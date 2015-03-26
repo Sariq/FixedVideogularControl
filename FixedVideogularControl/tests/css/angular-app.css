@@ -1,0 +1,39 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 28, 2014, 1:38:29 PM
+    Author     : user
+*/
+/*html5 app related css*/
+
+/*@import url( 'common/jquery-ui-1.10.3.custom.min.css' );*/
+/* Boilerplater header, mostly reset stuff */
+/* Issues: none */
+@import url( 'common/boilplate-head.css' );
+/* Font face declaration */
+/* Issues: none */
+@import url( 'common/font-face.css' );
+
+
+/* Layout stuff including some footer rules. */
+/* Issues: .new-background should be removed once everything has the class */
+@import url( 'common/layout.css' );
+
+/* Header */
+/* Issues: Has some footer styles */
+@import url( 'common/header.css' );
+
+/* Footer */
+/* Issues: None? */
+@import url( 'common/footer.css' );
+
+
+@import url( 'lib.css' );
+@import url( 'app.css' );
+
+@import url( 'jobScreen/main.css' );
+@import url( 'jobScreen/mobile.css' );
+

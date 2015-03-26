@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+#jobs-list {
+	margin: 12px auto 0;
+	width: 969px;
+}
+
+#jobs-list .job-info { 
+	margin-right: 0; 
+	width: 130px; 
+	overflow:hidden; 
+}
+#jobs-list .job-info .job-title, 
+#jobs-list .job-info .job-editor, 
+#jobs-list .job-info .job-status { 
+	height: 16px; 
+}
+
+#jobs-list .job-description {
+	clear: left;
+	padding: 8px 7px;
+	height: 104px;
+	overflow: auto;
+}
+
+.jobs-item {
+	width: 299px;
+	height: 239px;
+	padding: 10px 5px 5px;
+	float: left;
+	margin: 0 7px 16px;
+	border-radius: 4px;
+	background-color: #fff;
+	-webkit-box-shadow: 0 2px 3px rgba(0,0,0,.4);
+	box-shadow: 0 2px 3px rgba(0,0,0,.4);
+}
+
+.job-header {
+	padding: 8px 7px;
+}
+
+
+.job-budget { 
+	text-align:center; 
+	background-color:#21BA3D; 
+	color:#FFF; 
+	float:right; 
+	font-weight:600; 
+	font-size:12px; 
+	width:43px; 
+	height:14px; 
+	padding:5px; 
+}
+.job-no-budget { 
+	background-color:#fff; 
+	color:#CDC9C7; 
+	border:1px solid #e1e1e0; 
+	float:right; 
+	font-weight:700; 
+	font-size:12px; 
+	width:73px; 
+	height:26px; 
+	text-align:left; 
+	padding:2px; 
+}
+.stats2-index .h2-wrapper h2 {
+    color: white;
+}

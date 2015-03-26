@@ -1,0 +1,172 @@
+@charset "utf-8";
+
+
+
+.file-container {
+	position: relative;
+	display:inline-block;
+	overflow:hidden;
+}
+.file-container .fakefile {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1; 
+}
+.file-container .fakefile img {
+	float: right; 
+}
+.file-container  input.file-upload {
+	position: relative;
+	text-align: right;
+	height: 29px;
+	line-height: 29px;
+	filter: alpha(opacity: 0);
+	-ms-filter: alpha(opacity: 0);
+	opacity: 0;
+	z-index: 2; 
+	cursor:pointer; 
+}
+.file-container .cancel-download { 
+	margin-left: 5px; 
+}
+
+.file-container .upload-disabled-warning { 
+	color: red; 
+	font-weight: bold; 
+}
+
+
+
+
+#upload-files { 
+	font-size: 14px; 
+}
+
+.file-list { 
+	border: 1px solid #d9dfe1;  
+	border-radius: 2px; 
+}
+.file-list table { 
+	width: 100%; 
+}
+.file-list table tr { 
+	border-bottom: 1px solid #d9dfe1; 
+}
+
+#upload-files-list {  
+	border-top: 0; 
+	border-bottom: 0; 
+}
+
+.file-list table td { 
+	height: 30px; 
+	padding: 5px 12px; 
+	vertical-align: middle; 
+	border: 0; 
+}
+.file-list table td:first-child { 
+	width: 30%; 
+}
+.file-list table td:last-child { 
+	text-align: right; 
+}
+
+#upload-fail tr:first-child { 
+	border-top: 1px solid #d9dfe1; 
+}
+
+#upload-files table.upload-table-template, 
+#upload-files-other { 
+	display: none; 
+}
+
+.file-list  a { 
+	text-decoration: none; 
+}
+#upload-files a.upload-remove { 
+	color: #ff0000; 
+	margin-left: 5px; 
+}
+
+#upload-progress-bar { 
+	background: #f1f1f1; 
+	position: relative; 
+	border-radius: 4px; 
+	font-size: 12px; 
+	height: 20px; 
+	line-height: 20px; 
+	text-align: center; 
+	overflow: hidden; 
+	color: #000; 
+}
+#upload-progress-bar-filled { 
+	position: absolute; 
+	left: 0; 
+	top: 0; 
+	width: 100%; 
+	height: 100%; 
+	background: url( 'images/upload-progress.png' ) 0 0 repeat; 
+	color: white;  
+	clip: rect( 0, 0, auto, auto ); 
+	overflow: hidden; 
+}
+#upload-progress-bar-text { 
+	position: relative; 
+}
+
+#upload-progress-message { 
+	margin-top: 20px; 
+	font-size: 16px; 
+	color: #000; 
+}
+#upload-files-details { 
+	margin-top: 35px; 
+	display: inline-block; 
+}
+#upload-files-speed { 
+	display: none; 
+	color: #ccc; 
+	float: right; 
+	margin-top: -17px; 
+}
+#upload-files-list { 
+	margin-top: 20px; 
+}
+#upload-files-other { 
+	border-top: 1px solid #d9dfe1; 
+	position: relative; 
+	top: -1px; 
+}
+
+
+#upload-progress-message-attached { 
+	float: left; 
+}
+#upload-progress-message-time { 
+	float: right; 
+}
+
+#upload-files-header,
+#upload-done-message { 
+	display: none; 
+}
+
+#upload-done { 
+	color: #4c4c4c; 
+}
+#upload-fail { 
+	color: #ff0000; 
+}
+
+#upload-files-other { 
+	color: #000; 
+}
+#upload-files-other a.upload-cancel, 
+#upload-files-other a.upload-retry,  
+#upload-fail a.upload-retry { 
+	color: #0055b8;
+}
+#upload-files-other a:hover { 
+	color: #000; 
+}

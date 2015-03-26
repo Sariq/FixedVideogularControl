@@ -1,0 +1,353 @@
+@charset "utf-8";
+
+.form-error { 
+	text-align: center; 
+	color: #f00; 
+	font-weight: bold; 
+	margin-top: 8px; 
+}
+
+.field-error { 
+	color: red; 
+	font-size: 12px; 
+}
+
+.ui-confirmdialog-cancel, .button-link { 
+	background: none; 
+	padding: 0; 
+	display: inline; 
+	border: 0; 
+	-moz-appearance: none !important; 
+	-moz-box-sizing: content-box !important; 
+	font-size: 100%; 
+	margin-left: -3px; 
+}
+
+.ui-confirmdialog-cancel {
+	float: right;
+	font-size: 0.9em;
+	margin-top: 4px;
+	color: #015ec9;
+}
+
+.ui-confirmdialog-confirm {
+	/* Placeholder once styles are decided */
+}
+
+.ui-confirmdialog-message { 
+	font-size: 1.2em; 
+	margin: 0.3em 0; 
+}
+
+
+.button-link-disabled { 
+	color: #444; 
+	cursor: default; 
+}
+
+
+.button-container { 
+	margin-bottom: 10px; 
+}
+
+.button-disabled { 
+	cursor:default;
+	background:#333 !important;
+}
+
+
+.button-container a.button {
+	background: 0;
+	border: 0;
+	padding: 7px 13px;
+	box-shadow: inset 0 0 3px #d7dfd8;
+	font-size: 16px;
+	color: #397e40;
+	width: 240px;
+	text-decoration: none;
+	display: inline-block;
+	text-align: center;
+}
+
+.progress,
+.progress label, 
+.progress input[type="button"], 
+.progress input[type="submit"], 
+.progress input[type="image"], 
+.progress button { 
+	cursor: progress !important; 
+}
+
+
+.form-block {
+	width: 500px;
+	float: left;
+	color: #b4b4b4;
+	
+}
+
+.form-block-narrow {
+	width: 400px;
+}
+
+.form-block p {
+	margin-bottom: 20px;
+	text-align:center;
+}
+.form-block a {
+	color: #808080;
+	text-decoration: none;
+	margin-right: 5px;
+}
+.form-block a:hover {
+	color: #000;
+	text-decoration:none;
+}
+
+.whiteResponsive {
+		height: auto;
+	padding: 0 50px;
+	margin: 0 auto;
+padding: 44px 50px 30px;
+	margin: 20px auto 20px;
+	border-radius: 4px;
+	background-color: #fff;
+	-webkit-box-shadow: 0 2px 3px rgba(0,0,0,.4);
+	box-shadow: 0 2px 3px rgba(0,0,0,.4);
+}
+
+.white-form-footer,
+.white-form {
+	width: 715px;
+	height: auto;
+	padding: 0 50px;
+	margin: 0 auto;
+}
+
+.white-form {
+	padding: 44px 50px 30px;
+	margin: 20px auto 20px;
+	border-radius: 4px;
+	background-color: #fff;
+	-webkit-box-shadow: 0 2px 3px rgba(0,0,0,.4);
+	box-shadow: 0 2px 3px rgba(0,0,0,.4);
+}
+
+.white-form-footer .form-block {
+	padding: 0 50px;
+	
+}
+
+.white-form-footer {
+	width: 815px;
+}
+
+.white-form-footer-right {
+	float: right;
+	font-weight: 400;
+	font-size: 14px;
+	color: #000;
+	text-decoration: none;
+}
+
+.white-form .field input[type="text"],
+.white-form .field input[type="password"],
+.white-form .field input[type="email"],
+.white-form .field textarea,
+.white-form .field-checkboxes .field-checkboxes-list,
+.white-form .field-upload,
+form .field-upload,
+.white-form select,
+.white-form .field-select div,
+.white-form .ui-multiselect,
+.white-form .field-static, .white-form .field-checkbox {
+	display: inline-block;
+	margin-bottom: 15px;
+	font-size: 17px;
+}
+
+.white-form .field input[type="text"],
+.white-form .field input[type="password"],
+.white-form .field input[type="email"],
+.white-form .field textarea,
+.white-form .field-checkboxes .field-checkboxes-list,
+.white-form .field-upload,
+form .field-upload,
+.white-form select,
+.white-form .field-select div,
+.white-form .ui-multiselect {
+	padding: 4px 6px 5px;
+	color: #555;
+	border-radius: 2px;
+	background-color: #fff;
+	box-shadow: 0 2px #fff, inset 0 2px 3px rgba(0,0,0,.1);
+	-webkit-box-shadow: 0 2px #fff, inset 0 2px 3px rgba(0,0,0,.1);
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border: solid 1px #dadfe1;
+	width: 100%;
+	max-width:498px;
+}
+
+.white-form .field textarea {
+	height: 200px;
+}
+
+.white-form .field input[disabled], .white-form .field textarea[disabled], .white-form .field select[disabled] {
+	background: #efefef;
+}
+
+.white-form .field-checkbox .field-description {
+	margin-bottom: 0;
+	margin-top: 10px;
+}
+
+.white-form .field-checkbox input {
+	vertical-align: middle;
+}
+
+.white-form .field-checkbox label {
+	display: inline;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.white-form .field-error {
+	margin-top: -10px;
+	margin-bottom: 10px;
+}
+
+.white-form-left-labels .field label {
+	display: inline-block;
+	top: 0;
+	vertical-align: middle;
+	width: 147px;
+}
+
+.white-form-left-labels .field input[type="text"] {
+	width: 352px;
+}
+
+.white-form .field-checkboxes-checkbox {
+	margin: 14px 0;
+}
+
+.white-form .field-checkboxes label { 
+	width: auto; 
+	margin-left: 13px; 
+	margin-bottom: 0;
+	font-size: 15px;
+	cursor: pointer;
+	vertical-align: middle;
+	top: 0;
+	display: inline-block;
+}
+
+.white-form .field-checkboxes input[type="checkbox"] { 
+	margin-left: 9px;
+	vertical-align: middle; 
+	cursor: pointer;
+}
+.white-form .field-checkboxes {
+	width: 240px;
+	float: left;
+}
+.white-form .field-checkboxes:first-child {
+	margin-right: 20px;
+}
+
+.white-form .field-checkboxes legend {
+	display: inline;
+	float: left;
+	vertical-align: middle;
+}
+
+.white-form .field-checkboxes .field-checkboxes-list { 
+	width: 240px;
+	height: 300px; 
+	overflow-y: auto; 
+	clear: both; 
+}
+
+.white-form .field-checkboxes .field-checkboxes-selectors { 
+	float: right;
+	font-size: 14px;
+	line-height: 21px;
+}
+.white-form .field-checkboxes .field-checkboxes-selectors a {
+	text-decoration: none;
+}
+.white-form .field-checkboxes .field-checkboxes-selectors a:first-child { 
+	margin-right: 5px;
+}
+
+
+.white-form .field-checkboxes-checkbox-all {
+	margin-bottom: 20px;
+}
+
+.white-form .field-checkboxes-checkbox-all label {
+	font-weight: bold;
+}
+
+.white-form label span {
+	font-size: 17px;
+	color:#0056b9;
+}
+
+.white-form label, .white-form h3, .white-form .label, form .html5-upload label {
+	position: relative;
+	display: inline-block;
+	top: 4px;
+	line-height: 29px;
+	color: #000;
+	z-index: 4;
+	cursor: text;
+	width: 100%;
+	text-align: left;
+	font-size: 18px;
+	margin-bottom: 13px;
+}
+
+.white-form .field-description {
+	margin-bottom: 15px;
+}
+
+.field-description-content{
+	line-height: 16px;
+	color: #777;
+}
+
+
+
+.btn, a.btn {
+	text-decoration: none;
+	text-align: center;
+	display: block;
+	max-width: 498px;
+	width: 100%;
+	height: 100%;
+	max-height:80px;
+	font-size: 21px;
+	color: #fff;
+	-webkit-appearance: none;
+	white-space: nowrap;
+	box-sizing: border-box;
+	padding: 19px 0;
+	margin: 14px 0 0;
+	border: none;
+	border-radius: 2px;
+	background-color: #0056b9;
+	-webkit-box-shadow: 0 3px 2px rgba(0,0,0,.05);
+	box-shadow: 0 3px 2px rgba(0,0,0,.05);
+}
+.btn:hover, a.btn:hover {
+	text-decoration: none;
+	background: #0065d9;
+	-webkit-box-shadow:
+		inset 0px 1px 0px 0px rgba(105,175,255,1),
+		0 3px 2px rgba(0,0,0,.05);
+	box-shadow:
+		inset 0px 1px 0px 0px rgba(105,175,255,1),
+		0 3px 2px rgba(0,0,0,.05);
+}

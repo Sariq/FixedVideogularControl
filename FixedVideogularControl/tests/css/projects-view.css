@@ -1,0 +1,1157 @@
+@charset "utf-8";
+.back-to-projects {
+	width: 956px;
+	margin: 0 auto 15px;
+	/*color: #000000;
+    float: right;
+    font-size: 14px;
+    text-decoration: none;*/
+}
+
+/* Tabs UI */
+.ui-tabs.ui-tabs-vertical {
+    padding: 0;
+    width: 100%;
+}
+
+#project-tabs {
+	border:none;
+border-radius:0px;
+}
+
+
+.ui-tabs.ui-tabs-vertical .ui-widget-header {
+    border: none;
+}
+.ui-tabs.ui-tabs-vertical .ui-tabs-nav {
+    float: left;
+	height:100%;
+    width: 120px;
+    background: #efefef;
+	padding:0px;
+	
+}
+
+.ui-tabs.ui-tabs-vertical .gradient {
+	background: -webkit-linear-gradient(#efefef, white); /* For Safari */
+background: -o-linear-gradient(#efefef, white); /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(#efefef, white); /* For Firefox 3.6 to 15 */
+background: linear-gradient(#efefef, white); /* Standard syntax */
+}
+
+.ui-tabs.ui-tabs-vertical .ui-tabs-nav li:hover a {
+color:#0056b9;
+}
+
+.ui-tabs.ui-tabs-vertical .ui-tabs-nav li {
+	position:relative;
+    clear: left;
+    width: 100%;
+    overflow: hidden;
+    right: -2px;
+    z-index: 2;
+	vertical-align:bottom;
+	display:inline-block;
+	height:90px;
+}
+.ui-tabs.ui-tabs-vertical .ui-tabs-nav li a {
+    display: block;
+    width: 100%;
+	height:100%;
+	position:relative;
+	top:-60px;
+	padding-top:70px;
+    	text-align:center;
+		color:#333333;
+		text-decoration:none;
+		z-index:100;
+	
+		
+}
+.ui-tabs.ui-tabs-vertical .ui-tabs-nav li:hover {
+	cursor:pointer;
+}
+
+
+
+.ui-tabs.ui-tabs-vertical .ui-tabs-panel {
+    float: right;
+    position: relative;
+	width:820px;
+	padding:0px;
+
+
+}
+
+
+	
+.ui-tabs.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active  ,.ui-tabs.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active  a {
+	
+	color:#0056b9;
+}
+.ui-tabs.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active {
+	background-color:#f6f5f5;
+  
+}
+.ui-tabs-active:after {
+	position:absolute;
+	display:block;
+	right:0px;
+	z-index:100;
+	content:"";
+top:35%;
+border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent; 
+	
+	border-right:15px solid white; 
+}
+#details_tab_l:hover:before ,#details_tab_l.ui-tabs-active:before{
+	background:url(images/tabs_icons.png) 20px -46px no-repeat;
+}
+
+
+.ui-tabs.ui-tabs-vertical .ui-tabs-nav li:before {
+		position:relative;
+	display:block;
+	width:80px;
+	height:60px;
+	content:"";
+	cursor:pointer;
+
+}
+
+#details_tab_l:before {
+	background:url(images/tabs_icons.png) 20px 10px no-repeat;
+}
+#users_tab_l:before {
+    background:url(images/tabs_icons.png) -334px 10px no-repeat;
+}
+
+#payment_tab_l:before {
+    background:url(images/tabs_icons.png) -224px 10px no-repeat;
+}
+
+
+#history_tab_l:before {
+	background:url(images/tabs_icons.png) 20px 10px no-repeat;
+}
+
+
+#history_tab_l:hover:before,#history_tab_l.ui-tabs-active:before {
+		background:url(images/tabs_icons.png) 20px -46px no-repeat;
+}
+
+#media_tab_l:before {
+	background:url(images/tabs_icons.png) -140px 10px no-repeat;
+}
+
+#media_tab_l:hover:before , #media_tab_l.ui-tabs-active:before{
+	background:url(images/tabs_icons.png) -142px -48px no-repeat;
+}
+
+#proposals_tab_l:before {
+	background:url(images/tabs_icons.png) -60px 10px no-repeat;
+}
+
+#proposals_tab_l:hover:before, #proposals_tab_l.ui-tabs-active:before {
+	background:url(images/tabs_icons.png) -62px -50px no-repeat;
+}
+#chat_tab_l:before {
+	background:url(images/tabs_icons.png) -60px 10px no-repeat;
+}
+
+#chat_tab_l:hover:before , #chat_tab_l.ui-tabs-active:before {
+		background:url(images/tabs_icons.png) -62px -50px no-repeat;
+}
+#users_tab_l:hover:before , #users_tab_l.ui-tabs-active:before {
+    background:url(images/tabs_icons.png) -334px -50px no-repeat;
+}
+
+#payment_tab_l:hover:before , #payment_tab_l.ui-tabs-active:before {
+    background:url(images/tabs_icons.png) -224px -49px no-repeat;
+}
+
+#project-tabs > div > div {
+	margin:30px;
+}
+
+/* Review dialog */
+
+#review-dialog .field,  
+#project-action .field { 
+	position: relative;
+	margin-bottom: 15px;
+	clear: left;
+}
+
+
+#review-dialog { 
+	display: none; 
+	padding-top: 10px; 
+}
+#review-dialog textarea {
+	vertical-align:top;
+}
+#review-dialog p { 
+	margin-bottom: 0.5em; 
+}
+#review-dialog .no-review-submit {
+	display: block;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.rating-error { 
+	float: right; 
+	color: #f00;
+}
+
+/* Project Header, Details, Files */
+.media-file-list {
+	overflow:auto;
+}
+.media-file-list .media-file img {
+	float: left;
+	margin-right: 16px;
+}
+.media-file-list .media-file {
+	min-height: 76px; 
+	position: relative; 
+	clear: left;
+	padding: 10px 0px 10px 10px;
+	border-bottom: 1px solid #e9e9ea;
+} 
+#job-view {
+	position:relative;
+}
+
+#job-view .job-info { 
+	margin-left:20px;
+	
+}
+
+#job-view .job-info .job-title {
+	font-size:20px;
+}
+
+.jobs-index #job-view {
+	margin-bottom:15px;
+	width: 956px;
+	clear: both;
+	border-radius: 4px;
+	background-color: #fff;
+	-webkit-box-shadow: 0 2px 3px rgba(0,0,0,.4);
+	box-shadow: 0 2px 3px rgba(0,0,0,.4);
+}
+.jobs-index #job-view-contents {
+	height: 457px;
+	padding: 0 3px 20px;
+	clear: both;
+}
+.final_video { padding-bottom:20px;
+}
+
+#job-view-header {
+	color: #000;
+	margin-bottom: 0px;
+	padding: 15px 0px 8px 15px;
+	border-radius: 4px 4px 0 0;
+	-webkit-box-shadow: 0 1px 5px rgba(0,0,0,.2);
+	box-shadow: 0 1px 5px rgba(0,0,0,.2);
+	overflow: hidden;
+		border-bottom:thin;
+	border-bottom-color:	#000;
+	
+}
+
+#job-view-header #job-description {
+	padding-top:15px;
+	clear:both;
+
+}
+#job-view-header #job-description #job-description-contents {
+	padding-top:4px;
+	overflow:hidden;
+}
+
+.red-deadline {
+	color: #f00; 
+}
+
+#view-job-details { 
+	font-weight: bold; 
+}
+
+#job-view-details-general p { 
+	margin-top: 1em; 
+}
+#job-view-details-files h3 {
+	margin-top:10px;
+}
+
+#job-view-details-files { 
+	clear:both; 
+	margin-top: 1em; 
+	padding-top: 1em; 
+}
+#job-view-details-files-list { 
+	width: 90%; 
+	margin:30px;
+	height: auto; 
+}
+
+#job-view-details-file-view { 
+	border:1px solid #e9e9ea; 
+	width: 640px; 
+	height: auto; 
+	max-height:800px;
+	float: left; 
+	margin-right:15px; 
+	text-align: center; 
+	vertical-align: middle; 
+	position: relative;
+}
+.job-chat-expand {
+	margin-left:12px;
+}
+
+.project-view-action {
+	display:block;}
+button.project-view-action {
+	text-align:left;
+	color:#0056b9;
+	text-decoration:underline;
+	font-family: proxima-nova, Helvetica-neue, Helvetica, Arial, sans-serif;
+}
+.preview-thumbnail { 
+	position: relative; 
+	float:left; 
+	margin-right: 16px; 
+	width: 87px; 
+	height: 48px; 
+}
+.media-file .preview-thumbnail img { 
+	float: none; 
+	margin-right: 0; 
+}
+
+.file-view-empty { 
+	color: #aaa; 
+	display: block; 
+	font-size: 2em; 
+	font-weight: bold; 
+	line-height: 360px; 
+	text-align: center; 
+}
+
+#project-history ul { 
+	list-style: none; 
+	margin-top:30px;
+	margin-right:30px;
+	}
+#project-history li {
+
+	line-height: 20px;
+
+	border-bottom-style:solid;
+	border-bottom-color:#CCC;
+	border-bottom-width:1px;
+	padding-bottom:4px;
+	margin-bottom:10px;
+	maring-top:10px;
+}
+
+.job-history-time {
+	padding: 12px 3px 0 3px;
+	display:inline;
+	font-weight:bold;
+}
+.job-history-log {
+	padding:0 3px 12px 3px;
+		display:inline;
+	color:#2a8c33;
+}
+
+/* Chat */
+.job-chat-hidden { 
+	display: none; 
+}
+
+.hidden-container {
+	display:none;
+
+}
+.job-talk { 
+padding-left:10px;
+	margin-bottom: 4px; 
+	clear: both; 
+	font-size:14px;
+	line-height:17px;
+	
+}
+.editor-profile  .job-talk {
+	width:40em;
+}
+.editor-profile #job-chat textarea {
+	width:40em;
+
+}
+
+
+
+#job-chat .field {
+	display:inline;
+padding-left:10px;
+padding-top:40px;
+	width:300px;
+	
+}
+
+.job-chat-line a:hover {
+	font-weight:500;
+}
+
+.job-chat-line a span {
+	font-weight:200;
+}
+.job-chat-line {
+	margin-bottom:10px;
+}
+
+ .job-chat-hidden {
+	padding-top: 10px;
+	background-color:#FFF;
+	color:#000;
+}
+
+
+.job-chat-unhidden
+{
+	color:#000;
+	background-color:#FFF;
+}
+
+
+.job-talk .line_info {
+	float:left;
+	width:100%;
+	
+	
+}
+
+.job-talk .message{ 
+
+float:right;
+width:100%;
+
+}
+
+#project-chat .job-talk .message{ 
+width:619px;
+}
+
+.job-talk .line_info {
+	float:left;
+	
+}
+
+.job-talk .at { font-weight:500!important; float:left; width:7em }
+.job-talk .from {padding-left:5px; text-decoration:underline; }
+
+.jobs-index .ui-toggler {
+	padding-left: 12px;
+	background: url( 'images/toggler-white.png' ) 4px center no-repeat;
+}
+
+.jobs-index .ui-toggler-on {
+	background: url( 'images/toggler-white-toggled.png' ) 4px center no-repeat;
+}
+
+.editor-profile  .job-chat-expand {
+	color: #0056b9;
+	font-size: 12px;
+	text-decoration: none;
+	line-height: 22px;
+	text-align: left;
+	padding: 0;
+	display: block;
+}
+
+.editor-profile .job-chat-expand:hover {
+	color: #0076fe;
+	
+}
+
+#project-tabs #job-chat {
+	position:relative;
+}
+
+#project-tabs #project-action {
+	margin-top:12px;
+	background:#efefef;
+}
+
+#project-tabs .job-chat-hidden {
+	background:inherit;
+}
+#project-tabs .job-talk {
+margin-left:12px;
+margin-right:12px;
+
+position:relative;
+}
+/*project actions */
+#project-action {
+	line-height:1.5;
+	
+}
+
+#project-action #upload-files {
+	display:inline-block;
+}
+#project-action #upload-files-other  {
+	border-top: 1px solid #efefef !important; 
+	display:inline-block;
+	
+}
+
+#project-action #upload-files-other table{
+margin-left:20px;
+margin-right:20px;
+max-width:450px;
+}
+
+#project-action #upload-files-other table td {
+	width:150px;
+}
+
+#project-action .approval {
+	margin:20px;
+}
+
+
+#project-action .payment-milestones table,#project-history  .payment-milestones table  {
+	max-width:450px;
+	margin-top:12px;
+}
+
+#project-history .payment-milestones {
+	margin-bottom:0px;
+}
+#project-action .payment-milestones table th,#project-action .payment-milestones table td,.offer_details .milestones table th, .offer_details .milestones table td{
+	border:1px solid #0056b9;}
+
+#project-action #upload-files table th,#project-action #upload-files table td{
+	border:1px solid #0056b9;}
+
+.chat {
+	width:100%;
+	padding-bottom:12px;
+	position:relative;
+	float:left;
+	min-height:30px;
+}
+
+.approval .payment-milestones {
+	float:left;
+	margin-right:12px;
+}
+
+#project-tabs #approve_now_field {
+	padding:0px;
+	margin-left:12px;
+}
+
+.approve_now {
+	margin-left:18px;
+	margin-bottom:8px;
+}
+
+
+/* proposals */
+
+.chat-editor-name a,.proposal-editor-name a ,.job-editor a{
+	color:#0056b9;
+	font-weight:600;
+	text-decoration:none;
+
+}
+.chat-editor-name a ,.proposal-editor-name a  { margin-bottom:10px; }
+
+.proposal  {
+		margin-top:15px;
+		line-height:1.5;
+		border-bottom:thin;
+		border-bottom-style:dashed;
+		border-bottom-color:#dedede;
+		padding-bottom:5px;
+}
+.proposal-editor-image ,.chat-editor-image{
+	float:left;
+	display:inline-block;
+	width:95px;
+	
+}
+
+
+.offer-icon {
+	float:left;
+	padding:15px;
+	
+	font-size:28px;
+	text-align:center;
+	font-family: 'Hammersmith One', sans-serif;
+	font-weight:700;
+	border-right-width:1px;;
+	border-right-color:#dedede;
+	border-right-style:inset;
+	top:10px;bottom:10px;
+	position:absolute;
+	line-height:1;
+	width:85px;
+}
+.offer-icon .prop {
+	text-align:center;
+	font-size:14px;
+
+	font-family:"proxima-nova","Helvetica-neue", Helvetica, Arial, sans-serif;
+	color:#666666;
+	font-weight:100;
+}
+.proposal-summary {
+	float:none;
+	width:auto;
+margin-left:125px;
+overflow:hidden;
+		margin-top:15px;
+		margin-bottom:15px;
+		margin-right:12px;
+position:relative;
+
+}
+
+
+.proposal-summary .proposal-duration {
+	float:left;
+	width:50%;
+	display:inline-block;
+}
+.proposal-summary .proposal-milestone-count {
+	float:right;
+		width:50%;
+	display:inline-block;
+}
+#review-dialog .button-container, 
+#project-action .button-container {
+	text-align: center;
+	margin-top: 6px;
+}
+
+.talk-button-container {
+	margin-top:12px;
+	
+	width:280px;
+	float:right;
+	padding-right:20px;
+}
+
+#project-action .field {
+	float:left;
+}
+
+
+.chat .talk-button-container {
+	margin-right:20px;
+}
+
+
+ .milestones {
+	height:auto;
+	position:relative;
+	display:inline-block;
+	width:60%;
+}
+.offer_details .milestones table  {
+	width:auto;
+	
+}
+.offer_details {
+	margin-top:12px;
+	overflow:hidden;
+	background-color:#efefef;
+	height:auto;
+	position:relative;
+}
+
+
+
+.proposal-actions,#project-action .actions {
+	padding-top:12px;
+}
+.proposal-actions .accept:before ,#project-action .actions .send-proposal:before {
+	position:relative;
+	display:inline-block;
+	width:20px;
+	height:16px;
+	content:"";
+	cursor:pointer;
+	background:url(images/proposal-actions.png) 0px 2px no-repeat;
+	
+}
+.proposal-actions div.clicked:before,#project-action .actions div.clicked:before {
+	background:url(images/proposal-actions.png) -40px 1px no-repeat;
+}
+
+.proposal-actions .shortlist:before {
+	position:relative;
+	display:inline-block;
+	width:20px;
+	height:12px;
+	content:"";
+	cursor:pointer;
+	background:url(images/proposal-actions.png) -20px 0px no-repeat;
+	
+}
+
+.proposal-actions .discard:before ,#project-action .actions .discard:before{
+	position:relative;
+	display:inline-block;
+	width:18px;
+	height:16px;
+	content:"";
+	cursor:pointer;
+	background:url(images/proposal-actions.png) -40px 2px no-repeat;
+	
+}
+
+.proposal-actions div.clicked:before {
+	background:url(images/proposal-actions.png) -40px 0px no-repeat;
+}
+
+.proposal-actions,#project-action .actions {
+	margin-left:12px; 
+}
+.proposal-actions .discard,#project-action .actions .discard {
+	padding-left:10px;
+}
+
+.proposal-actions div,#project-action .actions div  {
+	cursor:pointer;
+	margin-top:40px;
+	display:inline;
+	padding-right:12px;
+}
+#project-tabs .job-chat-expand {
+	color: #0056b9;
+font-weight: 600;
+text-decoration: none;
+}
+#project-tabs .talk-button-container{
+	width:auto;
+}
+#project-tabs .line-info {
+	display:inline;
+	width:100px;
+}
+
+#project-tabs .job-chat .message {
+	width:100%;
+}
+
+
+#project-tabs .field  {
+	display:inline-block;
+	
+}
+
+#project-payment   form > .field {
+	display:block;
+}
+
+#project-payment   form > .field-message label{
+	display:block;
+}
+
+#project-payment   form > .field-message textarea {
+	width:60%;
+}
+
+#project-action .milestone_approval .field , #project-action .approval .field{
+	display:block;
+}
+.proposal-actions  form ,#project-action .actions  form {
+display:none;
+}
+.proposal-actions button{
+	display:none;
+}
+
+
+#project-action #proposal-milestones textarea {
+    border: 1px solid #C1C8CC;
+    height: 60px;
+    margin-bottom: 5px;
+    width: 250px;
+}
+#project-tabs textarea {
+	resize: none;
+}
+#project-tabs  .proposal-accept-info .inner-padding{
+	position:relative;
+	margin-left:12px;
+	margin-bottom:12px;
+}
+#project-tabs .proposal-accept-warning {
+	position:relative;
+	color:black;
+}
+.milestone_approval {
+	margin:20px;
+}
+
+
+	
+#project-tabs .file-container {
+	margin-left:20px;
+	}
+#project-tabs .proposal form > .field ,#project-tabs .chat-container form > .field,#project-tabs .chat-container #project-action .field {
+	padding-left:12px;
+	padding-top:16px;
+	padding-right:8px;
+}
+
+.proposal-right {
+	position:relative;
+	margin-left:100px !important;
+
+	
+}
+
+
+
+.btn_send, a.btn_send {
+	position:relative;
+	text-decoration: none;
+	text-align: center;
+	display: block;
+	max-width: 498px;
+	font-size: 14px;
+	color: white;
+	-webkit-appearance: none;
+	white-space: nowrap;
+	box-sizing: border-box;
+	padding-top:8px;
+	padding-bottom:8px;
+	padding-right:20px;
+	padding-left:20px;
+
+	border: none;
+	background-color: #0057b9;
+	-webkit-box-shadow: 0 3px 2px rgba(0,0,0,.05);
+	box-shadow: 0 3px 2px rgba(0,0,0,.05);
+}
+
+.btn_accept , a.btn_accept {
+	background-color: #00b22d;
+}
+.btn_send:hover, a.btn_send:hover {
+	text-decoration: none;
+	background: #0065d9;
+	-webkit-box-shadow:
+		inset 0px 1px 0px 0px rgba(105,175,255,1),
+		0 3px 2px rgba(0,0,0,.05);
+	box-shadow:
+		inset 0px 1px 0px 0px rgba(105,175,255,1),
+		0 3px 2px rgba(0,0,0,.05);
+}
+.btn_accept:hover , a.btn_accept:hover {
+		background: #0065d9;
+}
+
+#projects-view-send-proposal .button-link {
+	display: block;
+	color: #015ec9;
+	margin-bottom: 5px;
+}
+
+
+
+
+
+/* Pagination */
+
+
+
+.active_page{
+	background-color:white !important;
+	color:#0056b9 !important;
+}	
+
+#job-status-header, #job-view-pagination, .page_navigation , .alt_page_navigation {
+	padding-bottom: 12px;
+}
+#job-view-pagination { 
+	height: 46px;
+	padding: 0;
+}
+
+#job-view-pagination .pagination-nav {
+	clear:both;
+}
+
+a.no_more, .first.last {
+	display:none !important;
+}
+
+.previous_link, .next_link ,.first_link , .last_link{
+	color:white !important;
+	background-color:#0056b9;
+}
+
+.project-action {
+	margin:12px;
+}
+
+.proposal-chat {
+	position:relative;
+	margin-left:12px;
+	margin-top:12px;
+}
+
+#proposal-fields {
+	margin-left:12px;
+}
+
+.payment-milestones {
+	margin:10px;
+	max-width:410px;
+
+}
+
+#project-media #upload-files {
+	margin-left:22px;
+}
+
+.milestones .payment-milestones {
+	max-width:280px;
+}
+.payment-milestones .milestone-previous {
+    background: none repeat scroll 0 0 #D9D9D9;
+}
+.payment-milestones .milestone-current {
+    background: none repeat scroll 0 0 #FFFF00;
+    position: relative;
+}
+
+.editor-profile .offer-milestones .milestone-current {
+	color:#000 !important;
+	
+}
+.white-form1 
+{
+	margin-left:30px;
+}
+
+.proposal-hidden {
+	display:none;
+}
+
+#last-message {
+	display:inline-block;
+}
+
+.proposal-hidden .button-container {
+	display:inline-block;
+}
+.green_button {
+}
+
+#chat-dialog {
+	font-size:14px;
+}
+#chat-dialog p {
+	margin-bottom:5px;
+}
+#proposal-dialog { 
+
+	display: none; 
+font-size:14px;
+overflow:auto;
+}
+#proposal-dialog .milestones,#action-dialog .milestones , #chat-dialog .milestones {
+	float:left;
+	width:auto;
+	max-width:350px;
+}
+#proposal-dialog h3
+{
+		width:350px;;
+}
+
+#proposal-dialog .final , #action-dialog .final,  #chat-dialog .final 
+{
+	padding-left:12px;
+	max-width:350px;
+	display:inline-block;
+}
+
+#proposal-dialog #coupon_code {
+	width:89px;
+}
+.coupon-button-container  button {
+	position:relative;
+	text-decoration: none;
+	text-align: center;
+	display: inline-block;
+	max-width: 498px;
+	font-size: 14px;
+	
+	-webkit-appearance: none;
+	white-space: nowrap;
+	box-sizing: border-box;
+	padding-top:8px;
+	padding-bottom:8px;
+	padding-right:20px;
+	padding-left:20px;
+background: #808080;
+	border: none;
+	-webkit-box-shadow: 0 3px 2px rgba(0,0,0,.05);
+	box-shadow: 0 3px 2px rgba(0,0,0,.05);
+}
+
+.coupon-button-container {
+	display:inline-block;
+}
+
+
+#share-dialog {
+	font-size:14px;
+}
+#project-action .talk-button-container{
+	margin-right:0px;
+	padding-right:3px;
+	position:relative;
+	float:right;
+	right:22px;
+	margin-top:16px;
+}
+
+#project-action .field {
+		max-width:500px;
+	position:relative;
+	overflow:auto;
+}
+
+#project-action .wide-field  {
+	max-width:700px;
+}
+
+#project-action button {
+	display:inline-block;
+}
+#project-action .html5-upload{
+	float:left;
+margin-left:0px;
+}
+
+#project-action #upload-files-header-details {
+	display:none;
+}
+
+.editor_requests {
+	clear:both;margin-left:12px;
+	margin-top:8px;
+}
+.editor_requests span {
+	margin-right:8px;
+}
+#project-action .send-proposal ,#project-action  .discard{
+	color:#000;
+}
+#project-action .discard {
+	display:inline-block;
+}
+#project-action .button-link {
+	text-align:left;
+	color:#0056b9;
+}
+
+.discard button
+{
+	width:200px;height:25px;
+}
+
+#action-dialog {
+	font-size:14px;
+	width:380px;
+}
+
+#action-dialog #proposal-fields .field ,#action-dialog #projects-view-send-proposal .field-message{
+	margin-bottom:5px;
+}
+
+#action-dialog button {
+	margin:0 auto;
+}
+
+	
+#action-dialog #projects-view-send-proposal .field-message label {
+	vertical-align:top;
+}
+
+#action-dialog ol {
+	width:670px;
+
+}
+
+#action-dialog #proposal-milestones-list  div {
+	display:inline-block;
+}
+
+#action-dialog ol li select{
+	width:100%;
+}
+
+#action-dialog  .field-percent {
+	width:50px;
+}
+
+#action-dialog  .field-milestone_price {
+	width:60px;
+}
+
+#action-dialog .field-deliverable {
+	width:240px;
+}
+
+#action-dialog .field-deliverable input {
+	width:100%;
+}
+
+#action-dialog  ol li label {
+	display:none;
+}
+
+.user_invite_div {
+	display:none;
+}
+.user_invite_div .field {
+	display:inline;
+}
+.user_invite_div input {
+	display:inline;
+	width:250px;
+}
+
+.user_invite_div button {
+	display:inline;
+}
+
+
+	.changed-job {
+		color:#F00 !important;
+	}
+	
+.project-action-cblabel {
+	vertical-align:-1px !important;
+}

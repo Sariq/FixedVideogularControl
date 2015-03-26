@@ -1,0 +1,113 @@
+@charset "utf-8";
+
+.error-page p {
+	font-size: 1.2em;
+	text-align: center;
+}
+
+
+.error-page #main h2 { 
+	text-align: center;
+	font-size: 24px;
+	color: #2A7831;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+.error-page-error_404 #main h2 {
+	margin-top: 100px;
+}
+
+#exception_error, 
+#exception_error p {
+	font-size: 1em;
+	text-align: left;
+	color: #333;
+}
+
+#exception_error h1, 
+#exception_error #main h2 {
+	margin: 0;
+	padding: 1em 0;
+	font-size: 1em;
+	font-weight: 400;
+}
+
+#exception_error h3 {
+	margin: 0;
+	padding: .4em 0 0;
+	font-size: 1em;
+	font-weight: 400;
+}
+
+#exception_error p {
+	margin: 0;
+	padding: .2em 0;
+}
+
+#exception_error pre {
+	overflow: auto;
+	white-space: pre-wrap;
+}
+
+#exception_error table {
+	width: 100%;
+	display: block;
+	margin: 0 0 .4em;
+	padding: 0;
+	border-collapse: collapse;
+	background: #fff;
+	overflow: auto;
+}
+
+#exception_error table td {
+	border: solid 1px #ddd;
+	text-align: left;
+	vertical-align: top;
+	padding: .4em;
+}
+
+#exception_error table td pre {
+	margin: 0;
+}
+
+#exception_error div.content {
+	padding: .4em 1em 1em;
+	overflow: hidden;
+}
+
+#exception_error pre.source {
+	margin: 0 0 1em;
+	padding: .4em;
+	background: #fff;
+	border: dotted 1px #b7c680;
+	line-height: 1.2em;
+}
+
+#exception_error pre.source span.line {
+	display: block;
+}
+
+#exception_error pre.source span.highlight {
+	background: #f0eb96;
+}
+
+#exception_error pre.source span.line span.number {
+	color: #666;
+}
+
+#exception_error ol.trace {
+	display: block;
+	margin: 0 0 0 2em;
+	padding: 0;
+	list-style: decimal;
+}
+
+#exception_error ol.trace li {
+	margin: 0;
+	padding: 0;
+}
+
+.error-js .collapsed {
+	display: none;
+}

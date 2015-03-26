@@ -1,0 +1,264 @@
+#annotations-module {
+
+  .vcArrow {
+    background: url('../images/arrow.gif') no-repeat;
+    width: 28px;
+    display: inline-block;
+    height: 19px;
+  }
+  .saved_message_warning {
+    color: @red;
+  }
+
+  videogular, video {
+    max-height: 100%;
+  }
+
+  .annotation_add {
+    &:disabled {
+      background: @grey;
+      cursor: not-allowed;
+    }
+  }
+  #filter_area {
+         h3 {
+      font-size: 27px;
+      text-shadow: none;
+      margin-top: 30px;
+      line-height: 27px;
+      font-weight: normal;
+    }
+    .show_name,.show_name_public {
+      text-align: center;
+      margin: auto;
+      div {
+        margin: 20px 0;
+      }
+      input {
+        line-height: 2;
+        width: 216px;
+      }
+    }
+  
+  .annotator_choose {
+    width: 220px;
+    text-align: center;
+    margin: auto;
+    line-height: 0;
+    padding: 20px 0;
+
+  }
+          .show_name_public {
+        input {
+            font-size: 14px;
+        }
+    }
+    overflow-y:auto;
+    .infoAnno {
+      padding-top: 20px;
+      padding-bottom:20px;
+      
+      padding-left: 10%;
+      
+      font-size: 14px !important;
+    }
+  
+      display:table-cell;
+      width:33%;
+      
+      height:100%;
+  }
+  #annotations_data {
+      /*width:100%;*/
+      clear:both;
+      overflow: auto;
+    max-height: 400px;
+    margin-top: 30px;
+     display:table;
+      
+  }
+  #annotations_list {
+      display:table-cell;
+      width:66%;
+      height:100%;
+            
+    overflow: auto;
+    max-height: 400px;
+    margin-top: 30px;
+background:#ffffff;
+    .annotation {
+        box-sizing: border-box;
+     width: 100%;
+      -webkit-transition: all 0.5s linear;
+      -moz-transition: all 0.5s linear;
+      -ms-transition: all 0.5s linear;
+      -o-transition: all 0.5s linear;
+      transition: all 0.5s linear;
+      background: #f2f2f2;
+      padding: 8px 0 8px 8px;
+      color: #4a4a4a;
+      &.new {
+        color: @red;
+      }
+      margin: 0px 0px 5px 0px;
+      font-size: 14px;
+      > span {
+        display: inline-block;
+      }
+
+      div.annotationButtons {
+        box-sizing: border-box;
+        float: right;
+        width: 94px;
+        margin-top: -5px;
+        button {
+          float: right;
+          margin: 0px 12px 0px 0px;
+        }
+        .voteUp, .voteDown {
+          float: left;
+          margin: 0;
+          width: 50px;
+          i {
+            margin-left: 10px;
+          }
+        }
+      }
+      &.marked, &.marked .annotation {
+        background: #0056c9;
+        color: white;
+      }
+      div.annotationReplyList {
+        margin-top: 10px;
+        margin-left: 73px;
+        width:100%;
+        
+        padding: 0;
+        .annotation {
+                        width:100%;
+            overflow: hidden;
+
+          &.reply {
+            padding: 10px 0 0 0;
+            margin-bottom: 3px;
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+          .from {
+            vertical-align: top;
+          }
+        }
+      }
+
+      .timestamp {
+        font-size: 15px;
+        font-weight: 600;
+        opacity: 0.8;
+        width: 70px;
+      }
+
+      .from {
+        font-weight: 300;
+        text-transform: capitalize;
+        width: 150px;
+        display: inline-block;
+
+      }
+
+      .comment {
+        width: 40%;
+        font-weight: bold;
+        textarea {
+          font-size: 14px;
+          font-weight: 800;
+          width: 100%;
+          border: none;
+          resize: none;
+          &:focus {
+            border: 2px solid #FC3;
+          }
+        }
+      }
+    }
+  }
+  .annotation-marker {
+    z-index: 100;
+    width: 4px;
+    left: -1px; //compensate for width, actual postion is set by JS with margin-left
+    height: 9px;
+    background-color: black;
+    position: absolute;
+    cursor: pointer;
+    i {
+      position: relative;
+      bottom: 12px;
+      color: @blue;
+      left: -3px;
+      height: 20px;
+      z-index: 999999;
+    }
+    &.new i {
+      color: @red;
+    }
+  }
+
+  div.show_name {
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 28%;
+    padding: 1%;
+  }
+
+  .annotationsStats {
+    margin-top: 15px;
+  }
+
+  .contributorsPart {
+      word-wrap: break-word;
+     
+    ul {
+      margin-left: 0;
+      li.contributor {
+         font-size: 14px;
+        list-style: none;
+        display: inline;
+        span {
+          cursor: pointer;
+          color: @blue;
+          &.red {
+            color: @red;
+          }
+        }
+        &:not(:last-child) {
+          &:after {
+            content: ',';
+            display: inline-block;
+            width: 4px;
+            margin-left: -2px;
+          }
+        }
+
+      }
+    }
+    div.filterControls {
+      margin-top: 10px;
+      a {
+      text-decoration: none;
+    }
+    }
+  }
+
+}
+body.framez-index, body.video-annotate, body.welcome-editor {
+  //public views
+  .video_part a, #annotations-module .contributorsPart ul li.contributor span {
+    color: #8CB0DA;
+  }
+  .video_part {
+    color: white;
+    background-color: #5c5c5c;
+   
+  }
+}
+

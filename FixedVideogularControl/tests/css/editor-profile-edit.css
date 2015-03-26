@@ -1,0 +1,207 @@
+@charset "utf-8";
+
+/* Submenu, unused... */
+/*
+#profile-submenu { 
+	list-style: none; 
+	margin: 1px 0 8px 0; 
+	background: #403C44;
+	height:39px; 
+	border-top:1px solid #fff; 
+	border-bottom:1px solid #fff; 
+}
+
+#profile-submenu li { 
+	list-style: none;
+	display: inline-block;
+}
+
+#profile-submenu li a,
+#profile-submenu li a {
+	display:block; 
+	border-right:1px solid #fff; 
+	padding:10px 25px; color:#fff; 
+	font-size:14px; 
+	text-decoration:none; 
+	height:19px;
+}
+#profile-submenu li a:active span, 
+#profile-submenu li a:hover span, 
+#profile-submenu li a:focus span,  
+#profile-submenu li.sub-menu-current span {
+	display:block; 
+	border-right:1px solid #fff; 
+	padding:10px 25px; 
+	color:#fff; 
+	font-size:14px; 
+	text-decoration:none; 
+	height:19px;
+	background: #0056b9;
+}
+*/
+
+/* General */
+.change-password { 
+	clear: both; 
+}
+
+/* Appearance */
+#editor-appearance .file-container { 
+	display: block;
+	margin-left: 170px; 
+	height:30px;
+}
+
+#editor-appearance .fakefile {
+	width: 92px;
+	min-height: 31px;
+	line-height: 31px;
+	margin: 0 auto 17px;
+	padding: 0 9px;
+	background: #0065d9;
+	color :#fff;
+	text-decoration:none;
+	text-transform: uppercase;
+}
+
+
+.file-size-info { 
+	vertical-align: middle; 
+}
+
+#editor-profile-image img { 
+	vertical-align: middle; 
+}
+#editor-profile-header-image, 
+#editor-profile-image,
+#editor-profile2-image{ 
+	margin-bottom: 8px; 
+	display: inline-block;
+        
+}
+#editor-profile-header-image img, 
+#editor-profile-image img ,
+#editor-profile2-image img {
+    max-width: 600px;
+    max-height: 350px;
+    display: inline-block;
+    
+}
+
+#editor-profile-image img ,
+#editor-profile2-image img {
+    max-height: 250px;
+}
+
+#editor-profile-image .upload-message { 
+	line-height: 1; 
+	margin-top: 55px; 
+}
+
+#editor-profile-header-image { 
+	width: 492px; 
+	height: 200px; 
+}
+#editor-profile-image { 
+	width: 150px; 
+	height: 150px; 
+}
+
+#editor-profile-image img.empty-image { 
+	display: none; 
+}
+#editor-profile-image-container {
+    display:block
+}
+.editor-edit #main .file-container  input.file-upload { 
+	width: 147px; 
+	cursor: pointer !important; 
+}
+
+/* Portfolio */
+
+
+/* Still using old form layout, left aligned labels... */
+.editor-portfolio label {
+	vertical-align: top;
+}
+
+.editor-clip { 
+	clear: left; 
+	padding: 16px 0; 
+	border:1px solid #e8e6e6;
+	margin-bottom:10px;
+} 
+.editor-clip-info { 
+	float:left; 
+	width: 50%; 
+}
+.editor-clip-link { 
+	float:left;
+	width: 100%; 
+} 
+a.editor-clip-remove { 
+	clear:both; 
+	float: right; 
+	color:#b24712; 
+	text-decoration:none; 
+	margin-right: 14px; 
+}
+
+.editor-clip-thumb { 
+	height: 160px; 
+	text-align: center; 
+}
+.editor-clip.progress .editor-clip-thumb { 
+	background: url( 'images/ajax-loader.gif' ) center center no-repeat; 
+}
+
+.editor-clip-link .field-description-title { 
+	display: block; 
+	margin-left: 19px;  
+	width: auto; 
+}
+.editor-clip-link .field-description-content { 
+	display: block; 
+	margin-left: 19px; 
+	width: auto; 
+}
+.clip-thumbnail { 
+	position: relative; 
+	display: block; 
+}
+
+.white-form .portfolio-clip-label {
+	width: 18%;
+	display: inline-block;
+	margin-left: 2px;
+	top: 0px;
+	font-size: 17px;
+}
+
+.portfolio-clip-link {
+	width: 80%;
+}
+.portfolio-input {
+	width: 32%;
+}
+
+#editor-clips .button-container { 
+	margin-top:0; 
+	margin-bottom:10px; 
+	padding: 16px 0; 
+}
+#editor-clips .button-container button { 
+	padding: 2px 13px; 
+}
+#editor-new-clip { 
+	display: none; 
+}
+
+#editor-portfolio-instructions { 
+	padding: 5px 20px; 
+	font-size: 14px; 
+}
+#editor-portfolio-instructions p { 
+	margin-bottom: 0.5em; 
+}

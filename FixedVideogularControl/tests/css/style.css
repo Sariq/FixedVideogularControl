@@ -1,0 +1,177 @@
+@charset "utf-8";
+/*@import url( 'common/jquery-ui-1.10.3.custom.min.css' );*/
+/* Boilerplater header, mostly reset stuff */
+/* Issues: none */
+@import url( 'common/boilerplate-head.css' );
+
+/* Font face declaration */
+/* Issues: none */
+@import url( 'common/font-face.css' );
+
+/* Layout stuff including some footer rules. */
+/* Issues: .new-background should be removed once everything has the class */
+@import url( 'common/layout.css' );
+
+/* Header */
+/* Issues: Has some footer styles */
+@import url( 'common/header.css' );
+
+/* Footer */
+/* Issues: None? */
+@import url( 'common/footer.css' );
+
+/* Submenus */
+/* Issues: DISABLED, not inline with current theme */
+@import url( 'common/menu-submenu.css' );
+
+
+
+/* Get support button */
+/* Issues: none */
+@import url( 'common/get-support.css' );
+
+/* Messages */
+/* Issues: none */
+@import url( 'common/messages.css' );
+
+/* jQuery ui helper */
+/* Issues: Check if this is for multiselect or also for tabs and dialog? */
+@import url( 'common/ui-helper.css' );
+
+/* jQuery ui tabs, only used by project-view, but is pretty generic. */
+/* Issues: none */
+@import url( 'common/ui-tabs.css' );
+
+/* jQuery ui dialog. */
+/* Issues: none */
+@import url( 'common/ui-dialog.css' );
+
+/* Forms, mostly .white-form rules and some other stuff. Does not include all the project-view forms, those are in projects.css */
+/* Issues: .white-form isn't the best name, probably contains some old compat code that can be cleaned up (anything not namespaced under .white-form should be checked) */
+@import url( 'common/forms.css' );
+
+/* Rules filters which are the drill down selectors for index pages */
+/* Issues: Search disabled */
+@import url( 'common/forms-filters.css' );
+
+/* Rules for ui-multiselect, language selection in editor portfolio. */
+/* Issues: Has compatiblity to IE < 8, should maybe be replaced with something newer... */
+@import url( 'common/forms-multiselect.css' );
+
+/* Pagination */
+/* Issues: none */
+@import url( 'common/pagination.css' );
+
+/* Style for uploads. */
+/* Issues: none */
+@import url( 'common/upload.css' );
+
+/* Style for star rating widget, both static and dynamic (input) */
+/* Issues: none */
+@import url( 'common/rating.css' );
+
+/* Style for cool round signup button. */
+/* Issues: none */
+@import url( 'common/signup-button.css' );
+
+/* Style for password complexity widget. */
+/* Issues: none */
+@import url( 'common/password-complexity.css' );
+
+
+/* Carousel */
+/* Issues: Needs a style update? */
+@import url( 'common/feature-carousel.css' );
+@import url( 'common/carousel.css' );
+
+
+/* Stuff not categorized really */
+/* Issues: shouldn't exist */
+@import url( 'common/misc.css' );
+
+/*html5 app related css*/
+@import url( 'lib.css' );
+@import url( 'app.css' );
+
+
+@import url( 'jobScreen/main.css' );
+@import url( 'jobScreen/mobile.css' );
+
+/* 
+	Page specific rules, some stuff might be shared between controllers and should be moved to common.
+	Naming convension should be: common controller stuff in 'controller.css' and method specific in 'controller-method.css'.
+*/
+
+
+/* User signup form styles, required fields marker not displayed */
+/* Issues: none */
+@import url( 'user-signup.css' );
+
+/* Style for static pages, the content in views/pages, basic small checkered background, full width page title and sub titles. */
+/* Issues: none */
+@import url( 'page.css' );
+
+/* Style for editor and clip index. */
+/* Issues: .editor-card and .clip-info should be merged and html maybe made to be more similar. .editor/.clip class names are too generic. .editor-send stuff is not in there yet. */
+@import url( 'editors.css' );
+
+/* Style for common project pages (mostly projects-index and projects-view). */
+/* Issues: None. */
+@import url( 'projects.css' );
+
+/* Style for project index pages. */
+/* Issues: None. */
+@import url( 'projects-index.css' );
+
+/* Style for single project pages. */
+/* Issues: It's a mess. Waiting for re-design, hopefully this file can be discarded. */
+@import url( 'projects-view.css' );
+
+/* Style for editor profile in proposal. */
+/* Issues: none */
+@import url( 'projects-proposal.css' );
+
+/* Style for milestone editing and display. */
+/* Issues: some code might be the result of projects.css craziness, this could be cleaned up when those are changed. */
+@import url( 'projects-milestones.css' );
+
+/* Style project creation. */
+/* Issues: none */
+@import url( 'projects-create.css' );
+
+/* progress bar sty;e. */
+/* Issues: naming is not consistent, too many properties are duplicated, could be more generic  */
+@import url( 'projects-progress.css' );
+
+/* Style for project upload. */
+/* Issues: none */
+@import url( 'projects-files.css' );
+
+/* Style user preferences. */
+/* Issues: none */
+@import url( 'user-preferences.css' );
+
+/* Editor Profile Edit */
+/* Issues: needs new design */
+@import url( 'editor-profile-edit.css' );
+
+/* Welcome pages, home page and editor welcome */
+/* Issues: syntax, non-semantic, refrences missing images: images/arrows-small.png and images/small-nav.png */
+@import url( 'welcome.css' );
+
+/* Video watch, used to be share.css (stripped out signup style) */
+/* Issues: syntax */
+@import url( 'video-watch.css' );
+
+/* Editor Profile */
+/* Issues: syntax */
+@import url( 'editor-profile.css' );
+
+/* Exceptions */
+/* Issues: needs to be inlined to exception headers. */
+@import url( 'exception.css' );
+
+/* Boilerplater helpers */
+/* Issues: none */
+@import url( 'common/boilerplate-footer.css' );
+

@@ -1,0 +1,170 @@
+@charset "utf-8";
+
+#projects-view-send-proposal .field-message label {
+    display: block;
+}
+
+#projects-view-send-proposal .field-message textarea {
+    width: 100%;
+	max-width:350px;
+}
+
+#projects-view-send-proposal  .talk-button-container{
+    width:100%;
+}
+
+div#proposal-fields label {
+    min-width: 180px;
+    display: inline-block;
+}
+
+/* Payment scheme select */
+#proposal-fields .field-select div {
+    float: right;
+    line-height: 28px;
+}
+
+#proposal-milestones .field {
+    margin-top: 0;
+}
+
+#proposal-milestones-header {
+    margin: 1em 2em 5px;
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom: 1px solid;
+}
+
+#proposal-milestones-header span {
+    width: 200px;
+    display: inline-block;
+}
+
+#proposal-milestones-header span:first-child,
+.field-milestone_type {
+    width: 120px;
+}
+
+#proposal-milestones-list {
+    padding-left: 0;
+}
+
+.field-milestone_type,
+#proposal-milestones .field-percent,
+.field-milestone_price {
+    display: inline-block;
+}
+
+#proposal-milestones .field-percent .field-description,
+#proposal-milestones .field-percent .field-description-content {
+    display: inline;
+}
+
+#proposal-milestones .field.field-name {
+    margin-left: 20px;
+}
+
+#proposal-milestones .field-name input {
+    width: 110px;
+    margin-right: 10px
+}
+
+#proposal-milestones .field-percent {
+    margin-left: 10px;
+}
+
+.field-milestone_type label,
+#proposal-milestones .field-percent label {
+    display: none;
+}
+
+.proposal-milestone {
+    white-space: nowrap;
+}
+
+.proposal-milestone-remove {
+    float: right;
+}
+
+.field-milestone_type,
+.field-milestone_price {
+    line-height: 28px;
+}
+
+#proposal-milestones .field-percent input {
+    width: 40px;
+}
+
+.field-milestone_price {
+    width: 40px;
+    padding: 5px;
+}
+
+.proposal-milestone-remove {
+    padding: 5px 0;
+}
+
+.proposal-milestone-remove a.rounded-button {
+    padding: 0 5px;
+    background: #000;
+    color: #fff;
+    font-weight: bold;
+}
+
+.proposal-milestone-remove a:hover {
+    text-decoration: none;
+}
+
+#proposal-milestone-template {
+    display: none;
+}
+  #project-payment .field-deadline label,
+  #project-payment .field-days label{
+   width:240px !important;
+   display:inline-block;
+    }
+    
+     #project-payment .field-deadline  input,
+  #project-payment .field-days  input{
+  width:60px; 
+  }
+    #project-payment #milestones {
+        margin-top:8px;
+    }
+#proposal-milestone-approve.invalid .field-milestone_type,
+#proposal-milestone-approve.invalid .field-percent,
+#proposal-milestone-approve.invalid .field-milestone_price {
+    color: red;
+}
+
+#job-aside .payment-milestones {
+    margin-left: 26px;
+    margin-bottom: 10px;
+}
+
+#job-aside .payment-milestones .milestone-previous {
+    background: #d9d9d9;
+}
+
+#job-aside .payment-milestones .milestone-current {
+    background: #ffff00;
+    position: relative;
+}
+
+#job-aside .payment-milestones .milestone-current .arrow {
+    background: url('images/milestone-arrow.png') 0 0 no-repeat;
+    width: 22px;
+    height: 24px;
+    position: absolute;
+    left: 4px;
+    margin-top: -4px;
+}
+
+.payment-milestone-next {
+    display: none;
+}
+
+#job-history .payment-milestone-next {
+    display: block;
+}
+

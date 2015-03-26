@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+#get-support {
+	position: fixed;
+	bottom: 100px;
+	right: 0;
+	z-index: 10000;
+	
+	display: block;
+	width: 49px;
+	height: 138px;
+	overflow: hidden;
+	text-indent: -1000px;
+	
+	background: url( 'images/get-support.png' ) 0 0 no-repeat;
+}
+
+.user-bug #get-support {
+	display: none;
+}

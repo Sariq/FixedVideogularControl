@@ -1,0 +1,54 @@
+{
+  "name": "vc-html5app",
+  "main": "app.js",
+  "version": "0.0.0",
+  "authors": [
+    "nadav <ns@nadavsinai.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {},
+  "dependencies": {
+      "jquery": "*",
+    "isotope": "*",
+    "jquery-bridget": "*",
+    "get-style-property": "*",
+    "get-size": "*",
+    "eventEmitter": "*",
+    "eventie": "*",
+    "doc-ready": "*",
+    "matches-selector": "*",
+    "outlayer": "*",
+    "masonry": "*",
+    "imagesloaded": "*",
+    "angular": "*",
+    "angular-masonry": "*",
+    "angular-deckgrid": "*",
+    "angular-route": "*",
+    "ngDialog": "*",
+    "ng-grid": "*",
+    "videogular": "*",
+    "videogular-controls": "*",
+    "videogular-poster": "*",
+    "bower-videogular-flash-alt": "*",
+    "videogular-buffering": "*",
+    "videogular-overlay-play":"*",
+    "font-awesome": "*",
+    "angular-animate": "*",
+    "swfobject": "*",
+    "angular-sanitize": "*",
+    "angular-touch": "*",
+    "angular-cookies": "*",
+    "angular-resource": "*"
+  },
+  "resolutions": {
+    "angular": "1.3.5"
+  }
+}

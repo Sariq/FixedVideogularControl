@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+#player-overlay {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top:0;
+	background: #000;
+}
+
+#carousel-container {
+	padding-top: 0px;
+	position: fixed;
+	top: 50%;
+	z-index: 2000;
+	margin: -236px 0 -5px 0;
+	width: 991px;
+	height: 473px;
+	background: url( 'images/carousel-back.png' ) top left no-repeat;
+}
+
+#carousel-container .loading {
+	position: absolute;
+	width: 991px;
+    left: 0;
+	text-align: center;
+    top: 227px;
+	font-size: 18px;
+	z-index: 100;
+}
+#carousel {
+  height: 360px;
+  width: 991px;
+  background: none;
+}
+.carousel-feature {
+	background: #000;
+}
+#carousel .carousel-feature .carousel-caption {
+	top: 0;
+	bottom: auto;
+	color: #DBF4DE;
+    font-size: 17px;
+    line-height: 35px;
+	opacity: 0.75 !important;
+	/*height:35px;*/
+}
+#carousel .carousel-feature-dummy {
+	display: none !important;
+}
+#carousel-left, #carousel-right {
+	display: block;
+	top: 190px;
+	width: 28px;
+	height: 43px;
+	background: url( 'images/carousel-left.png' ) top left no-repeat;
+}
+#carousel-left {
+	left: 10px;
+}
+#carousel-right {
+	right: 10px;
+	background: url( 'images/carousel-right.png' ) top left no-repeat;
+}
+
+#carousel-close {
+	display: block;
+	background: url( 'images/carousel-close.png' ) top left no-repeat;
+	width: 22px;
+	height: 20px;
+	position: absolute;
+	right: 11px;
+	top: 11px;
+}
+
+#carousel .tracker-individual-container {
+	top: auto;
+	bottom: -55px;
+}
+#carousel .tracker-summation-container {
+	top: auto;
+	bottom: -85px;
+}
+
+#carousel .carousel-clip-duration { 
+	color: #f00; 
+	font-size: 0.8em; 
+	margin-left: 4px; 
+}
+ 
+#carousel .carousel-editor-name { 
+	color: #DBF4DE; 
+	text-decoration: none; 
+}
+
+.player-container {
+	position: absolute; 
+	z-index: 100;  
+	width: 640px; 
+	height: 360px;
+	background: url( 'images/ajax-loader.gif' ) center center no-repeat;
+}
+
+.carousel-caption .title, .carousel-caption .info {
+	padding-left: 100px;
+}
+.carousel-caption .title {
+	background-color: #111;
+	height: 35px; 
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.carousel-caption .info {
+	background-color: #333;
+	line-height: 1.2;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	max-height: 58px;
+	overflow: hidden;
+}
+#carousel .editor-pic {
+	display: block;
+	background-image: url( 'images/editor-pic-back.png' );
+	width: 60px;   
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	padding: 13px 12px 12px 12px;
+	position: absolute;
+    left: -2px;
+    top: -33px;
+    z-index: 200;
+}
+#carousel .editor-pic img {
+	vertical-align: middle;
+}

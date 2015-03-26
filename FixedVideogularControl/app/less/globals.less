@@ -1,0 +1,216 @@
+.backgroundAndSpinColor(@color:@grey) {
+  background-color: @color;
+  &:hover {
+    background-color: spin(@color, 15);
+  }
+}
+
+.strikeThrough {
+  text-decoration: line-through;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+.fullButton {
+    background: 0;
+	width: 100px;
+	text-decoration: none;
+	text-align: center;
+        position:relative;
+	text-decoration: none;
+	text-align: center;
+	display: block;
+	font-size: 14px;
+	color: white;
+	-webkit-appearance: none;
+	white-space: nowrap;
+	box-sizing: border-box;
+	height:32px;
+        padding-top:8px;
+	padding-bottom:8px;
+	padding-right:20px;
+	padding-left:20px;
+
+	border: none;
+	background-color: #0057b9;
+	-webkit-box-shadow: 0 3px 2px rgba(0,0,0,.05);
+	box-shadow: 0 3px 2px rgba(0,0,0,.05);
+        &:hover {          
+	background: #0065d9;
+	-webkit-box-shadow:
+		inset 0px 1px 0px 0px rgba(105,175,255,1),
+		0 3px 2px rgba(0,0,0,.05);
+	box-shadow:
+		inset 0px 1px 0px 0px rgba(105,175,255,1),
+		0 3px 2px rgba(0,0,0,.05);
+        }
+        &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+.appBtn {
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  font-size: 14px;
+  padding: 3px 6px;
+  color: white;
+  min-width: 26px;
+  white-space: nowrap;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, .05);
+  //  opacity: 0.7;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 0 12px;
+  display: inline-block;
+  &:not([disabled]):hover {
+    //    opacity: 1;
+    text-decoration: none;
+    -webkit-box-shadow: inset 0px 1px 0px 0px rgba(105, 175, 255, 1), 0 3px 2px rgba(0, 0, 0, .05);
+    box-shadow: inset 0px 1px 0px 0px rgba(105, 175, 255, 1), 0 3px 2px rgba(0, 0, 0, .05);
+  }
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  .backgroundAndSpinColor;
+  &.blue {
+    .backgroundAndSpinColor(@blue);
+  }
+  &.red {
+    .backgroundAndSpinColor(@red);
+  }
+  &.green {
+    .backgroundAndSpinColor(@green);
+  }
+  &.large {
+    padding: 20px 8px;
+    font-size: 18px;
+  }
+  .tight {
+    padding: 0px;
+  }
+}
+
+.simpleShowAni.ng-hide-add,
+.simpleShowAni.ng-hide-remove {
+  -webkit-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+  display: block !important;  
+  opacity: 1;
+}
+
+.simpleShowAni.ng-hide {
+  opacity: 0;
+}
+
+.animateShow {
+  transition: all linear 0.5s;
+  -webkit-transition: all linear 0.5s;
+  &.ng-hide-add, &.ng-hide-remove {
+    line-height: 20px;
+    opacity: 1;
+    display: block !important;
+    &.ng-hide-add-active,
+    &.ng-hide-remove-active {
+
+    }
+  }
+  &.ng-hide {
+    line-height: 0;
+    opacity: 0;
+    padding: 0 10px;
+  }
+}
+
+.repeatAnimation {
+  &.ng-enter,
+  &.ng-leave,
+  &.ng-move {
+    -webkit-transition: 0.5s linear all;
+    transition: 0.5s linear all;
+    position: relative;
+  }
+  &.ng-enter {
+    left: -10px;
+    opacity: 0;
+    &.ng-enter-active {
+      left: 0;
+      opacity: 1;
+    }
+  }
+  &.ng-leave {
+    left: 0;
+    opacity: 1;
+    &.ng-leave-active {
+      left: -10px;
+      opacity: 0;
+    }
+  }
+  &.ng-move {
+    opacity: 0.5;
+    &.ng-move-active {
+      opacity: 1;
+    }
+  }
+}
+
+.slide-hide, .slide-show {
+  -webkit-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+  -moz-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+  -o-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+  transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+}
+
+.slide-hide {
+  position: relative;
+  top: 0;
+  &.slide-hide-active {
+    position: absolute;
+    top: -100px;
+  }
+}
+
+.slide-show {
+  position: absolute;
+  top: 100px;
+  &.slide-show-active {
+    position: relative;
+    top: 0px;
+  }
+}
+
+.inline {
+  display: inline-block;
+}
+
+.float_right {
+  float: right;
+}
+
+.fit_layer_width{
+  width: 3px;
+  height: 100%;
+  border: solid 1px #422123;
+  display: inline-block;
+  margin: 0px 2px;
+  background: #efefef;
+}
+
+.fit_layer_width:hover{
+  cursor: w-resize;
+}
+
+.resizecursor{
+  cursor: w-resize !important;
+}
+
+.initialcursor{
+  cursor: initial !important;
+}

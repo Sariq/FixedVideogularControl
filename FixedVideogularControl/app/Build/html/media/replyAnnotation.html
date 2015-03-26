@@ -1,0 +1,21 @@
+<div class="annotation reply" ng-class={marked:state.isMarked}><span class=from>{{ annotation.fromUser }}</span> <span ng-hide=state.$editable class=comment>{{ annotation.comment }}</span> <span ng-show=state.$editable class=comment><textarea rows=3 placeholder="Write your comment here" ng-model=annotation.comment></textarea></span><div class=annotationButtons><button class="appBtn green reply annotation_comment" title="Click to add a reply comment"></button> <button class="appBtn reply annotate_reply" title="Click to reply comment"></button> <button class="appBtn delete annotate_delete" title="Click to Delete comment"></button> <button class="appBtn annotate_flag_red" title="Click to reply comment"></button><!--<button ng-hide="state.$editable || (!userIsProjectOwner && !userHasWritten(annotation)) "
+ ng-click="annotation.delete()" class="appBtn delete annotate_delete" title="Click to Delete comment">
+ <span><i class="fa-trash-o fa"></i></span>
+ </button>--><!--<button ng-hide="state.$editable" ng-if="userIsProjectOwner" ng-click="annotation.hide()" class="hide"--><!--title="Click to hide">--><!--<span><i class="fa fa-eye-slash"></i></span>--><!--</button>--><!--<button ng-hide="state.$editable" ng-if="userIsProjectOwner && annotation.isHidden" ng-click="annotation.show()"--><!--class="show"--><!--title="Click to show">--><!--<span><i class="fa fa-eye"></i></span>--><!--</button>--><!--<button ng-hide="state.$editable || !annotation.userCanVote()" ng-click="annotation.voteUp()" class=" appBtn blue voteUp"
+ title="Click to vote up for comment">
+ <span>{{ annotation.votes.up }}<i class="fa fa-chevron-up"></i></span>
+ </button>
+
+ <button ng-hide="state.$editable || !annotation.userCanVote()" ng-click="annotation.voteDown()" class="appBtn red voteDown"
+ title="Click to vote down for comment">
+ <span>{{ annotation.votes.down }}<i class="fa fa-chevron-down"></i></span>
+ </button>
+
+ <button ng-show="state.$editable" ng-click="cancelSave()" class="appBtn cancel"
+ title="Click to remove comment">
+ <span><i class="fa fa-times"></i></span>
+ </button>
+
+ <button ng-show="state.$editable" ng-click="save()" class="appBtn green" title="Click to save comment">
+ <span><i class="fa-save fa"></i> </span>
+ </button>--></div></div>

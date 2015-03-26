@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+/* Simple page */
+
+.page-index { 
+
+}
+
+#page-content { 
+	width: 840px;
+	margin: 0 auto;
+}
+
+#page-content h1.page-title {
+	font-weight: 700;
+	font-size: 41px;
+	line-height: 52px;
+	padding: 5px 0px 0px;
+	background-image: url( 'images/pattern.png' );
+	margin-bottom: 45px;
+}
+
+#page-content p {
+	font-weight: 100;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #1d1d1d;
+	text-shadow: 0px 0px 1px rgba(0,0,0,.2), 0px 1px 1px #fff;
+	margin-bottom: 1em;
+}
+
+
+#page-content a {
+	text-decoration: none;
+}
+
+/* tos, automatic sub-item counter */
+#page-content ol { 
+	counter-reset: item; 
+	margin-left: 1.2em; 
+	margin-top: 1em; 
+	font-size: 16px;
+	padding: 0;
+}
+#page-content li { 
+	margin-bottom: 1em; 
+	line-height: 1.5; 
+	counter-increment: item;  
+}
+#page-content li li { 
+	list-style-type: none; 
+}
+#page-content li li:before { 
+	content: counters(item, ".") "\0000a0\0000a0\0000a0\0000a0"; 
+}
+
+#page-content .signup-btn {
+	margin: 30px auto 17px;
+}
+#page-content .editor-signup-btn {
+	margin: 0 auto;
+	text-align: center;
+}
+
+#page-content .white-box {
+	position:relative;
+	padding: 20px 10px 15px;
+	margin: 30px auto 20px;
+	border-radius: 4px;
+	background-color: #fff;
+	-webkit-box-shadow: 0 2px 3px rgba(0,0,0,.4);
+	box-shadow: 0 2px 3px rgba(0,0,0,.4);
+}
+
+.faq {
+	margin-top:25px;
+	margin-right:25px;
+		padding-left: 40px;
+		padding-right:40px;
+}
+.step div {
+	line-height:22px;
+
+	display:inline-block;
+	vertical-align: bottom;
+}
+
+.hiw_img {
+	position:relative;
+	min-height:260px;
+	line-height:260px;
+	width:140px;
+	z-index:100;
+	float:left;
+	vertical-align: text-bottom;
+}
+
+.float_right {
+	float:right;
+	min-width:190px;
+}
+
+.hiw_txt { 
+	min-height:260px;
+	max-width:550px;
+	
+		font-weight: 100;
+	font-size: 15px;
+	line-height: 1.5;
+	color: #1d1d1d;
+	text-shadow: 0px 0px 1px rgba(0,0,0,.2), 0px 1px 1px #fff;
+
+	margin-bottom: 1em;
+
+}
+
+.step {
+	margin:30px;
+	clear:both;
+	position:relative;
+	overflow:hidden;
+}
+
+
+
+.circle {
+	background:url(images/circle.png) no-repeat;
+	width:76px;
+	height:76px;
+	font-size:74px;
+	font-weight:800;
+	color:#FFF;
+	position:absolute;
+	z-index:1;
+	
+	left:-25px;
+	top:-5px;
+}
+
+.hiw_txt span {
+	text-transform:uppercase;
+	color:#0056b9;
+	font-size:18px;
+	display:block;
+	font-weight:700;
+	
+	}
+	
+	.hiw_txt h2{
+margin-top:0px;	
+display:block;
+	}
+	
+	.hiw_txt p {
+	font-size:11px;
+	}

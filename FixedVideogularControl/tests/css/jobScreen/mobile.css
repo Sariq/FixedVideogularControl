@@ -1,0 +1,320 @@
+@media (max-width: 2600px){
+	.media-content .media-item{
+		width: 25%;
+	}
+}
+
+@media (max-width: 1919px){
+	.media-content .media-item{
+		width: 33.33%;
+	}
+}
+
+@media (max-width: 1559px){
+	.media-content .media-item{
+		width: 50%;
+	}
+}
+
+@media (max-width:1023px){
+	.media-content .media-item{
+		width: 50%;
+	}
+
+	.sh-container{
+		width: 90%;
+	}
+}
+
+@media (max-width:979px){
+	.sh-container{
+		width: 90%;
+	}
+
+	.more-message .col-sm-4:nth-child(2) span{
+		font-size: 12px;
+	}
+}
+
+@media (max-width:899px){
+	.project-title div.float-left span{
+		font-size: 18px;
+	}
+	.sh-container{
+		width: 90%;
+	}
+
+	.message-content, .message-date, .sub-message-content, .sub-more-message, .more-message .col-sm-4:nth-child(2) span{
+		font-size: 12px;
+	}
+
+	.left-panel{
+		margin-top: 118px;
+	}
+
+	.sub-message-header{
+		font-size: 14px;
+	}
+
+	.sub-message-div img{
+		width: 200px;
+	}
+
+	.sub-message-area {
+    	width: calc(100% - 220px);
+	}
+
+	.avata-img{
+		width: 150px;
+		height: 150px;
+		border-radius: 150px;
+	}
+
+	.body-panel{
+		margin-top: 0px;
+	}
+
+	.project-title{
+		padding-left: 80px;
+	}
+
+	.project-content {
+    	padding: 35px 40px 0px 40px;
+    }
+
+    .more-message .col-sm-4:nth-child(1), .more-message .col-sm-4:nth-child(3){
+    	width: 20%;
+    }
+
+    .more-message .col-sm-4:nth-child(2){
+    	width: 59%;
+    	text-align: center;
+    }
+}
+
+@media (max-width:767px){
+
+	.mobile-col-half{
+		width: 100%;
+	}
+	.left-panel{
+		display: none;
+	}
+	.mobile-menu-img{
+		display: block;
+	}
+	.user-lists{
+		display: none;
+	}
+	.user-img{
+		display: none;
+	}
+
+	.sub-message-div img{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+
+	.sub-message-div .sub-message-area{
+		width: 100%;
+	}
+
+	.more-message .col-sm-4{
+		float: left;
+	}
+
+	.body-panel{
+		width: calc(100% - 10px);
+	}
+
+	.project-title{
+		margin-left: 80px;
+	}
+
+	.project-desc{
+		margin-left: 80px;
+	}
+
+	.project-desc{
+		width: auto;
+		margin-left: 55px;
+	}
+}
+
+@media (max-width: 639px){
+	.avata-img {
+	    width: 100px;
+	    height: 100px;
+	    border-radius: 100px;
+	}	
+
+	.main-container{
+		padding-top: 45px;
+	}
+
+	.project-title {
+	    padding-left: 25px;
+	    height: 42px;
+	    line-height: 48px;
+	}
+
+	.project-title div.float-left{
+		height: 100%;
+	}
+
+	.project-title div.float-left span {
+    	font-size: 13px;
+	}
+
+	.project-title div.float-right img{
+		height: 35px;
+		margin-top: -6px;
+	}
+
+	.project-content {
+	    padding: 35px 20px 0px 20px;
+	}
+
+	.project-desc{
+		padding-left: 54px;
+		font-size: 12px;
+	}
+
+	.left-panel {
+	    margin-top: 97px;
+	}
+}
+
+@media (max-width: 479px){
+	.media-content .media-item{
+		width: 100%;
+		padding-right: 0px !important;
+	}
+
+	.project-title {
+	    margin-left: 55px;
+	}
+
+	.project-title .float-right {
+	    width: 60px;
+	}
+
+	.logo-img{
+		width: 150px;
+	}
+
+	.header-container .btn-area{
+		margin-top: 15px;
+	}
+
+	.signupfree-btn{
+		margin-bottom: 5px;
+	}
+
+	.sh-container{
+		width: 95%;
+	}
+
+	.avata-img {
+	    width: 75px;
+	    height: 75px;
+	    border-radius: 75px;
+	}
+
+	.project-link{
+		margin-left: -5px;
+	}
+
+	.main-container{
+		padding-top: 35px;
+	}
+
+	.left-panel {
+	    width: 56px;
+	    margin-top: 68px;
+	}
+
+	.left-panel ul {
+	    padding-left: 10px;
+	}
+
+	.project-title {
+	    padding-left: 25px;
+	    height: 32px;
+	    line-height: 36px;
+	}
+
+	.project-title div.float-left span {
+	    font-size: 12px;
+	}
+
+	.project-title div.float-left img {
+	    margin-top: -2px;
+	    width: 21px;
+	}
+
+	.project-title div.float-right img {
+	    height: 26px;
+	    margin-top: -6px;
+	}
+
+	.project-desc {
+		padding-left: 47px;
+		font-size: 8px;
+	}
+
+	.project-content {
+	    padding: 35px 10px 0px;
+	}
+
+	.message-area{
+		position: relative;
+		padding-bottom: 20px;
+	}
+
+	.message-content{
+		width: calc(100% - 66px);
+		margin-left: 43px;
+		margin-top: -18px;
+	}
+
+	.message-date{
+		position: absolute;
+		top: 9px;
+		right: 1px;
+	}
+
+	.more-message .col-sm-4:nth-child(1), .more-message .col-sm-4:nth-child(3) {
+	    width: 14%;
+	}
+
+	.more-message .col-sm-4:nth-child(2) {
+	    width: 70%;
+	}	
+
+	.more-message .col-sm-4:nth-child(2) span {
+	    font-size: 11px;
+	}
+
+	.sub-message-header{
+		font-size: 13px;
+	}
+}
+
+@media (max-width: 359px){
+	.project-title{
+		padding-right: 0px;
+	}
+
+	.project-title .float-right{
+		width: 30px;
+	}
+
+	.mobile-menu-img{
+		left: 0px;
+	}
+
+	.mobile-menu-ul{
+		left: -50px;
+	}
+}

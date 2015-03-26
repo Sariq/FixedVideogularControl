@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+.jobs-files .white-form {
+	width: 763px
+}
+.jobs-files .white-form-footer {
+	width: 863px
+}
+
+#job-files-form {
+	float: left; 
+	width: 500px;
+}
+
+.fakefile {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+.fakefile-center {
+	display: table-cell;
+	vertical-align: middle;
+}
+.fakefile-text {
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+form .field-upload {
+	height: 125px;
+	max-width: 500px;
+}
+
+.white-form .field-upload {
+	height: 275px;
+	max-width: 500px;
+}
+
+
+#job-attached-files-list table tr:last-child { 
+	border-bottom: 0; 
+}
+
+#job-attached-files-list { 
+	max-height: 286px; 
+	overflow-y: auto;
+}
+
+#job-attached-files {
+	margin-bottom: 40px; 
+}
+
+.media-file-contents {
+	overflow:hidden;
+}

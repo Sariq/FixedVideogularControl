@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+.messages .message {
+	color: #000;
+	border-radius: 4px;
+	background-color: #fff;
+	-webkit-box-shadow: 0 2px 3px rgba(0,0,0,.4);
+	box-shadow: 0 2px 3px rgba(0,0,0,.4);
+	max-width:956px;
+}
+
+.messages .message { border: 1px solid silver; padding: 10px; font-size: 14px; margin: 20px 0; }
+.messages .error { border: 1px solid red; }
+.messages .success { border: 1px solid green; }
+.messages .warning { border: 1px solid yellow; }
+.messages .info { border: 1px solid blue; }

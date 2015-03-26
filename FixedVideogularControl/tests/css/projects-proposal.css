@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+.proposal-accept-info {
+	margin-top: 8px;
+	clear: both;
+}
+.proposal-accept-warning { 
+	color: #ccf3f8;
+	font-weight: bold; 
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+	font-size: 13px;
+}
+
+.proposal-accept-warning a{ 
+	color: #FFFF00;	
+}
+.proposal-accept-warning p {
+	margin-top: 1em;
+}
+
+#proposal-coupon { 
+	font-size: 14px;
+}
+.coupon-final-price { 
+	font-weight: bold; 
+}
+.coupon-remove { 
+	float: right; 
+	font-weight: normal; 
+	font-size: 12px; 
+}
+#coupon-apply { 
+	background: #808080; 
+	padding: 0 3px; 
+	font-size: 12px; 
+}
+#coupon-calculation { 
+	height: 45px; 
+}
+#coupon-calculation p {
+	margin-bottom: 4px; 
+}
+#coupon-calculation.progress { 
+	background: url( 'images/ajax-loader-small.gif' ) center center no-repeat; 
+}

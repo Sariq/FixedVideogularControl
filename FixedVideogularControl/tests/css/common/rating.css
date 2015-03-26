@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+.rating {
+	margin-top:5px;
+	position:relative;
+	background:url( 'images/ratings.png' ) left top no-repeat;
+	height:15px;
+	width:80px;
+	clear:both;
+}
+
+.no-rating {
+	position:relative;
+	height:20px;
+	font-size: 12px;
+}
+.rating input { 
+	display: none; 
+}
+.rating label {
+	z-index:5;
+	position:absolute;
+	width:15px !important;
+	margin:0 !important;
+	top:0;
+	line-height:15px;
+	height:15px;
+	background:none left -25px no-repeat;
+	text-indent: -100px; 
+	overflow: hidden; 
+}
+
+.rating input[type="radio"]:checked+label, 
+.rating label:hover {
+	cursor:pointer;
+	left:0px !important;
+	z-index:1;
+	background-image:url( 'images/ratings.png' );
+}
+.rating label#rate-1 {
+	left:0px;z-index:1025;
+}
+.rating label#rate-2 {
+	left:16px;z-index:1020;
+} 
+.rating label#rate-3 {
+	left:32px;z-index:1015;
+} 
+.rating label#rate-4 {
+	left:48px;z-index:1010;
+} 
+.rating label#rate-5 {
+	left:64px;z-index:1005;
+}
+
+.rating #current-rating.rate-0 {
+	width:0px;
+}
+.rating #current-rating.rate-1 {
+	width:16px;
+} 
+.rating input[type="radio"]:checked+label#rate-2, 
+.rating label#rate-2:hover, 
+.rating #current-rating.rate-2 {
+	width: 32px !important;
+} 
+.rating input[type="radio"]:checked+label#rate-3, 
+.rating label#rate-3:hover, 
+.rating #current-rating.rate-3 {
+	width: 48px !important;
+} 
+.rating input[type="radio"]:checked+label#rate-4, 
+.rating label#rate-4:hover, 
+.rating #current-rating.rate-4 {
+	width: 64px !important;
+} 
+.rating input[type="radio"]:checked+label#rate-5, 
+.rating label#rate-5:hover, 
+.rating #current-rating.rate-5 {
+	width: 80px !important;
+}
+
+.rating #current-rating {
+	display:block;
+	position: absolute;
+	height:16px;
+	z-index:0;
+	left:0;
+	top:0;
+	background:url( 'images/ratings.png' ) left -25px no-repeat;
+}
+.rating-review-count {
+    font-size: 10px;
+    left: 1px;
+    position: relative;
+    text-decoration: none;
+    top: 10px;
+    white-space: nowrap;
+}

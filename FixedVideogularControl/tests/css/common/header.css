@@ -1,0 +1,271 @@
+@charset "utf-8";
+
+/* Header */
+
+
+#top {
+	width: 100%;
+        
+	height: 78px;
+	padding-top:2px;
+	padding-bottom:2px;
+
+	border-bottom: 1px solid #242424;
+	background: url( 'images/darknoise.png' ) repeat scroll center top #3f3f3f;
+	/*font-size: 15px;
+	line-height: 22px;*/
+	-webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,.15);
+	box-shadow:	0px 2px 3px 0px rgba(0,0,0,.15);
+}
+
+.framez-index #top {
+    min-width:940px;
+}
+body[class^="framez"] #top{
+    z-index: 1;
+    background: #000000;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM5OTk2OTQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  #000000 0%, #999694 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000000), color-stop(100%,#999694));
+    background: -webkit-linear-gradient(top,  #000000 0%,#999694 100%);
+    background: -o-linear-gradient(top,  #000000 0%,#999694 100%);
+    background: -ms-linear-gradient(top,  #000000 0%,#999694 100%);
+    background: linear-gradient(to bottom,  #000000 0%,#999694 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#999694',GradientType=0 );
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 1;
+}
+
+#wrapper {
+    width:100%;
+    
+}
+
+.top-block {
+	position:relative;
+	height: 78px;
+	padding: 15px 15px 5px;
+}
+.top-container {
+	max-width: 1000px;
+position:relative;
+	margin: 0 auto;
+}
+/*
+.lt-ie9 #top {
+	top: 28px;
+}
+*/
+/*#top h1,*/
+#premium-title,
+#logo-container {
+	margin: 4px 0 0 0px;
+	float: left;
+	overflow: hidden;
+	position: relative;
+}
+
+#premium-title {
+    color: #FFFFFF;
+    font-family: 'Kaushan Script',cursive;
+	font-size: 20px;
+    font-weight: 500;
+    line-height: 50px;
+}
+#premium-title.framezSiteLogo{
+    margin: 0;
+    top:-10px;
+}
+#premium-title a {
+	color: #fff;
+	text-decoration: none;
+	margin-left: 15px;
+}
+
+
+#logo-container a {
+	display: block;
+	width: 115px;
+	height: 50px;
+	background: url( 'images/sprite-a.png' ) no-repeat;
+	text-indent: -3000em;
+	margin-left: 15px;
+}
+#skip {
+	position: fixed;
+	top: 0;
+	left: -10000px;
+}
+#skip a:focus,
+#skip a:active {
+	display: block;
+	position: absolute;
+	left: 10000px;
+	top: 0;
+	z-index: 10001;
+	width: 200px;
+	margin: 15px 0 0 15px;
+	padding: 4px 8px;
+	background: #333;
+	color: #fff;
+	font-weight: 500;
+	font-size: 1.1em;
+	text-align: center;
+	text-decoration: none;
+}
+#top-nav,
+#userinfo {
+	position: relative;
+	float: right;
+	margin: 16px 15px 0 0;
+	font-family: "proxima-nova";
+	text-transform: uppercase;
+}
+#userinfo .username {
+	text-transform: none;
+}
+#top-nav > ul {
+	background: url( 'images/darknoise.png' ) repeat scroll center top #3f3f3f;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	position:relative;
+}
+
+
+#userinfo .userinfo-item,
+#top-nav > ul > li {
+
+	float: left;
+	padding: 0 0 0 14px;
+	font-size: 1.5em;
+	position:relative;
+	overflow:visible;
+}
+ #top-nav > ul > li:not(.current_notif)  {
+	background:  #3f3f3f;
+}
+ body[class^="framez"]  #top-nav > ul > li:not(.current_notif)  {
+     background:none;
+ }
+.welcome-index  #top-nav > ul > li:not(.current_notif) ,
+.welcome-editor  #top-nav > ul > li:not(.current_notif)  {
+	background:none;
+}
+
+#userinfo .userinfo-item {
+	display: inline-block;
+}
+
+#top-nav > ul > li:first-child {
+	padding-left: 0;
+}
+#top-nav > ul > li > a,
+#top-nav > ul > li > span,
+#userinfo .userinfo-item > a,
+#userinfo .userinfo-item > span {
+	display: block;
+	float: left;
+	height: 29px;
+	padding: 0 15px;
+	background: url( 'images/nav.png' ) -3000em -3000em no-repeat;
+	color: #fff;
+	line-height: 30px;
+	text-decoration: none;
+}
+body[class^="framez"] #top-nav > ul > li{
+    margin-right:10px ;
+}
+#top-nav > ul > li.menu-item-user-login > a,
+#top-nav > ul > li.menu-item-user-login > span {
+	background: rgba(0,0,0,0.50);
+}
+#top-nav > ul > li.menu-item-user-signup > a,
+#top-nav > ul > li.menu-item-user-signup > span,
+#top-nav > ul > li.menu-item-editor-signup > a,
+#top-nav > ul > li.menu-item-editor-signup > span {
+	background: #0056b9;
+	font-weight: 700;
+}
+
+#userinfo .userinfo-item > a,
+#userinfo .userinfo-item > span {
+	background: #0056b9;
+}
+
+#top-nav > ul > li.menu-item-disabled {
+	opacity: 0.3;
+}
+
+
+#top-nav > ul > li.menu-current > span {
+	background: #000000;
+	border-radius:4px;
+	opacity:1;
+}
+
+#top-nav em,
+nav em,
+#footer nav em {
+	position: absolute;
+	left: -3000em;
+	top: -3000em;
+}
+
+
+
+.current_notif {
+	background:#F00;
+	padding: 0 15px;
+	border-radius:4px;
+
+}
+
+@media only screen and (max-width: 660px) {
+
+	body:not(.framez-index) #top-nav > ul > li.menu-item-how-it-works > a,
+	body:not(.framez-index) #top-nav > ul > li.menu-item-editors > a,
+	body:not(.framez-index) #top-nav > ul > li.menu-item-how-it-works > span,
+	body:not(.framez-index) #top-nav > ul > li.menu-item-editors > span {
+		display:none !important;
+	}
+
+}
+
+@media only screen and (max-width: 480px) {
+
+	body:not(.framez-index) #top-nav > ul > li:last-child {
+		float:right !important;
+		padding: 0 !important;
+	}
+
+}
+
+@media only screen and (max-width: 450px) {
+
+	body:not(.framez-index) #top {
+		height:93px;
+	}
+
+	body:not(.framez-index) #top h1,
+	body:not(.framez-index) #logo-container {
+		margin: 12px 0 0;
+		float:none;
+	}
+
+	body:not(.framez-index) #top h1 a,
+	body:not(.framez-index) #logo-container a {
+		margin: 0 auto;
+		float: none;
+	}
+
+	body:not(.framez-index) #top-nav > ul > li > a,
+	body:not(.framez-index) #top-nav > ul > li > span  {
+		display:none !important;
+	}
+
+
+}

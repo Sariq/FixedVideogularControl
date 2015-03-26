@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+.job-image {
+	float: left;
+	margin-right: 13px;
+}
+
+.job-info { 
+	float: left;
+	margin-right: 17px;
+	line-height: 16px;
+}
+
+.job-title a {
+	color: #636365;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.job-title a.changed-job  {
+	color:#F00;
+	}
+	

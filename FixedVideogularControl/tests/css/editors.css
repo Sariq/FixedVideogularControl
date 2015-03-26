@@ -1,0 +1,191 @@
+@charset "utf-8";
+
+.editor, 
+.clip {
+	float: left;
+	position: relative;
+	padding: 10px 11px;
+	width: 290px;
+	height: 205px;
+	margin: 0 0 15px 14px;
+	border-radius: 4px;
+	background-color: #fff;
+	-webkit-box-shadow: 0 2px 3px rgba(0,0,0,.4);
+	box-shadow: 0 2px 3px rgba(0,0,0,.4);
+}
+
+.editor-star {
+	position: absolute;
+	left: -12px;
+	top: -10px;
+	width: 36px;
+	height: 34px;
+	background: url('images/editor-star.png') top left no-repeat;
+	border: 0;
+	overflow: hidden;
+	text-indent: -1000em;
+}
+.editor-my-editor .editor-star {
+	background: url('images/editor-star-full.png') top left no-repeat;
+}
+
+.editor-image, 
+.clip-image {
+	float: left;
+	margin-right: 14px;
+	width: 130px;
+	height: 130px;
+	line-height: 130px;
+	vertical-align: middle;
+	text-align: center;
+	padding: 2px;
+	background-color: #fff;
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.4);
+	box-shadow: 0 1px 1px rgba(0,0,0,.4);
+	overflow: hidden;
+}
+
+
+.editor-card,
+.clip-info {
+	height: 150px;
+}
+
+.editor-card img, 
+.clip-image img {
+	display: inline;
+	vertical-align: middle;
+	margin: 0 auto;
+}
+
+.editor-card-text,
+.clip-info-text {
+	float: right;
+	padding-top: 5px;
+	font-size: 14px;
+	line-height: 25px;
+	width: 139px;
+}
+
+.editor-card-text .name, 
+.clip-info-text .clip-editor-name {
+	font-weight: bold;
+}
+
+.editor-card-text .name {
+	overflow: hidden;
+	height: 25px;
+}
+
+.clip-info-text .clip-editor-name a,
+.editor-card-text .name a {
+	text-decoration: none;
+}
+.editor-actions {
+	clear: both;
+	float: left;
+	width:135px;
+}
+
+.editor-card-text .country {
+	overflow: hidden;
+	height: 50px;
+}
+
+.editor-edit .file-size-info {
+	font-size: 0.8em;
+	margin-bottom: 4px;
+	margin-left: 6px;
+}
+
+.clip-info-text .description {
+	height: 23px;
+	overflow: hidden;
+}
+
+.editor-actions a {
+	font-size: 12px;
+	color: #828384;
+	text-decoration: none;
+	display: inline-block;
+	padding: 0 24px;
+	line-height: 22px;
+}
+
+a.editor-view-profile:hover {
+	color: #0056B9;
+}
+
+.editor-actions .send-job input {
+	padding: 0;
+}
+
+.editor-actions .send-job {
+	display: inline;
+	color: #828384;
+}
+
+a.editor-watch, 
+a.clip-watch-text {
+	display: block;
+	top: 136px;
+	left: 5px;
+	width: 135px;
+	height: 25px;
+	font-size: 14px;
+	line-height: 25px;
+	text-align: center;
+	text-decoration: none;
+	background-color: #333;
+	color: #fff;
+	margin-bottom: 5px;
+	padding: 1px 0px;
+	-webkit-box-shadow: 0 2px 2px rgba(0,0,0,.05);
+	box-shadow: 0 2px 2px rgba(0,0,0,.05);
+}
+
+a.clip-watch-text:hover,
+a.editor-watch:hover {
+	background: #006ae3;
+}
+
+
+.editors-getclips #carousel-close, 
+.editors-getclip #carousel-close { 
+	display:none; 
+}
+
+
+.back-to-job { 
+	position: absolute; 
+	right: 16px; 
+	top: 18px; 
+}
+#filters .list-c {
+	margin-left:10px;
+	margin-top:10px;
+	padding-top:10px;
+	padding-bottom:10px;
+	font-size:13px;
+
+}
+
+
+.list-c  li button.link-button {  
+     cursor: pointer; 
+
+	  padding: 8px 6px 6px 6px; 
+	
+	
+}
+
+.list-c button.active {
+	border-color: #003e4a; 
+	
+	  background: url( 'common/images/sprite-a.png' ) -3000em -3000em no-repeat; 
+	   background-color: #003e4a ;  
+	 color: #fff ;  
+
+	background-position: 7px -990px; 
+	padding-left:24px;
+}

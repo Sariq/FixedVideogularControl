@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+.jobs-create .white-form {
+	width: 763px;
+}
+#job-create-form {
+	float: left;
+	width: 500px;
+}
+
+#job-create-general {
+	margin-bottom: 29px;
+}
+
+#job-create-optional {
+	margin-top: 22px;
+}
+.jobs-create .white-form .field input[type="text"], 
+.jobs-create .white-form .field textarea {
+	max-width: 498px;
+}
+
+#job-create-form .user-preferences {
+	margin-top: 56px;
+}
+
+#job-create-launch-message {
+	font-size: 14px;
+	text-align: center;
+}
+.jobs-create .button-container {
+	margin: 30px 0 25px;
+	clear: both;
+}

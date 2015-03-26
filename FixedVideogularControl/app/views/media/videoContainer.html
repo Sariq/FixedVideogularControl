@@ -1,0 +1,29 @@
+<div class="videoContainer">
+    <videogular vg-stretch="config.stretch" vg-responsive="config.responsive" vg-autoplay='config.autoPlay' vg-width="config.width"
+                vg-height="config.height" vg-theme="config.theme.url" vg-player-ready="onPlayerReady($API)">
+               
+         <vg-media vg-src="config.media"               
+                  vg-native-controls="false">
+        </vg-media>
+        <vg-overlay-play></vg-overlay-play>
+       <api-connector></api-connector>
+         <vg-poster vg-url='config.poster.url'></vg-poster>
+   
+    </videogular>
+   <div class="video-action-control">
+        <div class="video-playing-bar">    
+        </div>
+        <div class="video-action-btns">
+            <div class="play-btn" ng-click="doSthonPlay();"></div>
+            <div class="play-btn" ng-click="doSthonPause();"></div>
+            <div class="music-btn"></div>
+            <div class="settings-btn"></div>
+            <div class="lock-btn"></div>
+            <div class="bright-btn"></div>
+<!--           <div class="video-timing">
+                <div class="video-timing-content">{{API.currentTime | date:'mm:ss'}}</div>
+            </div>-->
+         
+            <div   ng-click="addAnnotation()" class="add-annot-btn">+</div>
+    </div>
+</div>
