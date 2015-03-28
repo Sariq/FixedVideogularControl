@@ -24,6 +24,6 @@
                 <div class="video-timing-content">{{API.currentTime | date:'mm:ss'}}</div>
             </div>
          
-            <div   ng-click="addAnnotation()" class="add-annot-btn">+</div>
+            <div ng-show="!addDisabled"  ng-click="addAnnotation()" class="add-annot-btn">+</div>
     </div>
 </div>

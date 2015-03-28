@@ -30,6 +30,7 @@
             replace: true,
             templateUrl: '../app/views/media/videoContainer.html',
             controller: function ($scope, $element, $attrs) {
+                $scope.addDisabled = true;
                 $scope.config = {
                     media: [],
                     responsive: true,
@@ -71,10 +72,16 @@
                     $scope.playerAPI = API;
                     console.log(API)
                 };
-                $scope.playerPlay = function () {
-                    $scope.playerAPI.play();
+                //$scope.playerPlay = function () {
+                //    $scope.playerAPI.play();
                    
-                };
+                //};
+                $scope.$on('enableAdd', function () {
+                    $scope.addDisabled = false;
+                });
+                $scope.$on('disableAdd', function () {
+                    $scope.addDisabled = true;
+                });
                 //add Annot Sari
                 $scope.doSthonPlay = function () {
   

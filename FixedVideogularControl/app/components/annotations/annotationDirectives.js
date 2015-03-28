@@ -103,7 +103,7 @@
         };
         $scope.dismissOnPlayWatcher = null;
         $scope.save = function () {
-                 
+            $scope.state.$editable = false;
             if (typeof $scope.dismissOnPlayWatcher === 'function') {
                 $scope.dismissOnPlayWatcher();
             }
