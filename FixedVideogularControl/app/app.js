@@ -6,7 +6,7 @@
         'vc.generalDirectives',
         'vc.generalServices',
         'vc.generalFilters',
-        
+           'smoothScroll',
          'ngResource',
         'ngAnimate',
         'ngDialog'          

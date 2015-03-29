@@ -2,7 +2,7 @@
     "use strict";
     var annotationsModule = angular.module('vc.annotations');
 
-    annotationsModule.controller('vc.annotationsController', function ($scope, $element, annotationSvc, $filter) {
+    annotationsModule.controller('vc.annotationsController', function ($scope, $element, annotationSvc, $filter, $anchorScroll, $location, smoothScroll) {
         //  $element.data('$$ngAnimateState',{disabled:false,running:true});
         $scope.annotations = [];
         $scope.contributors = [];
@@ -102,11 +102,61 @@
         
         $scope.mediaId = $scope.file.file_id;
         annotationSvc.getList($scope.mediaId).then(function (dataList) {
-            $scope.annotations = dataList;
+            //$scope.annotations = dataList;
+
+            $scope.annotations =
+                
+                   
+    [
+        { fromUser: "test", "children": [], "id": "268", "timestamp": "0", "comment": "asf", "parent_id": "0", "is_hidden": 0, "votes_up": null, "votes_down": null, "user_id": -2, "from": "asfasf", "flag": false },
+         { fromUser: "test", "children": [{ "children": [], "id": "272", "timestamp": "1000", "comment": "", "parent_id": "271", "is_hidden": 0, "votes_up": null, "votes_down": null, "user_id": -2, "from": "aaa", "flag": false }], "id": "271", "timestamp": "1000", "comment": "Hello", "parent_id": "0", "is_hidden": 0, "votes_up": null, "votes_down": null, "user_id": -2, "from": "aaa", "flag": false },
+         { fromUser: "test", "children": [], "id": "273", "timestamp": "5000", "comment": "hi", "parent_id": "0", "is_hidden": 0, "votes_up": null, "votes_down": null, "user_id": -2, "from": "jake", "flag": false },
+         { fromUser: "test", "children": [{ "children": [], "id": "270", "timestamp": "5500", "comment": "dfg sdfg", "parent_id": "257", "is_hidden": 0, "votes_up": null, "votes_down": null, "user_id": -2, "from": "cxcv xcvb dfg", "flag": false }], "id": "257", "timestamp": "5500", "comment": "There's a jump cut in this scene, but you almost managed to hide it using the blur effect- nice!", "parent_id": "0", "is_hidden": 0, "votes_up": null, "votes_down": null, "user_id": -2, "from": "Scott A.", "flag": false },
+         { fromUser: "test", "children": [], "id": "261", "timestamp": "10000", "comment": "take this scene out", "parent_id": "0", "is_hidden": 0, "votes_up": null, "votes_down": null, "user_id": -2, "from": "Bunker", "flag": false },
+         { fromUser: "test", "children": [], "id": "243", "timestamp": "15000", "comment": "test etest", "parent_id": "0", "is_hidden": 0, "votes_up": null, "votes_down": null, "user_id": -2, "from": "wsefwef", "flag": false },
+         { fromUser: "test", "children": [], "id": "244", "timestamp": "20000", "comment": "teswe", "parent_id": "0", "is_hidden": 0, "votes_up": null, "votes_down": null, "user_id": -2, "from": "wsefwef", "flag": false },
+         { fromUser: "test", "children": [], "id": "245", "timestamp": "25000", "comment": "teswe", "parent_id": "0", "is_hidden": 0, "votes_up": null, "votes_down": null, "user_id": -2, "from": "wsefwef", "flag": false },
+        { fromUser: "test", "children": [], "id": "246", "timestamp": "35000", "comment": "sample______", "parent_id": "0", "is_hidden": 0, "votes_up": null, "votes_down": null, "user_id": -2, "from": "wsefwef", "flag": false },
+        { fromUser: "test", "children": [], "id": "269", "timestamp": "40000", "comment": "hi hi", "parent_id": "0", "is_hidden": 0, "votes_up": null, "votes_down": null, "user_id": -2, "from": "hao", "flag": false },
+        { fromUser: "test", "children": [], "id": "197", "timestamp": "45000", "comment": "sdf", "parent_id": "0", "is_hidden": 0, "votes_up": null, "votes_down": null, "user_id": -2, "from": "Test", "flag": false },
+        { fromUser: "test", "children": [], "id": "267", "timestamp": "50000", "comment": "The music is a bit loud here", "parent_id": "0", "is_hidden": 0, "votes_up": null, "votes_down": null, "user_id": -2, "from": "joe", "flag": false },
+        { fromUser: "test", "children": [], "id": "258", "timestamp": "55000", "comment": "At the point where the annotation pins flash- I would give it some more time before they fade back out.", "parent_id": "0", "is_hidden": 0, "votes_up": null, "votes_down": null, "user_id": -2, "from": "Scott A.", "flag": false },
+        { fromUser: "test", "children": [], "id": "201", "timestamp": "60000", "comment": "The collaboration feature is something I'd use for certain customers, but not all of them", "parent_id": "0", "is_hidden": 0, "votes_up": null, "votes_down": null, "user_id": -2, "from": "Alene", "flag": false },
+        { fromUser: "test", "children": [{ "children": [], "id": "210", "timestamp": "65000", "comment": "As many as you like. There's no official limit, it's basically a question of how many people you WANT to invite to collaborate. We've tested the annotation tool for up to 20 collaborators and it worked smoothly.", "parent_id": "209", "is_hidden": 0, "votes_up": null, "votes_down": null, "user_id": -2, "from": "Arik", "flag": false }, { "children": [], "id": "247", "timestamp": "65000", "comment": "a fwef waefwae waef we", "parent_id": "209", "is_hidden": 0, "votes_up": null, "votes_down": null, "user_id": -2, "from": "wsefwef", "flag": false }], "id": "209", "timestamp": "65000", "comment": "How many collaborators can you add to a video?", "parent_id": "0", "is_hidden": 0, "votes_up": null, "votes_down": null, "user_id": -2, "from": "David", "flag": false },
+        { fromUser: "test", "children": [{ "children": [], "id": "274", "timestamp": "70000", "comment": "hi", "parent_id": "242", "is_hidden": 0, "votes_up": null, "votes_down": null, "user_id": -2, "from": "jake", "flag": false }], "id": "242", "timestamp": "70000", "comment": "how are you?", "parent_id": "0", "is_hidden": 0, "votes_up": null, "votes_down": null, "user_id": -2, "from": "wsefwef", "flag": false }
+    ]
+                   
+               
+
+            //$scope.annotations =
+            //    [{ children: [], comment: "test1", flag: false, fromUser: "test", id: 1, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 0 },
+			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 2, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 1000 },
+			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 3, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 5000 },
+			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 4, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 10000 },
+			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 5, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 15000 },
+			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 6, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 20000 },
+			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 7, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 25000 },
+			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 8, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 35000 },
+			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 9, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 40000 },
+			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 10, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 45000 },
+			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 11, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 50000 },
+			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 12, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 55000 },
+			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 13, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 60000 },
+			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 14, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 65000 },
+			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 15, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 70000 },
+			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 16, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 75000 },
+			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 17, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 80000 },
+			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 18, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 85000 },
+			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 19, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 90000 },
+			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 20, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 95000 },
+			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 21, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 100000 },
+			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 22, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 105762 }
+
+            //        ]
             //Sari - set Annotation in annotationSvc
             annotationSvc.setList($scope.annotations);
         });
-
+       
         $scope.mediaTime = {duration: null, current: null};
         
         
@@ -136,6 +186,7 @@
                 mediaId: $scope.mediaId,
                 flag: 0
             });
+         
             var once = $scope.$on('AnnotationAdded', function (e, newAnnoData) {
                 if (newAnnoData[0].annotation == newAnno) {//scope
                     once();

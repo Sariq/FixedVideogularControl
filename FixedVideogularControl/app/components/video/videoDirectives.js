@@ -21,7 +21,7 @@
         }
     );
 
-    vcVideoModule.directive('vcMediaVideoContainer', function ($sce, $timeout, annotationSvc) {
+    vcVideoModule.directive('vcMediaVideoContainer', function ($sce, $timeout, annotationSvc, smoothScroll) {
         return {restrict: "E",
             scope: {
                 file: '=',
@@ -55,6 +55,8 @@
                         mediaId: $scope.mediaId,
                         flag: 0
                     });
+                    //alert(newAnno);
+                  
                     var once = $scope.$on('AnnotationAdded', function (e, newAnnoData) {
                         if (newAnnoData[0].annotation == newAnno) {//scope
                             once();
@@ -63,6 +65,7 @@
                         }
                     });
                     $scope.annotations.push(newAnno);
+                    console.log($scope.annotations);
                     $scope.areAllAdded = false;
                     setTimeout(function () {
                         $scope.$root.$broadcast('videoPause');
@@ -72,6 +75,40 @@
                     $scope.playerAPI = API;
                     console.log(API)
                 };
+                var i = 0;
+                $scope.onUpdateTime = function ($currentTime, $duration) {
+                    //console.log($scope.API.currentTime)
+                    $scope.annotations = annotationSvc.getListFromSvc();
+                    $scope.myAnnotationArr = [];
+                    console.log($scope.annotations)
+             
+
+                    
+              
+             
+                    
+                    
+
+                    console.log($scope.annotations[i].timestamp)
+
+                    if ($scope.annotations[i].timestamp <= $scope.API.currentTime) {
+                           if(i!=0)
+                               annotationSvc.listScope.$broadcast('markAnnotation', { id: $scope.annotations[i].id });
+                                //var element = document.getElementById($scope.annotations[i].id);
+                                //smoothScroll(element);
+                                //console.log(document.getElementById($scope.annotations[i].id).id)
+                                //document.getElementById(($scope.annotations[i].id)).style.color = "blue";
+                                ////$("#" + $scope.annotations[i].id).style.backgroundColor = "lightblue";
+                                ////$('#annotations_list').animate({ scrollTop: $("#" + $scope.annotations[i].id).offset().top }, 5000);
+                                //console.log("in")
+                                //console.log($scope.annotations[i].timestamp + '-' + ($scope.annotations[i].id))
+                               // $('#annotations_list').animate({ scrollTo: $('#annotations_list').scrollTop() - $('#annotations_list').offset().top + $("#" + $scope.annotations[i].id).offset().top }, 5000);
+                            
+                            i++;
+
+                    }
+                   
+                }
                 //$scope.playerPlay = function () {
                 //    $scope.playerAPI.play();
                    

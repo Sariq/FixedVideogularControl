@@ -1,8 +1,9 @@
-<div class="annotation" ng-class="{marked:state.isMarked}"   ng-mouseenter="annotation.showMe=false" ng-mouseleave="annotation.showMe=true">
 
+<div class="annotation" id="{{annotation.id}}" ng-class="{marked:state.isMarked}" ng-mouseenter="annotation.showMe=false" ng-mouseleave="annotation.showMe=true">
+<!--    <button class="btn annotator_choose"  ng-click="gotoAnchor(x)">scroll To</button><br />-->
     <div class="annotation_mark active"></div>
     <!--<div class="annotation_mark none"></div>-->
-    <span class="timestamp">{{ annotation.timestamp  | date:'mm:ss'}}</span>
+    <span class="timestamp">{{annotation.timestamp | date:'mm:ss'}}</span>
     <span class="from" title="{{ annotation.fromUser }}">{{ annotation.fromUser.length > 20?  annotation.fromUser.substring(0,18)+'..': annotation.fromUser }}</span>
     <span ng-hide="state.$editable" class="comment">{{ annotation.comment }}</span>
     <span ng-show="state.$editable" class="comment">
