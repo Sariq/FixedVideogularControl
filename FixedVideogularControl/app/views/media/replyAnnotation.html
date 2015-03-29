@@ -2,7 +2,7 @@
     <span class="from">{{ annotation.fromUser }}</span>
     <span ng-hide="state.$editable" class="comment">{{ annotation.comment }}</span>
     <span ng-show="state.$editable" class="comment"><textarea rows="3" placeholder="Write your comment here"  ng-model="annotation.comment"></textarea></span>
-    <div class="annotationButtons">
+    <div class="annotationButtons" ng-show="usernameIsSet()">
         <button  class="appBtn green reply annotation_comment" title="Click to add a reply comment">
         </button>
         <button  class="appBtn reply annotate_reply" title="Click to reply comment">

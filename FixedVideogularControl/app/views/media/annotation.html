@@ -1,4 +1,5 @@
-<div class="annotation" ng-class="{marked:state.isMarked}">
+<div class="annotation" ng-class="{marked:state.isMarked}"   ng-mouseenter="annotation.showMe=false" ng-mouseleave="annotation.showMe=true">
+
     <div class="annotation_mark active"></div>
     <!--<div class="annotation_mark none"></div>-->
     <span class="timestamp">{{ annotation.timestamp  | date:'mm:ss'}}</span>
@@ -10,24 +11,24 @@
     </span>
 
     <div class="annotationButtons" ng-show="usernameIsSet()">
-        <button ng-hide="state.$editable" ng-disabled="replyDisabled" ng-click="addReply()" class="appBtn green reply annotation_comment" title="Click to add a reply comment">
+        <button  ng-hide="annotation.showMe" ng-disabled="replyDisabled" ng-click="addReply()" class="appBtn green reply annotation_comment" title="Click to add a reply comment">
         </button>
-        <button ng-hide="state.$editable" ng-disabled="!userHasWritten(annotation) && !userIsProjectOwner" ng-click="" class="appBtn reply annotate_reply" title="Click to reply comment">
+        <button ng-hide="annotation.showMe" ng-disabled="!userHasWritten(annotation) && !userIsProjectOwner" ng-click="" class="appBtn reply annotate_reply" title="Click to reply comment">
         </button>
-        <button ng-hide="state.$editable" ng-disabled="!userHasWritten(annotation) && !userIsProjectOwner" ng-click="annotation.delete()" class="appBtn delete annotate_delete" title="Click to delete comment">
+        <button ng-hide="annotation.showMe" ng-disabled="!userHasWritten(annotation) && !userIsProjectOwner" ng-click="annotation.delete()" class="appBtn delete annotate_delete" title="Click to delete comment">
         </button>
-        <button ng-hide="state.$editable" ng-disabled="!userHasWritten(annotation) && !userIsProjectOwner" ng-click="" class="appBtn annotate_flag_red" title="Click to reply comment">
+        <button ng-disabled="!userHasWritten(annotation) && !userIsProjectOwner" ng-click="toggleFlag(annotation)" class="appBtn annotate_flag_red" title="Click to reply comment">
         </button>
-        <button ng-hide="state.$editable" ng-disabled="!userHasWritten(annotation) && !userIsProjectOwner "
+<!--        <button ng-hide="annotation.showMe" ng-disabled="!userHasWritten(annotation) && !userIsProjectOwner "
                 ng-click="annotation.delete()" class="appBtn  delete" title="Click to Delete comment">
             <span><i class="fa-trash-o fa"></i></span>
         </button>
 
-        <button ng-hide="state.$editable" ng-disabled="replyDisabled"
+        <button ng-hide="annotation.showMe"  ng-disabled="replyDisabled"
                 ng-click="addReply()" class="appBtn green reply"
                 title="Click to add a reply comment">
             <span><i class="fa fa-reply"></i></span> </span>
-        </button>
+        </button>-->
 
         <!--<button ng-hide="state.$editable" ng-if="userIsProjectOwner" ng-click="annotation.hide()" class="hide"-->
         <!--title="Click to hide">-->

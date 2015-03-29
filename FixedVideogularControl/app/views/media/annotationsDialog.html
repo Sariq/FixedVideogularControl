@@ -1,11 +1,13 @@
 <div id="annotations-module" ng-cloak="" title="Annotate" ng-controller="vc.annotationsController" annotation-list="annotationList"  >
     <!--ng-mousemove="onResizeWidth($event)"  ng-mouseup="onStopResize()"  ng-mouseleave="onStopResize()" ng-class="{'resizecursor':resizeFlag==true, 'initialcursor': resizeFlag==false}"-->
     <h4 class="viewTitle">{{ (allowAnnotate) ? 'Annotate' : 'View'}}</h4>
-
+    <div class="col-md-6 col-xs-12" style="padding-left:0;padding-right:0">
     <div class="video_part clearfix" id='video-part' >
         <vc-media-video-container annotation-markers="annotations" media-time="mediaTime"
                                   data-file="file"></vc-media-video-container>
     </div>
+   </div>
+     <div class="col-md-6 col-xs-12" style="padding-left:0;padding-right:0;height:100%">
     <div class="fit_layer_width" ng-mousedown="" ng-show="resizediv_flag">
     <div id="annotations_data"  >
         <div id="filter_area">
@@ -56,10 +58,11 @@
                 </div>
             </div>
         </div>
-        <div class="annotations_list_wrap"><div id="annotations_list" ng-style="{height:annoPartHeight}" ng-if="allowAnnotate">
+        <div class="annotations_list_wrap"><div id="annotations_list" ng-style="{height:100%}" ng-if="allowAnnotate">
 
             <vc-media-annotation data-annotation="annotation" class="repeatAnimation"
-                                 ng-repeat="annotation in annotations| filter : filter.checkAnnotationUserNotInFilter  | orderObjectBy:'timestamp' track by $index "></vc-media-annotation>
+                                 ng-repeat="annotation in annotations| filter : filter.checkAnnotationUserNotInFilter  | orderObjectBy:'timestamp' track by $index " ng-init="annotation.showMe=true"></vc-media-annotation>
         </div></div>
     </div></div>
+        </div>
 </div>

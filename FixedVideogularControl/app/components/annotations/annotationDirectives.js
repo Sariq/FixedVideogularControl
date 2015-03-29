@@ -204,6 +204,17 @@
             templateUrl: '../app/views/media/annotation.html',
             controller: function ($scope, $element, $attrs) {
                 annotationController.call(this, arguments, annotationSvc);
+                $scope.hover = function (annotation,text) {
+                    //alert(angular.toJson(annotation))
+                   
+                    return annotation.showMe = !annotation.showMe;
+                }
+                $scope.toggleFlag = function (annotation) {
+                    alert(annotation.flag)
+
+                    annotation.flag = !annotation.flag;
+                }
+                
             },
             link: function ($scope, $element) {
                 AnnotationsLinkFunction.call(this, arguments, annotationSvc);

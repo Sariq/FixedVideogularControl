@@ -102,7 +102,7 @@
         
         $scope.mediaId = $scope.file.file_id;
         annotationSvc.getList($scope.mediaId).then(function (dataList) {
-           // $scope.annotations = dataList;
+            $scope.annotations = dataList;
             //Sari - set Annotation in annotationSvc
             annotationSvc.setList($scope.annotations);
         });

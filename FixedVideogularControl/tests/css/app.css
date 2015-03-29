@@ -175,7 +175,7 @@ button::-moz-focus-inner {
   float: right;
 }
 .fit_layer_width {
-  width: 3px;
+  width: 100%;
   height: 100%;
   border: solid 1px #422123;
   display: inline-block;
@@ -210,8 +210,8 @@ button::-moz-focus-inner {
 }
 #annotations-module #filter_area {
   overflow-y: auto;
-  display: table-cell;
-  width: 33%;
+  /*display: table-cell;*/
+  /*width: 33%;*/
   height: 100%;
 }
 #annotations-module #filter_area h3 {
@@ -252,7 +252,7 @@ button::-moz-focus-inner {
   font-size: 14px !important;
 }
 #annotations-module #annotations_data {
-  /*width:100%;*/
+ width:100%;
   clear: both;
   overflow: auto;
   max-height: 400px;
@@ -260,12 +260,12 @@ button::-moz-focus-inner {
   display: table;
 }
 #annotations-module #annotations_list {
-  display: table-cell;
-  width: 66%;
-  height: 100%;
+  /*display: table-cell;*/
+  width: 100%;
+ 
   overflow: auto;
-  max-height: 400px;
-  margin-top: 30px;
+  /*max-height: 400px;*/
+  /*margin-top: 30px;*/
   background: #ffffff;
 }
 #annotations-module #annotations_list .annotation {
@@ -291,7 +291,7 @@ button::-moz-focus-inner {
 #annotations-module #annotations_list .annotation div.annotationButtons {
   box-sizing: border-box;
   float: right;
-  width: 94px;
+  /*width: 94px;*/
   margin-top: -5px;
 }
 #annotations-module #annotations_list .annotation div.annotationButtons button {
@@ -609,14 +609,14 @@ a:hover {
   width: 100px !important;
 }
 #annotations-module .annotations_list_wrap #annotations_list .annotation .comment {
-  width: calc(100% - 280px) !important;
+  /*width: calc(100% - 280px) !important;*/
 }
 #annotations-module .annotations_list_wrap #annotations_list .annotation div.annotationReplyList {
   margin-top: 0px !important;
   width: calc(100% - 72px) !important;
 }
 #annotations-module .annotations_list_wrap #annotations_list .annotation .annotationButtons {
-  width: 93px !important;
+  /*width: 93px !important;*/
   margin-top: 2px !important;
 }
 #annotations-module .annotations_list_wrap #annotations_list .annotation .annotationButtons button {
@@ -766,26 +766,27 @@ a:hover {
     width: 1600px !important;
   }
   body.framez-index .video_part {
-    width: 800px;
+    width: 100%;
     height: 496px;
     display: inline-block !important;
     vertical-align: top !important;
   }
   body.framez-index #annotations_data {
     display: inline-block !important;
-    width: 718px;
+    /*width: 718px;*/
+     width: 100%;
     position: relative !important;
     /*height: 496px !important;*/
     height: 100% !important;
     overflow-x: hidden !important;
-    overflow-y: auto !important;
+    overflow-y: hidden !important;
   }
   body.framez-index #annotations_data .annotations_list_wrap {
     overflow-x: hidden !important;
   }
-  body.framez-index #annotations-module {
+  /*body.framez-index #annotations-module {
     display: inline-block;
-  }
+  }*/
   div.tvBack {
     padding-bottom: 40px !important;
   }
@@ -797,13 +798,13 @@ a:hover {
     width: 25% !important;
   }
   #annotations-module .annotations_list_wrap {
-    height: auto !important;
+    height: 70% !important;
     overflow-y: initial !important;
-    padding-left: 12px !important;
+    /*padding-left: 12px !important;*/
   }
   #annotations-module #filter_area {
-    height: auto !important;
-    overflow-y: auto !important;
+    height: 30% !important;
+    overflow-y: hidden !important;
     padding-left: 12px !important;
   }
 }
@@ -813,7 +814,7 @@ a:hover {
     width: 1500px !important;
   }
   body.framez-index .video_part {
-    width: 750px;
+    width: 100%;
     height: 468px;
   }
   body.framez-index #annotations_data {
@@ -832,7 +833,7 @@ a:hover {
     width: 1400px !important;
   }
   body.framez-index .video_part {
-    width: 700px;
+    width: 100%;
     height: 440px;
   }
   body.framez-index #annotations_data {
@@ -854,7 +855,7 @@ a:hover {
     width: 1300px !important;
   }
   body.framez-index .video_part {
-    width: 650px;
+    width: 100%;
     height: 411px;
   }
   body.framez-index #annotations_data {
@@ -873,7 +874,7 @@ a:hover {
     width: 1200px !important;
   }
   body.framez-index .video_part {
-    width: 600px;
+    width: 100%;
     height: 384px;
   }
   body.framez-index #annotations_data {
@@ -892,7 +893,7 @@ a:hover {
     width: 1100px !important;
   }
   body.framez-index .video_part {
-    width: 550px;
+    width: 100%;
     height: 336px;
   }
   body.framez-index #annotations_data {
@@ -911,7 +912,7 @@ a:hover {
     width: 1000px !important;
   }
   body.framez-index .video_part {
-    width: 500px;
+    width: 100%;
     height: 328px;
   }
   body.framez-index #annotations_data {
@@ -985,7 +986,8 @@ a:hover {
     width: 25% !important;
   }
   #annotations-module .video_part {
-    height: calc(100% - 270px) !important;
+    /*height: calc(100% - 270px) !important;*/
+     height: 100%;
   }
   #annotations-module .video_part vg-poster-image img {
     width: auto;
@@ -1039,7 +1041,8 @@ a:hover {
     width: 33% !important;
   }
   #annotations-module .video_part {
-    height: calc(100% - 240px) !important;
+    /*height: calc(100% - 240px) !important;*/
+    height: 100%;
   }
   #annotations-module #filter_area {
     height: 240px !important;
