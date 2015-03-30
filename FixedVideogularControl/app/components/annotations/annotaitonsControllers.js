@@ -2,7 +2,7 @@
     "use strict";
     var annotationsModule = angular.module('vc.annotations');
 
-    annotationsModule.controller('vc.annotationsController', function ($scope, $element, annotationSvc, $filter, $anchorScroll, $location, smoothScroll) {
+    annotationsModule.controller('vc.annotationsController', function ($timeout,$scope, $element, annotationSvc, $filter, $anchorScroll, $location) {
         //  $element.data('$$ngAnimateState',{disabled:false,running:true});
         $scope.annotations = [];
         $scope.contributors = [];
@@ -172,13 +172,18 @@
         $scope.$on('disableAdd', function () {
             $scope.addDisabled = true;
         });
-       
+
+        //BroadCast from video
+        $scope.$on('addAnnotTest', function (info, currentTime) {
+           
+            $scope.addAnnotation(currentTime);
+        });
         $scope.addDisabled = false;        
-        $scope.addAnnotation = function () {
+        $scope.addAnnotation = function (currentTime) {
             
             $scope.$broadcast('disableAdd');
             var newAnno = annotationSvc.create({
-                timestamp: $scope.mediaTime.current,
+                timestamp: currentTime,
                 fromUser: $scope.$root.userData.name,
                 userId: $scope.$root.userData.id,
                 mediaId: $scope.mediaId,
@@ -186,17 +191,24 @@
             });
          
             var once = $scope.$on('AnnotationAdded', function (e, newAnnoData) {
-                if (newAnnoData[0].annotation == newAnno) {//scope
-                    once();
-                    var newAnnoElm = newAnnoData[1]; //$element
-                    $('#annotations_list').animate({'scr}ollTop': (newAnnoElm.position().top + (newAnnoElm.height()))}, 700);
-                }
-            });
+         
+                once();
+                $timeout(function () {  //delay for compile the new element
+                    var newAnnoElm = $('.mytest').filter(function () {
+                        return this.id === '';
+                    });
+                    newAnnoElm.parent().animate({
+                        scrollTop: newAnnoElm.parent().scrollTop() + (newAnnoElm.position().top - newAnnoElm.parent().position().top)
+                    }, 700);
+                    $scope.$root.$broadcast('newMarkAnnotation');
+                    $scope.areAllAdded = false;
+                    setTimeout(function () {
+                        $scope.$root.$broadcast('videoPause');
+                    }, 20);
+     
+                });
+                }, 0)
             $scope.annotations.push(newAnno);
-            $scope.areAllAdded = false;
-            setTimeout(function () {
-                $scope.$root.$broadcast('videoPause');
-            }, 20);
         };
     });
 

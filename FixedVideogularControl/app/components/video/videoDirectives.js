@@ -21,7 +21,7 @@
         }
     );
 
-    vcVideoModule.directive('vcMediaVideoContainer', function ($sce, $timeout, annotationSvc, smoothScroll) {
+    vcVideoModule.directive('vcMediaVideoContainer', function ($sce, $timeout, annotationSvc,$rootScope) {
         return {restrict: "E",
             scope: {
                 file: '=',
@@ -45,64 +45,25 @@
                 };
                 //add Annot Sari
                 $scope.addAnnotation = function () {
-                    $scope.annotations=annotationSvc.getListFromSvc();
+
+                // self mark with event, so siblings get unmarked
                     $scope.$broadcast('disableAdd');
-              
-                    var newAnno = annotationSvc.create({
-                        timestamp: $scope.API.currentTime,
-                        fromUser: $scope.$root.userData.name,
-                        userId: $scope.$root.userData.id,
-                        mediaId: $scope.mediaId,
-                        flag: 0
-                    });
-                    //alert(newAnno);
-                  
-                    var once = $scope.$on('AnnotationAdded', function (e, newAnnoData) {
-                        if (newAnnoData[0].annotation == newAnno) {//scope
-                            once();
-                            var newAnnoElm = newAnnoData[1]; //$element
-                            $('#annotations_list').animate({ 'scr}ollTop': (newAnnoElm.position().top + (newAnnoElm.height())) }, 700);
-                        }
-                    });
-                    $scope.annotations.push(newAnno);
-                    console.log($scope.annotations);
-                    $scope.areAllAdded = false;
-                    setTimeout(function () {
-                        $scope.$root.$broadcast('videoPause');
-                    }, 20);
+                    $rootScope.$broadcast('addAnnotTest', $scope.API.currentTime);
                 };
-                $scope.onPlayerReady = function (API) {
-                    $scope.playerAPI = API;
-                    console.log(API)
-                };
+
                 $scope.currentFrame = 0;
                 $scope.onUpdateTime = function ($currentTime, $duration) {
-                    //console.log($scope.API.currentTime)
                     $scope.annotations = annotationSvc.getListFromSvc();
                     $scope.myAnnotationArr = [];
-                    console.log($scope.annotations[$scope.currentFrame].timestamp)
                     if ($scope.annotations[$scope.currentFrame].timestamp <= $scope.API.currentTime) {
-                        if ($scope.currentFrame != 0)
+                        //if ($scope.currentFrame != 0)
                             annotationSvc.listScope.$broadcast('markAnnotation', { id: $scope.annotations[$scope.currentFrame].id });
-                                //var element = document.getElementById($scope.annotations[i].id);
-                                //smoothScroll(element);
-                                //console.log(document.getElementById($scope.annotations[i].id).id)
-                                //document.getElementById(($scope.annotations[i].id)).style.color = "blue";
-                                ////$("#" + $scope.annotations[i].id).style.backgroundColor = "lightblue";
-                                ////$('#annotations_list').animate({ scrollTop: $("#" + $scope.annotations[i].id).offset().top }, 5000);
-                                //console.log("in")
-                                //console.log($scope.annotations[i].timestamp + '-' + ($scope.annotations[i].id))
-                               // $('#annotations_list').animate({ scrollTo: $('#annotations_list').scrollTop() - $('#annotations_list').offset().top + $("#" + $scope.annotations[i].id).offset().top }, 5000);
-                            
                         $scope.currentFrame++;
 
                     }
                    
                 }
-                //$scope.playerPlay = function () {
-                //    $scope.playerAPI.play();
-                   
-                //};
+
                 $scope.$on('enableAdd', function () {
                     $scope.addDisabled = false;
                 });

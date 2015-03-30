@@ -23,20 +23,25 @@
         };
 
         function AnnotationModel(valuesObj) {
+          
             AnnotationBaseModel.call(this, valuesObj);
             var self = this;
             self.children = [];
+            
             AnnotationModel.prototype.addChild = function (childModel) {
+         
                 if (!(this instanceof AnnotationReplyModel)) { //verify we are not pushing reply to a reply
                     if (childModel instanceof AnnotationReplyModel) {
                         this.children.push(childModel);
                     } else {
                         this.children.push(new AnnotationReplyModel(childModel));
+                     
                     }
                 }
             };
             angular.forEach(valuesObj.children, function (child) {
                 self.addChild(child);
+              
             });
 
         }
@@ -47,6 +52,7 @@
         }
 
         AnnotationModel.prototype = Object.create(AnnotationBaseModel.prototype);
+        
         AnnotationReplyModel.prototype = Object.create(AnnotationBaseModel.prototype);
 
         AnnotationBaseModel.prototype.save = function () {
@@ -170,6 +176,7 @@
                 return q.promise;
             },
             create: function (dataObj, child) {
+               
                 var newObj;
                 if (!child) {
                     newObj = new AnnotationModel(dataObj);
@@ -177,6 +184,7 @@
                 else {
                     newObj = new AnnotationReplyModel(dataObj);
                 }
+             
                 return newObj;
             },
             save: function (annotationModel) {

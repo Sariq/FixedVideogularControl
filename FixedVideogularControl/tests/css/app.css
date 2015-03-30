@@ -183,10 +183,10 @@ button::-moz-focus-inner {
   background: #efefef;
 }
 .fit_layer_width:hover {
-  cursor: w-resize;
+  /*cursor: w-resize;*/
 }
 .resizecursor {
-  cursor: w-resize !important;
+  /*cursor: w-resize !important;*/
 }
 .initialcursor {
   cursor: initial !important;
@@ -267,6 +267,7 @@ button::-moz-focus-inner {
   /*max-height: 400px;*/
   /*margin-top: 30px;*/
   background: #ffffff;
+  cursor:pointer;
 }
 #annotations-module #annotations_list .annotation {
   box-sizing: border-box;
@@ -759,6 +760,7 @@ a:hover {
   font-size: 32px;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
   z-index: 1;
+  cursor:pointer;
 }
 @media (max-width: 2550px) {
   body.framez-index #content,
@@ -1120,4 +1122,6 @@ padding-right:0;
 }
 .plz {
   padding-left:0;
+}
+.mytest {
 }

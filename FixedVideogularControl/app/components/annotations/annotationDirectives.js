@@ -93,12 +93,10 @@
         }
         $scope.state = {$editable: false, isMarked: false};
         $scope.mark = function (markOnly) {
-           
             $element.parent().animate({
                 scrollTop: $element.parent().scrollTop() + ($element.position().top - $element.parent().position().top)
             }, 700);
             $scope.state.isMarked = true;
-           // $scope.$apply();
             if (!markOnly) {
                 $scope.$root.$broadcast('videoSeekTime', $scope.annotation.timestamp);
                 $scope.$digest();
@@ -140,9 +138,11 @@
     function AnnotationsLinkFunction(argsArr, annotationSvc) {
         
         var $scope = argsArr[0], $element = argsArr[1];
-        $scope.$emit('AnnotationAdded',[$scope,$element]);
+        $scope.$emit('AnnotationAdded', [$scope, $element]);
+        //console.log($element)
         $element.click(function (e) {
             if (e.target.tagName != 'BUTTON') { //filter them buttons...
+               
                 annotationSvc.listScope.$broadcast('markAnnotation', { id: $scope.annotation.id }); // self mark with event, so siblings get unmarked
                 if (e)
                     e.stopPropagation();
@@ -158,7 +158,9 @@
             }
         });
         $scope.$on('markAnnotation', function (e, data) {
+          
             if (data.id == $scope.annotation.id) {
+                console.log(data.opts)
                 $scope.mark(data.opts);
             }
             else { //unmark
@@ -166,8 +168,21 @@
             }
           
             $scope.$apply();
-         
         });
+        //Sari newAnnot mark
+        var temp_id = 0;//replace with real id
+        $scope.$on('newMarkAnnotation', function (e, data) {
+            if (!$scope.annotation.id) {
+                $scope.state.isMarked = true;
+                $scope.annotation.id = temp_id; 
+                temp_id++;
+            } else {
+                $scope.state.isMarked = false;
+            }
+            
+        });
+
+
         $scope.$watch('state.$editable', function (newVal) {
             if (newVal) {
                 $element.find('.comment textarea').focus();
@@ -205,7 +220,7 @@
             }
         };
     });
-    annotationsModule.directive('vcMediaAnnotation', function (annotationSvc, smoothScroll) {
+    annotationsModule.directive('vcMediaAnnotation', function (annotationSvc) {
         return {
             restrict: 'E',
             replace: true,
@@ -215,35 +230,13 @@
             templateUrl: '../app/views/media/annotation.html',
             controller: function ($scope, $element, $attrs) {
                 annotationController.call(this, arguments, annotationSvc);
-                $scope.hover = function (annotation,text) {
-                    //alert(angular.toJson(annotation))
-                   
+                //Sari
+                $scope.hover = function (annotation, text) {
                     return annotation.showMe = !annotation.showMe;
                 }
-                //Sari
                 $scope.toggleFlag = function (annotation) {
-                    alert(annotation.flag)
-
                     annotation.flag = !annotation.flag;
                 }
-                $scope.gotoAnchor = function (x) {
-
-                   // $('#myDiv').animate({ scrollTop: $("#anchor5000").offset().top }, 5000);
-                   // alert()
-                    //var element = document.getElementById('anchor' + 269);
-                    //smoothScroll(element);
-                    //x = 4;
-                    //var newHash = 'anchor' + x;
-                    //if ($location.hash() !== newHash) {
-                    //    // set the $location.hash to `newHash` and
-                    //    // $anchorScroll will automatically scroll to it
-                    //    $location.hash('anchor' + x);
-                    //} else {
-                    //    // call $anchorScroll() explicitly,
-                    //    // since $location.hash hasn't changed
-                    //    $anchorScroll();
-                    //}
-                };
                 //Sari
             },
             link: function ($scope, $element) {
@@ -281,4 +274,4 @@
 
 
 
-!function () { "use strict"; var e = angular.module("smoothScroll", []), t = function (e, t) { t = t || {}; var n = t.duration || 800, o = t.offset || 0, a = t.easing || "easeInOutQuart", c = t.callbackBefore || function () { }, r = t.callbackAfter || function () { }, f = function () { return window.pageYOffset ? window.pageYOffset : document.documentElement.scrollTop }; setTimeout(function () { var t, l, u = f(), i = 0, s = function (e, t) { return "easeInQuad" == e ? t * t : "easeOutQuad" == e ? t * (2 - t) : "easeInOutQuad" == e ? .5 > t ? 2 * t * t : -1 + (4 - 2 * t) * t : "easeInCubic" == e ? t * t * t : "easeOutCubic" == e ? --t * t * t + 1 : "easeInOutCubic" == e ? .5 > t ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1 : "easeInQuart" == e ? t * t * t * t : "easeOutQuart" == e ? 1 - --t * t * t * t : "easeInOutQuart" == e ? .5 > t ? 8 * t * t * t * t : 1 - 8 * --t * t * t * t : "easeInQuint" == e ? t * t * t * t * t : "easeOutQuint" == e ? 1 + --t * t * t * t * t : "easeInOutQuint" == e ? .5 > t ? 16 * t * t * t * t * t : 1 + 16 * --t * t * t * t * t : t }, d = function (e) { var t = 0; if (e.offsetParent) do t += e.offsetTop, e = e.offsetParent; while (e); return t = Math.max(t - o, 0) }, b = d(e), k = b - u, m = function () { var t = f(); l != b && t != b && window.innerHeight + t < document.body.scrollHeight || (clearInterval(I), r(e)) }, v = function () { i += 16, t = i / n, t = t > 1 ? 1 : t, l = u + k * s(a, t), window.scrollTo(0, l), m() }; c(e); var I = setInterval(v, 16) }, 0) }; e.factory("smoothScroll", function () { return t }), e.directive("smoothScroll", ["smoothScroll", function (e) { return { restrict: "A", scope: { callbackBefore: "&", callbackAfter: "&" }, link: function (t, n, o) { (void 0 === o.scrollIf || "true" === o.scrollIf) && setTimeout(function () { var a = function (e) { if (o.callbackBefore) { var n = t.callbackBefore({ element: e }); "function" == typeof n && n(e) } }, c = function (e) { if (o.callbackAfter) { var n = t.callbackAfter({ element: e }); "function" == typeof n && n(e) } }; e(n[0], { duration: o.duration, offset: o.offset, easing: o.easing, callbackBefore: a, callbackAfter: c }) }, 0) } } }]), e.directive("scrollTo", ["smoothScroll", function (e) { return { restrict: "A", scope: { callbackBefore: "&", callbackAfter: "&" }, link: function (t, n, o) { var a; n.on("click", function (n) { if (n.preventDefault(), a = document.getElementById(o.scrollTo)) { var c = function (e) { if (o.callbackBefore) { var n = t.callbackBefore({ element: e }); "function" == typeof n && n(e) } }, r = function (e) { if (o.callbackAfter) { var n = t.callbackAfter({ element: e }); "function" == typeof n && n(e) } }; return e(a, { duration: o.duration, offset: o.offset, easing: o.easing, callbackBefore: c, callbackAfter: r }), !1 } }) } } }]) }();
+//!function () { "use strict"; var e = angular.module("smoothScroll", []), t = function (e, t) { t = t || {}; var n = t.duration || 800, o = t.offset || 0, a = t.easing || "easeInOutQuart", c = t.callbackBefore || function () { }, r = t.callbackAfter || function () { }, f = function () { return window.pageYOffset ? window.pageYOffset : document.documentElement.scrollTop }; setTimeout(function () { var t, l, u = f(), i = 0, s = function (e, t) { return "easeInQuad" == e ? t * t : "easeOutQuad" == e ? t * (2 - t) : "easeInOutQuad" == e ? .5 > t ? 2 * t * t : -1 + (4 - 2 * t) * t : "easeInCubic" == e ? t * t * t : "easeOutCubic" == e ? --t * t * t + 1 : "easeInOutCubic" == e ? .5 > t ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1 : "easeInQuart" == e ? t * t * t * t : "easeOutQuart" == e ? 1 - --t * t * t * t : "easeInOutQuart" == e ? .5 > t ? 8 * t * t * t * t : 1 - 8 * --t * t * t * t : "easeInQuint" == e ? t * t * t * t * t : "easeOutQuint" == e ? 1 + --t * t * t * t * t : "easeInOutQuint" == e ? .5 > t ? 16 * t * t * t * t * t : 1 + 16 * --t * t * t * t * t : t }, d = function (e) { var t = 0; if (e.offsetParent) do t += e.offsetTop, e = e.offsetParent; while (e); return t = Math.max(t - o, 0) }, b = d(e), k = b - u, m = function () { var t = f(); l != b && t != b && window.innerHeight + t < document.body.scrollHeight || (clearInterval(I), r(e)) }, v = function () { i += 16, t = i / n, t = t > 1 ? 1 : t, l = u + k * s(a, t), window.scrollTo(0, l), m() }; c(e); var I = setInterval(v, 16) }, 0) }; e.factory("smoothScroll", function () { return t }), e.directive("smoothScroll", ["smoothScroll", function (e) { return { restrict: "A", scope: { callbackBefore: "&", callbackAfter: "&" }, link: function (t, n, o) { (void 0 === o.scrollIf || "true" === o.scrollIf) && setTimeout(function () { var a = function (e) { if (o.callbackBefore) { var n = t.callbackBefore({ element: e }); "function" == typeof n && n(e) } }, c = function (e) { if (o.callbackAfter) { var n = t.callbackAfter({ element: e }); "function" == typeof n && n(e) } }; e(n[0], { duration: o.duration, offset: o.offset, easing: o.easing, callbackBefore: a, callbackAfter: c }) }, 0) } } }]), e.directive("scrollTo", ["smoothScroll", function (e) { return { restrict: "A", scope: { callbackBefore: "&", callbackAfter: "&" }, link: function (t, n, o) { var a; n.on("click", function (n) { if (n.preventDefault(), a = document.getElementById(o.scrollTo)) { var c = function (e) { if (o.callbackBefore) { var n = t.callbackBefore({ element: e }); "function" == typeof n && n(e) } }, r = function (e) { if (o.callbackAfter) { var n = t.callbackAfter({ element: e }); "function" == typeof n && n(e) } }; return e(a, { duration: o.duration, offset: o.offset, easing: o.easing, callbackBefore: c, callbackAfter: r }), !1 } }) } } }]) }();
