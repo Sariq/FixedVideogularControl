@@ -1,12 +1,12 @@
 <div class="annotation reply">
 
-    <div class="annotation  reply" ng-class="{marked:state.isMarked}">
+    <div class="annotation row reply" ng-class="{marked:state.isMarked}" ng-mouseenter="annotation.showMe=false" ng-mouseleave="annotation.showMe=true">
 
 
         <span class="col-md-1 plz">
             <span class="from">{{ annotation.fromUser }}</span>
         </span>
-        <span class="col-md-8">
+        <span class="col-md-9">
             <span ng-hide="state.$editable" class="comment">{{ annotation.comment }}</span>
             <span ng-show="state.$editable" class="comment">
                 <textarea rows="3" placeholder="Write your comment here" ng-model="annotation.comment"></textarea>
@@ -15,7 +15,7 @@
 
 
 
-             <span class="col-md-3">
+             <span class="col-md-2 prz">
         <span class="annotationButtons" ng-show="usernameIsSet()">
             <button ng-hide="annotation.showMe" class="appBtn green reply annotation_comment" title="Click to add a reply comment">
             </button>

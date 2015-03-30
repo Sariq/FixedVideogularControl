@@ -51,14 +51,13 @@
                     $rootScope.$broadcast('addAnnotTest', $scope.API.currentTime);
                 };
 
-                $scope.currentFrame = 0;
+                $scope.currentAnnotation = 0;
                 $scope.onUpdateTime = function ($currentTime, $duration) {
                     $scope.annotations = annotationSvc.getListFromSvc();
                     $scope.myAnnotationArr = [];
-                    if ($scope.annotations[$scope.currentFrame].timestamp <= $scope.API.currentTime) {
-                        //if ($scope.currentFrame != 0)
-                            annotationSvc.listScope.$broadcast('markAnnotation', { id: $scope.annotations[$scope.currentFrame].id });
-                        $scope.currentFrame++;
+                    if ($scope.annotations[$scope.currentAnnotation].timestamp <= $scope.API.currentTime) {
+                        annotationSvc.listScope.$broadcast('markAnnotation', { id: $scope.annotations[$scope.currentAnnotation].id });
+                        $scope.currentAnnotation++;
 
                     }
                    
