@@ -286,26 +286,26 @@ button::-moz-focus-inner {
   color: #ff0000;
 }
 #annotations-module #annotations_list .annotation > span {
-  display: inline-block;
+  /*display: inline-block;*/
 }
-#annotations-module #annotations_list .annotation div.annotationButtons {
+#annotations-module #annotations_list .annotation span.annotationButtons {
   box-sizing: border-box;
   float: right;
   /*width: 94px;*/
   margin-top: -5px;
 }
-#annotations-module #annotations_list .annotation div.annotationButtons button {
+#annotations-module #annotations_list .annotation span.annotationButtons button {
   float: right;
   margin: 0px 12px 0px 0px;
 }
-#annotations-module #annotations_list .annotation div.annotationButtons .voteUp,
-#annotations-module #annotations_list .annotation div.annotationButtons .voteDown {
+#annotations-module #annotations_list .annotation span.annotationButtons .voteUp,
+#annotations-module #annotations_list .annotation span.annotationButtons .voteDown {
   float: left;
   margin: 0;
   width: 50px;
 }
-#annotations-module #annotations_list .annotation div.annotationButtons .voteUp i,
-#annotations-module #annotations_list .annotation div.annotationButtons .voteDown i {
+#annotations-module #annotations_list .annotation span.annotationButtons .voteUp i,
+#annotations-module #annotations_list .annotation span.annotationButtons .voteDown i {
   margin-left: 10px;
 }
 #annotations-module #annotations_list .annotation.marked,
@@ -343,7 +343,7 @@ button::-moz-focus-inner {
   font-weight: 300;
   text-transform: capitalize;
   width: 150px;
-  display: inline-block;
+  /*display: inline-block;*/
 }
 #annotations-module #annotations_list .annotation .comment {
   width: 40%;
@@ -1113,4 +1113,11 @@ a:hover {
     width: 90% !important;
     left: 5% !important;
   }
+}
+
+.prz {
+padding-right:0;
+}
+.plz {
+  padding-left:0;
 }

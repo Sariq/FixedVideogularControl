@@ -87,15 +87,18 @@
     });
     function annotationController(argsArr, annotationSvc) {
         var $scope = argsArr[0], $element = argsArr[1];
+       
         if ($scope.annotation.flag == 1) {
             $element.addClass('new');
         }
         $scope.state = {$editable: false, isMarked: false};
         $scope.mark = function (markOnly) {
+           
             $element.parent().animate({
                 scrollTop: $element.parent().scrollTop() + ($element.position().top - $element.parent().position().top)
             }, 700);
             $scope.state.isMarked = true;
+           // $scope.$apply();
             if (!markOnly) {
                 $scope.$root.$broadcast('videoSeekTime', $scope.annotation.timestamp);
                 $scope.$digest();
@@ -139,9 +142,11 @@
         var $scope = argsArr[0], $element = argsArr[1];
         $scope.$emit('AnnotationAdded',[$scope,$element]);
         $element.click(function (e) {
-            if (e.target.tagName != 'BUTTON') //filter them buttons...
-                annotationSvc.listScope.$broadcast('markAnnotation', {id: $scope.annotation.id}); // self mark with event, so siblings get unmarked
-
+            if (e.target.tagName != 'BUTTON') { //filter them buttons...
+                annotationSvc.listScope.$broadcast('markAnnotation', { id: $scope.annotation.id }); // self mark with event, so siblings get unmarked
+                if (e)
+                    e.stopPropagation();
+            }
         });
         $scope.$watch(function () {
             if ($scope.$parent.mediaTime) {
@@ -159,6 +164,9 @@
             else { //unmark
                 $scope.state.isMarked = false;
             }
+          
+            $scope.$apply();
+         
         });
         $scope.$watch('state.$editable', function (newVal) {
             if (newVal) {
