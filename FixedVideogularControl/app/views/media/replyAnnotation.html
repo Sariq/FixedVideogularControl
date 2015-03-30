@@ -1,4 +1,4 @@
-<div class="annotation reply" ng-class="{marked:state.isMarked}">
+<div class="annotation reply" ng-class="{marked:state.isMarked}" ng-mouseenter="annotation.showMe=false" ng-mouseleave="annotation.showMe=true">
     <span class="from">{{ annotation.fromUser }}</span>
     <span ng-hide="state.$editable" class="comment">{{ annotation.comment }}</span>
     <span ng-show="state.$editable" class="comment"><textarea rows="3" placeholder="Write your comment here"  ng-model="annotation.comment"></textarea></span>

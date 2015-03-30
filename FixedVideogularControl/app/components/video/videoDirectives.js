@@ -75,25 +75,15 @@
                     $scope.playerAPI = API;
                     console.log(API)
                 };
-                var i = 0;
+                $scope.currentFrame = 0;
                 $scope.onUpdateTime = function ($currentTime, $duration) {
                     //console.log($scope.API.currentTime)
                     $scope.annotations = annotationSvc.getListFromSvc();
                     $scope.myAnnotationArr = [];
-                    console.log($scope.annotations)
-             
-
-                    
-              
-             
-                    
-                    
-
-                    console.log($scope.annotations[i].timestamp)
-
-                    if ($scope.annotations[i].timestamp <= $scope.API.currentTime) {
-                           if(i!=0)
-                               annotationSvc.listScope.$broadcast('markAnnotation', { id: $scope.annotations[i].id });
+                    console.log($scope.annotations[$scope.currentFrame].timestamp)
+                    if ($scope.annotations[$scope.currentFrame].timestamp <= $scope.API.currentTime) {
+                        if ($scope.currentFrame != 0)
+                            annotationSvc.listScope.$broadcast('markAnnotation', { id: $scope.annotations[$scope.currentFrame].id });
                                 //var element = document.getElementById($scope.annotations[i].id);
                                 //smoothScroll(element);
                                 //console.log(document.getElementById($scope.annotations[i].id).id)
@@ -104,7 +94,7 @@
                                 //console.log($scope.annotations[i].timestamp + '-' + ($scope.annotations[i].id))
                                // $('#annotations_list').animate({ scrollTo: $('#annotations_list').scrollTop() - $('#annotations_list').offset().top + $("#" + $scope.annotations[i].id).offset().top }, 5000);
                             
-                            i++;
+                        $scope.currentFrame++;
 
                     }
                    

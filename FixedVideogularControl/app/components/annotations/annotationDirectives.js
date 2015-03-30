@@ -216,7 +216,8 @@
                     annotation.flag = !annotation.flag;
                 }
                 $scope.gotoAnchor = function (x) {
-                    $('#myDiv').animate({ scrollTop: $("#anchor5000").offset().top }, 5000);
+
+                   // $('#myDiv').animate({ scrollTop: $("#anchor5000").offset().top }, 5000);
                    // alert()
                     //var element = document.getElementById('anchor' + 269);
                     //smoothScroll(element);
