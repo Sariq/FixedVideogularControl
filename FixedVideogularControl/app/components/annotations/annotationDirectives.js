@@ -144,6 +144,7 @@
             if (e.target.tagName != 'BUTTON') { //filter them buttons...
                
                 annotationSvc.listScope.$broadcast('markAnnotation', { id: $scope.annotation.id }); // self mark with event, so siblings get unmarked
+                //child mark issue - Sari
                 if (e)
                     e.stopPropagation();
             }
@@ -169,9 +170,9 @@
           
             $scope.$apply();
         });
-        //Sari newAnnot mark
+        //newAnnot mark - Sari 
         var temp_id = 0;//replace with real id
-        $scope.$on('newMarkAnnotation', function (e, data) {
+        $scope.$on('markNewAnnotation', function (e, data) {
             if (!$scope.annotation.id) {
                 $scope.state.isMarked = true;
                 $scope.annotation.id = temp_id; 
@@ -211,9 +212,6 @@
             templateUrl: '../app/views/media/replyAnnotation.html',
             controller: function ($scope, $element, $attrs) {
                 annotationController.call(this, arguments, annotationSvc);
-                //$scope.usernameIsSet = function (annotation) {
-                //    return $scope.$root.usernameIsSet();
-                //};
             },
             link: function ($scope, $element, $attrs) {
                 AnnotationsLinkFunction.call(this, arguments, annotationSvc);
@@ -231,9 +229,6 @@
             controller: function ($scope, $element, $attrs) {
                 annotationController.call(this, arguments, annotationSvc);
                 //Sari
-                $scope.hover = function (annotation, text) {
-                    return annotation.showMe = !annotation.showMe;
-                }
                 $scope.toggleFlag = function (annotation) {
                     annotation.flag = !annotation.flag;
                 }

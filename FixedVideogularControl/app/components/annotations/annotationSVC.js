@@ -142,14 +142,16 @@
         };
 
         var annotationSvc = {
-            //Sari - set AnnotationsList
+            //Sari 
+            //set AnnotationsList
             setList: function (annotations) {
                 annotationsList = annotations;
             },
+            //get AnnotationsListFromSvc
             getListFromSvc: function () {
                 return annotationsList;
             } ,
-
+            //Sari 
             getList: function (mediaId) {
                 var q = $q.defer();
                 getAll(mediaId).then(function (response) {
@@ -188,7 +190,6 @@
                 return newObj;
             },
             save: function (annotationModel) {
-               // alert(angular.toJson(annotationModel))
                 var dataObj = {
                     media_id: annotationModel.mediaId,
                     comment: annotationModel.comment,

@@ -200,7 +200,7 @@
                     newAnnoElm.parent().animate({
                         scrollTop: newAnnoElm.parent().scrollTop() + (newAnnoElm.position().top - newAnnoElm.parent().position().top)
                     }, 700);
-                    $scope.$root.$broadcast('newMarkAnnotation');
+                    $scope.$root.$broadcast('markNewAnnotation');
                     $scope.areAllAdded = false;
                     setTimeout(function () {
                         $scope.$root.$broadcast('videoPause');
