@@ -65,6 +65,6 @@
 
     </div>
     <div ng-if="annotation.children.length" class="annotationReplyList">
-        <vc-reply-annotation data-annotation="child" ng-repeat="child in annotation.children"></vc-reply-annotation>
+        <vc-reply-annotation data-annotation="child" ng-repeat="child in annotation.children" ng-init="child.showMe=true"></vc-reply-annotation>
     </div>
 </div>

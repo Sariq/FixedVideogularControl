@@ -1,13 +1,13 @@
 <div class="annotation reply" ng-class="{marked:state.isMarked}" ng-mouseenter="annotation.showMe=false" ng-mouseleave="annotation.showMe=true">
-    <span class="from">{{ annotation.fromUser }}</span>
+    <span class="from">{{ annotation.fromUser }}--{{usernameIsSet()}}</span>
     <span ng-hide="state.$editable" class="comment">{{ annotation.comment }}</span>
     <span ng-show="state.$editable" class="comment"><textarea rows="3" placeholder="Write your comment here"  ng-model="annotation.comment"></textarea></span>
     <div class="annotationButtons" ng-show="usernameIsSet()">
-        <button  class="appBtn green reply annotation_comment" title="Click to add a reply comment">
+        <button ng-hide="annotation.showMe"   class="appBtn green reply annotation_comment" title="Click to add a reply comment">
         </button>
-        <button  class="appBtn reply annotate_reply" title="Click to reply comment">
+        <button  ng-hide="annotation.showMe"  class="appBtn reply annotate_reply" title="Click to reply comment">
         </button>
-        <button  class="appBtn  delete annotate_delete" title="Click to Delete comment">
+        <button  ng-hide="annotation.showMe"  class="appBtn  delete annotate_delete" title="Click to Delete comment">
         </button>
         <button  class="appBtn annotate_flag_red" title="Click to reply comment">
         </button>

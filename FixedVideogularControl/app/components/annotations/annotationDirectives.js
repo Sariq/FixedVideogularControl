@@ -188,6 +188,9 @@
             templateUrl: '../app/views/media/replyAnnotation.html',
             controller: function ($scope, $element, $attrs) {
                 annotationController.call(this, arguments, annotationSvc);
+                //$scope.usernameIsSet = function (annotation) {
+                //    return $scope.$root.usernameIsSet();
+                //};
             },
             link: function ($scope, $element, $attrs) {
                 AnnotationsLinkFunction.call(this, arguments, annotationSvc);
