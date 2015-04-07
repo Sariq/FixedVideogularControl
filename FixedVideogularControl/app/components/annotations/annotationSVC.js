@@ -2,10 +2,11 @@
     'use strict';
     var annotationsModule = angular.module('vc.annotations', []);
 
-    annotationsModule.factory('annotationSvc', function ($http, $rootScope, logSvc, $q, userData) {
+    annotationsModule.factory('annotationSvc', function ($http, $rootScope, logSvc, $q,$filter, userData) {
         
         var baseUrl = $rootScope.siteUrl + 'video';
         var annotationsList = [];
+        var currentAnnotIndex;
 
 
         var AnnotationBaseModel = function (valuesObj) { // valuesObj 2nd default property names are as in the server
@@ -150,7 +151,27 @@
             //get AnnotationsListFromSvc
             getListFromSvc: function () {
                 return annotationsList;
-            } ,
+            },
+            setAnnotIndexById: function (annotId) {
+                
+                //var result = $filter('filter')(this.getListFromSvc(), { id: annotId })[0];
+                var temAnnotList = this.getListFromSvc();
+               
+                for (var i = 0; i < temAnnotList.length; i++) {
+                    if (temAnnotList[i]['id'] == annotId) {
+                        currentAnnotIndex = i;
+                       
+                        break;
+                    }
+                }
+                
+            },
+            setAnnotIndex: function (annotIndex) {
+                currentAnnotIndex = annotIndex;
+            },
+            getAnnotIndex: function () {
+                return currentAnnotIndex;
+            },
             //Sari 
             getList: function (mediaId) {
                 var q = $q.defer();

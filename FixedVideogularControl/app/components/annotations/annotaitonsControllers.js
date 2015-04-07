@@ -102,6 +102,7 @@
         
         $scope.mediaId = $scope.file.file_id;
         annotationSvc.getList($scope.mediaId).then(function (dataList) {
+            //Sari - for Test
             //$scope.annotations = dataList;
 
             $scope.annotations =
@@ -123,36 +124,9 @@
         { fromUser: "test", "children": [{fromUser: "sari", "children": [], "id": "210", "timestamp": "65000", "comment": "As many as you like. There's no official limit, it's basically a question of how many people you WANT to invite to collaborate. We've tested the annotation tool for up to 20 collaborators and it worked smoothly.", "parent_id": "209", "is_hidden": 0, "votes_up": null, "votes_down": null, "user_id": -2, "from": "Arik", "flag": false }, {fromUser: "sari", "children": [], "id": "247", "timestamp": "65000", "comment": "a fwef waefwae waef we", "parent_id": "209", "is_hidden": 0, "votes_up": null, "votes_down": null, "user_id": -2, "from": "wsefwef", "flag": false }], "id": "209", "timestamp": "65000", "comment": "How many collaborators can you add to a video?", "parent_id": "0", "is_hidden": 0, "votes_up": null, "votes_down": null, "user_id": -2, "from": "David", "flag": false },
         { fromUser: "test", "children": [{fromUser: "sari", "children": [], "id": "274", "timestamp": "70000", "comment": "hi", "parent_id": "242", "is_hidden": 0, "votes_up": null, "votes_down": null, "user_id": -2, "from": "jake", "flag": false }], "id": "242", "timestamp": "70000", "comment": "how are you?", "parent_id": "0", "is_hidden": 0, "votes_up": null, "votes_down": null, "user_id": -2, "from": "wsefwef", "flag": false }
     ]
-                   
-               
-
-            //$scope.annotations =
-            //    [{ children: [], comment: "test1", flag: false, fromUser: "test", id: 1, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 0 },
-			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 2, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 1000 },
-			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 3, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 5000 },
-			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 4, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 10000 },
-			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 5, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 15000 },
-			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 6, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 20000 },
-			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 7, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 25000 },
-			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 8, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 35000 },
-			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 9, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 40000 },
-			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 10, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 45000 },
-			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 11, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 50000 },
-			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 12, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 55000 },
-			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 13, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 60000 },
-			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 14, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 65000 },
-			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 15, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 70000 },
-			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 16, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 75000 },
-			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 17, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 80000 },
-			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 18, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 85000 },
-			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 19, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 90000 },
-			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 20, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 95000 },
-			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 21, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 100000 },
-			//		{ children: [], comment: "test1", flag: false, fromUser: "test", id: 22, isHidden: false, is_me: true, mediaId: 197, showMe: false, timestamp: 105762 }
-
-            //        ]
-            //Sari - set Annotation in annotationSvc
+            //set Annotation in annotationSvc
             annotationSvc.setList($scope.annotations);
+            //Sari
         });
        
         $scope.mediaTime = {duration: null, current: null};
@@ -166,6 +140,7 @@
             }
             $scope.areAllAdded = true;
         });
+        //Sari
         $scope.$on('enableAdd', function () {
             $scope.addDisabled = false;
         });
@@ -173,9 +148,8 @@
             $scope.addDisabled = true;
         });
 
-        //BroadCast from video
-        $scope.$on('addAnnotTest', function (info, currentTime) {
-           
+        //BroadCasted from video
+        $scope.$on('addAnnotation', function (info, currentTime) {
             $scope.addAnnotation(currentTime);
         });
         $scope.addDisabled = false;        
@@ -210,6 +184,7 @@
                 }, 0)
             $scope.annotations.push(newAnno);
         };
-    });
 
+    });
+        //Sari
 }());

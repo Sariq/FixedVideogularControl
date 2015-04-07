@@ -41,35 +41,60 @@
                 },
                     autoHide: false,
 //                    autoHideTime: 200,
-                    autoPlay: false
-                };
-                //add Annot Sari
-                $scope.addAnnotation = function () {
+                    autoPlay: false,
 
+                };
+
+                //sari
+                $scope.updateTimeFlag = true;
+                //add Annot
+                $scope.addAnnotation = function () {
                 // self mark with event, so siblings get unmarked
                     $scope.$broadcast('disableAdd');
                     $rootScope.$broadcast('addAnnotTest', $scope.API.currentTime);
                 };
 
-                $scope.currentAnnotation = 0;
+                //mark the annotition by the current time in video
+                $scope.currentAnnotationIndex = 0;  //reset when video is finished
+               // annotationSvc.setAnnotIndex($scope.currentAnnotationIndex)
+                var x = 0;
+               
                 $scope.onUpdateTime = function ($currentTime, $duration) {
-                    $scope.annotations = annotationSvc.getListFromSvc();
-                    $scope.myAnnotationArr = [];
-                    if ($scope.annotations[$scope.currentAnnotation].timestamp <= $scope.API.currentTime) {
-                        annotationSvc.listScope.$broadcast('markAnnotation', { id: $scope.annotations[$scope.currentAnnotation].id });
-                        $scope.currentAnnotation++;
+                    x++;
+                    if ($scope.updateTimeFlag) {
+                      //  $scope.currentAnnotationIndex = annotationSvc.getAnnotIndex();
+                       // console.log($scope.currentAnnotationIndex)
+                        $scope.annotations = annotationSvc.getListFromSvc();
+                        $scope.myAnnotationArr = [];
 
+                        if ($scope.annotations[$scope.currentAnnotationIndex].timestamp <= $scope.API.currentTime) {
+                            annotationSvc.listScope.$broadcast('markAnnotation', { id: $scope.annotations[$scope.currentAnnotationIndex].id, opts: true });
+                            $scope.currentAnnotationIndex++;
+                           // annotationSvc.setAnnotIndex($scope.currentAnnotationIndex)
+                        }
                     }
-                   
+                    if (x == 2) { //get in twice ** need to check
+                        $scope.updateTimeFlag = true; //to make update by the progress bar wheb annotation selected
+                        x = 0;
+                    }
                 }
-
+               
+                //enable add button in player
                 $scope.$on('enableAdd', function () {
                     $scope.addDisabled = false;
                 });
+                //disable add button in player
                 $scope.$on('disableAdd', function () {
+                    
                     $scope.addDisabled = true;
                 });
-                //add Annot Sari
+
+                //Seeks to a specified time position
+                $scope.$on('videoSeekTime', function (e, annotTime) {
+                    $scope.updateTimeFlag = false;
+                    $scope.API.seekTime(annotTime / 1000)
+                });
+                //sari
                 $scope.doSthonPlay = function () {
   
                  console.log("clicked");
@@ -83,8 +108,10 @@
                 
                 this.setAPI = function (APIObj) {
                     console.log(APIObj+" setting API");
-                    
+                   
                     $scope.API = APIObj;
+                    
+
                 };
                 $scope.decodeEntities = function (text) {
                     var entities = [
@@ -109,12 +136,13 @@
                 var videoReady = false;
                 $scope.$on('onVgPlayerReady', function () {
                     videoReady = true;
+                   
                 });
-                $scope.$on('videoSeekTime', function (e, data) {
-                    if ($scope.API && !isNaN(data) && videoReady) {
-                        $scope.API.seekTime(data);
-                    }
-                });
+                //$scope.$on('videoSeekTime', function (e, data) {
+                //    if ($scope.API && !isNaN(data) && videoReady) {
+                //        $scope.API.seekTime(data);
+                //    }
+                //});
                 $scope.$on('videoPause', function () {
                     if ($scope.API) {
                         $scope.API.pause();
