@@ -49,9 +49,8 @@
                 $scope.updateTimeFlag = true;
                 //add Annot
                 $scope.addAnnotation = function () {
-                // self mark with event, so siblings get unmarked
-                    $scope.$broadcast('disableAdd');
-                    $rootScope.$broadcast('addAnnotTest', $scope.API.currentTime);
+                    $scope.$broadcast('disableAdd');//disable add button
+                    $rootScope.$broadcast('addAnnotation', $scope.API.currentTime);
                 };
 
                 //mark the annotition by the current time in video

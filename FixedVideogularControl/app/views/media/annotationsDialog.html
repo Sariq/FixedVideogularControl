@@ -1,4 +1,10 @@
-<div id="annotations-module" ng-cloak="" title="Annotate" ng-controller="vc.annotationsController" annotation-list="annotationList"  >
+<style>
+
+
+
+</style>
+
+<div id="annotations-module"  ng-cloak="" title="Annotate" ng-controller="vc.annotationsController" annotation-list="annotationList"  >
     <!--ng-mousemove="onResizeWidth($event)"  ng-mouseup="onStopResize()"  ng-mouseleave="onStopResize()" ng-class="{'resizecursor':resizeFlag==true, 'initialcursor': resizeFlag==false}"-->
     <h4 class="viewTitle">{{ (allowAnnotate) ? 'Annotate' : 'View'}}</h4>
     <div class="col-md-6 col-xs-12" style="padding-left:0;padding-right:0">
@@ -21,7 +27,7 @@
                     <button class="btn annotator_choose" ng-click="setUserName()">Start Annotating</button>
                 </div>
             </div>
-            <div ng-if="!$root.userData.name && publicView" class="show_name_public">
+            <div ng-if="!$root.userData.name && publicView" class=" show_name_public " >
                 <h3> What's your name? </h3>
 
                 <div><input type="text" ng-model="$root.userChosenName"/></div>

@@ -6,7 +6,10 @@
         
         var baseUrl = $rootScope.siteUrl + 'video';
         var annotationsList = [];
+        //Sari
+        //for test
         var currentAnnotIndex;
+        //Sari
 
 
         var AnnotationBaseModel = function (valuesObj) { // valuesObj 2nd default property names are as in the server
@@ -152,6 +155,7 @@
             getListFromSvc: function () {
                 return annotationsList;
             },
+            //set the current annotation index (when click on annot)- for now, will be changed
             setAnnotIndexById: function (annotId) {
                 
                 //var result = $filter('filter')(this.getListFromSvc(), { id: annotId })[0];
@@ -166,9 +170,11 @@
                 }
                 
             },
+            //set the current annotation index (when video time update)
             setAnnotIndex: function (annotIndex) {
                 currentAnnotIndex = annotIndex;
             },
+            //get the current annotation index
             getAnnotIndex: function () {
                 return currentAnnotIndex;
             },

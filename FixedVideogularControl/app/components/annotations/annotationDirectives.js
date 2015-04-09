@@ -187,7 +187,7 @@
         });
         //Sari
         //newAnnot mark 
-        var temp_id = 0;//replace with real id
+        var temp_id = 0;//need to be replaced with real id
         $scope.$on('markNewAnnotation', function (e, data) {
             if (!$scope.annotation.id) {
                 $scope.state.isMarked = true;

@@ -141,18 +141,21 @@
             $scope.areAllAdded = true;
         });
         //Sari
+        // enable add button
         $scope.$on('enableAdd', function () {
             $scope.addDisabled = false;
         });
+        //disable add button
         $scope.$on('disableAdd', function () {
             $scope.addDisabled = true;
         });
 
-        //BroadCasted from video
+        //BroadCasted from videoDirective
         $scope.$on('addAnnotation', function (info, currentTime) {
             $scope.addAnnotation(currentTime);
         });
-        $scope.addDisabled = false;        
+        $scope.addDisabled = false;
+        //add annotation
         $scope.addAnnotation = function (currentTime) {
             
             $scope.$broadcast('disableAdd');
@@ -174,17 +177,20 @@
                     newAnnoElm.parent().animate({
                         scrollTop: newAnnoElm.parent().scrollTop() + (newAnnoElm.position().top - newAnnoElm.parent().position().top)
                     }, 700);
+                    //marks the new annotation
                     $scope.$root.$broadcast('markNewAnnotation');
+
                     $scope.areAllAdded = false;
                     setTimeout(function () {
                         $scope.$root.$broadcast('videoPause');
                     }, 20);
      
                 });
-                }, 0)
+            }, 0)
+            //Sari
             $scope.annotations.push(newAnno);
         };
 
     });
-        //Sari
+     
 }());
