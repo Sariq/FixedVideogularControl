@@ -42,7 +42,7 @@
     <![endif]-->
 
     <script>
-        var vc = vc || {"baseUrl":"http:\/\/framez.co\/","siteUrl":"http:\/\/framez.co\/","csrf":{"vc_csrf_test_name":"5c37f33947c0e6e2737f30570b8067a7"}};
+        var vc = vc || { "baseUrl": "http:\/\/framez.co\/", "siteUrl": "http:\/\/framez.co\/", "csrf": { "vc_csrf_test_name": "5c37f33947c0e6e2737f30570b8067a7" } };
     </script>
 
     
@@ -133,7 +133,8 @@
     <script src="js/app/templates.js"></script> 
     <div ng-app="vc.clipView" class="annotation-section"-->
         <div class="tvBack">
-            <div class="tvInner">
+
+            <div class="tvInner">         
                 <ng-include ng-init="publicView=true" src="'../app/views/media/annotationsDialog.html'"
                             onload="allowAnnotate=true;"></ng-include>
             </div>
@@ -216,8 +217,10 @@
     </div>
 </section>
 <script type="text/javascript">
-    angular.module('vc.clipView').constant('clipData', {"id":"441","file_id":"441","thumbnail":"http:\/\/s3.amazonaws.com\/vidc-prev\/Editor_446\/Video\/Thumbnails\/441_879_promo.jpg","job_name":"Framez promotion","url_prefix":"",
-        "description":"","file_name":"promo.mp4","mp4":"1","direct_link":"http:\/\/s3.amazonaws.com\/vidc-files\/Editor_446\/Video\/441_879_promo.mp4","dl_link":"http:\/\/s3.amazonaws.com\/vidc-files\/Editor_446\/Video\/441_879_promo.mp4","pic_url":"","pic_url_type":"thumbnail","pic_url_id":"441","media_type":"footage"});
+    angular.module('vc.clipView').constant('clipData', {
+        "id": "441", "file_id": "441", "thumbnail": "http:\/\/s3.amazonaws.com\/vidc-prev\/Editor_446\/Video\/Thumbnails\/441_879_promo.jpg", "job_name": "Framez promotion", "url_prefix": "",
+        "description": "", "file_name": "promo.mp4", "mp4": "1", "direct_link": "http:\/\/s3.amazonaws.com\/vidc-files\/Editor_446\/Video\/441_879_promo.mp4", "dl_link": "http:\/\/s3.amazonaws.com\/vidc-files\/Editor_446\/Video\/441_879_promo.mp4", "pic_url": "", "pic_url_type": "thumbnail", "pic_url_id": "441", "media_type": "footage"
+    });
 </script>
         </div>
 
@@ -248,6 +251,22 @@
     <a id="get-support" href="http://framez.co/user/bug" title="Get Support / Report Bug">Get Support / Report
         Bug</a>
 
-  <!--  <div class="modal-backdrop fade in"></div>-->
+   
 </body>
 </html>
+<style>
+    /*.modal-backdrop {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1030;
+        background-color: #000;
+    }
+
+        .modal-backdrop.in {
+            opacity: .5;
+            filter: alpha(opacity=50);
+        }*/
+</style>

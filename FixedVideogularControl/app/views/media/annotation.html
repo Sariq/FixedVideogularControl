@@ -1,10 +1,12 @@
-<div class="annotation mytest" id="{{annotation.id}}">
 
-    <div class="annotation row" ng-class="{marked:state.isMarked}" ng-mouseenter="annotation.showMe=false" ng-mouseleave="annotation.showMe=true">
+
+<div class="annotation mytest" id="{{annotation.id}}" ng-class="{'annotBackDrop':state.$editable }">
+
+    <div class="annotation row" ng-class="{marked:state.isMarked}" ng-mouseenter="annotation.showMe=false" ng-mouseleave="annotation.showMe=true"  >
 
 
         <!--<div class="annotation_mark none"></div>-->
-        <span class="col-md-2 plz">
+        <span class="col-md-2 plz" >
             <span class="annotation_mark active"></span>
             <span class="timestamp">{{annotation.timestamp | date:'mm:ss'}}</span>
             <span class="from" title="{{ annotation.fromUser }}">{{ annotation.fromUser.length > 20?  annotation.fromUser.substring(0,18)+'..': annotation.fromUser }}</span>
@@ -13,7 +15,7 @@
 
         <span class="col-md-8">
             <span ng-hide="state.$editable" class="comment">{{ annotation.comment }}</span>
-            <span ng-show="state.$editable" class="comment">
+            <span ng-show="state.$editable" class="comment" >
                 <textarea rows="3" placeholder="Write your comment here"
                     ng-model="annotation.comment"></textarea>
             </span>
