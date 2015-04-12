@@ -15,8 +15,8 @@
 
         <span class="col-md-8">
             <span ng-hide="state.$editable" class="comment">{{ annotation.comment }}</span>
-            <span ng-show="state.$editable" class="comment" >
-                <textarea rows="3" placeholder="Write your comment here"
+            <span ng-if="state.$editable" class="comment" >
+                <textarea auto-focus="true" rows="3" placeholder="Write your comment here"
                     ng-model="annotation.comment"></textarea>
             </span>
         </span>
@@ -24,11 +24,11 @@
 
         <span class="col-md-2 prz">
         <span class="annotationButtons" ng-show="usernameIsSet()">
-            <button ng-hide="annotation.showMe" ng-disabled="replyDisabled" ng-click="addReply()" class="appBtn green reply annotation_comment" title="Click to add a reply comment">
+            <button ng-hide="annotation.showMe  || state.$editable" ng-disabled="replyDisabled" ng-click="addReply()" class="appBtn green reply annotation_comment" title="Click to add a reply comment">
             </button>
-            <button ng-hide="annotation.showMe" ng-disabled="!userHasWritten(annotation) && !userIsProjectOwner" ng-click="" class="appBtn reply annotate_reply" title="Click to reply comment">
+            <button ng-hide="annotation.showMe  || state.$editable" ng-disabled="!userHasWritten(annotation) && !userIsProjectOwner" ng-click="" class="appBtn reply annotate_reply" title="Click to reply comment">
             </button>
-            <button ng-hide="annotation.showMe" ng-disabled="!userHasWritten(annotation) && !userIsProjectOwner" ng-click="annotation.delete()" class="appBtn delete annotate_delete" title="Click to delete comment">
+            <button ng-hide="annotation.showMe || state.$editable" ng-disabled="!userHasWritten(annotation) && !userIsProjectOwner" ng-click="annotation.delete()" class="appBtn delete annotate_delete" title="Click to delete comment">
             </button>
             <button ng-disabled="!userHasWritten(annotation) && !userIsProjectOwner" ng-click="toggleFlag(annotation)" class="appBtn annotate_flag_red" title="Click to reply comment">
             </button>
