@@ -800,7 +800,7 @@ a:hover {
     width: 25% !important;
   }
   #annotations-module .annotations_list_wrap {
-    height: 70% !important;
+    height: 100% !important;
     overflow-y: initial !important;
     /*padding-left: 12px !important;*/
   }
