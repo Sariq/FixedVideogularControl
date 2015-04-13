@@ -36,16 +36,23 @@
                     responsive: true,
                     stretch: 'fit',
                     poster: {url: ''},
-                      theme: {
-                    url: "http://www.videogular.com/styles/themes/default/latest/videogular.css"
-                },
+                    theme: {
+                        url: "http://www.videogular.com/styles/themes/default/latest/videogular.css"
+                    },
                     autoHide: false,
-//                    autoHideTime: 200,
+                    //                    autoHideTime: 200,
                     autoPlay: false,
-
+                    cuePoints:{ 
+                        points: [
+           { time: 18 },
+           { time: 100 },
+                        ],
+                    }
+                       
                 };
 
                 //sari
+                $scope.myFun = function () { alert() }
                 $scope.updateTimeFlag = true;
                 //add Annot
                 $scope.addAnnotation = function () {
@@ -172,3 +179,38 @@
         };
     });
 }());
+(function () {
+    'use strict';
+    angular.module('uk.ac.soton.ecs.videogular.plugins.cuepoints', [])
+        .directive(
+            'vgCuepoints',
+            [function () {
+                return {
+                    restrict: 'E',
+                    require: '^videogular',
+                    templateUrl: 'bower_components/videogular-cuepoints/cuepoints.html',
+                    scope: {
+                        cuepoints: '=vgCuepointsConfig',
+                        theme: '=vgCuepointsTheme',
+                    },
+                    link: function ($scope, elem, attr, API) {
+                        // shamelessly stolen from part of videogular's updateTheme function
+                        function updateTheme(value) {
+                            if (value) {
+                                var headElem = angular.element(document).find("head");
+                                headElem.append("<link rel='stylesheet' href='" + value + "'>");
+                            }
+                        }
+
+                        $scope.calcLeft = function (cuepoint) {
+                            if (API.totalTime === 0) return '-1000';
+
+                            var videoLength = API.totalTime.getTime() / 1000;
+                            return (cuepoint.time * 100 / videoLength).toString();
+                        };
+
+                        updateTheme($scope.theme);
+                    },
+                };
+            }]);
+})();

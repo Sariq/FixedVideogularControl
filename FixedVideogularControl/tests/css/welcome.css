@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /* -------------------------------------------
 
 	Name: 		Video Cutters
@@ -543,11 +543,11 @@ body.framez-index .white #annotations_list,
     height: 115px;
 }
 
-div.tvBack {
+/*div.tvBack {
     background: url('../images/framez/welcome/tv.png');
     padding: 27px 18px 255px 34px;
     z-index: 2;
-}
+}*/
 
 div.tvInner {
     height: 515px;
@@ -644,7 +644,7 @@ body.framez-index a.step *{
 }
 body.framez-index .video_part {
     color: white;
-    background-color: #5c5c5c;
+    /*background-color: #5c5c5c;*/
 }
 
 body.framez-index .video_part .show_name_public {
@@ -685,7 +685,7 @@ width: 216px;
 body.framez-index .video_part
 body.framez-index #controls-container 
 {
-    background-color: #000000;
+    background-color: none;
 }
 
 body.framez-index .viewTitle {

@@ -212,7 +212,7 @@ button::-moz-focus-inner {
   overflow-y: auto;
   /*display: table-cell;*/
   /*width: 33%;*/
-  height: 100%;
+  height: 30%;
 }
 #annotations-module #filter_area h3 {
   font-size: 27px;
@@ -425,13 +425,13 @@ body.welcome-editor .video_part a,
 body.framez-index #annotations-module .contributorsPart ul li.contributor span,
 body.video-annotate #annotations-module .contributorsPart ul li.contributor span,
 body.welcome-editor #annotations-module .contributorsPart ul li.contributor span {
-  color: #8CB0DA;
+  /*color: #8CB0DA;*/
 }
 body.framez-index .video_part,
 body.video-annotate .video_part,
 body.welcome-editor .video_part {
   color: white;
-  background-color: #5c5c5c;
+  /*background-color: #5c5c5c;*/
 }
 .ngdialog.ngdialog-theme-default .ngdialog-content {
   max-width: 100%;
@@ -447,12 +447,12 @@ body.welcome-editor .video_part {
 }
 .video_part {
   width: 100%;
-  background-color: #5c5c5c;
+  /*background-color: #5c5c5c;*/
   position: relative;
   margin-bottom: 8px;
-  min-height: 280px;
+  /*min-height: 280px;
   max-height: 740px;
-  height: 480px;
+  height: 480px;*/
   padding-bottom: 38px;
   box-sizing: border-box;
 }
@@ -481,7 +481,7 @@ fa-circle.simpleShowAni {
 }
 videogular {
   position: relative;
-  background-color: #000000;
+  /*background-color: #000000;*/
   overflow: visible;
   display: block;
   width: 100%;
@@ -498,23 +498,20 @@ videogular.fullscreen {
   left: 0;
   top: 0;
 }
-videogular video {
+.videogular video {
   position: absolute;
   width: 100%;
-  height: auto;
+  height: 100%;
   z-index: 1;
+    width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 .annotation-section {
   top: 30px;
 }
-div.tvBack {
-  background: #f8f7f7 !important;
-  border: solid 1px #ccc !important;
-  padding: 20px 20px 0px 20px !important;
-  z-index: 2;
-  box-sizing: border-box;
-  height: 100%;
-}
+
 div.tvInner {
   height: 100% !important;
 }
@@ -533,9 +530,11 @@ body.framez-index .video_part {
 }
 vg-poster-image img {
   width: 100%;
+  height:100%;
 }
 vg-poster-image img.none {
   width: 100%;
+  height:100%;
 }
 a {
   cursor: pointer;
@@ -683,7 +682,7 @@ a:hover {
 }
 .video-action-control .video-action-btns {
   width: 100%;
-  height: 26px;
+  /*height: 26px;*/
   position: relative;
   background: #000;
 }
@@ -769,7 +768,7 @@ a:hover {
   }
   body.framez-index .video_part {
     width: 100%;
-    height: 496px;
+    height: 70%;
     display: inline-block !important;
     vertical-align: top !important;
   }
@@ -933,6 +932,14 @@ a:hover {
     width: 98%;
     z-index: 1001;
   }
+  div.tvBack {
+  background: #f8f7f7 !important;
+  border: solid 1px #ccc !important;
+  padding: 20px 20px 0px 20px !important;
+  z-index: 2;
+  box-sizing: border-box;
+  height: 100%;
+}
 }
 @media (max-width: 1079px) {
   #wrapper #container {
@@ -1027,7 +1034,7 @@ a:hover {
     background-size: 100% 100% !important;
   }
 }
-@media (max-width: 899px) {
+/*@media (max-width: 899px) {
   body.framez-index #content,
   .welcome-editor #content,
   .annotation-section {
@@ -1044,7 +1051,7 @@ a:hover {
   }
   #annotations-module .video_part {
     /*height: calc(100% - 240px) !important;*/
-    height: 100%;
+    /*height: 100%;
   }
   #annotations-module #filter_area {
     height: 240px !important;
@@ -1065,8 +1072,8 @@ a:hover {
   body.framez-index .video_part {
     height: 394px !important;
   }
-}
-@media (max-width: 767px) {
+}*/
+/*@media (max-width: 767px) {
   body.framez-index #content,
   .welcome-editor #content,
   .annotation-section {
@@ -1077,7 +1084,7 @@ a:hover {
   }
   body.framez-index .video_part {
     height: 338px !important;
-  }
+  }*/
   /*#annotations-module{
 		#filter_area{
 			width: 100% !important;
@@ -1088,9 +1095,9 @@ a:hover {
 			display: block !important;
 			width: 100% !important;
 		}
-	} */
-}
-@media (max-width: 639px) {
+	}*/
+/*}*/
+/*@media (max-width: 639px) {
   body.framez-index #content,
   .welcome-editor #content,
   .annotation-section {
@@ -1115,7 +1122,7 @@ a:hover {
     width: 90% !important;
     left: 5% !important;
   }
-}
+}*/
 /*Sari*/
 .prz {
 padding-right:0;
@@ -1178,5 +1185,129 @@ padding-right:0;
   margin:3px;
 }
  /*Resize*/
+          videogular vg-cuepoints {
+	position: relative;
+	top: -50px;
 
+	display: block;
+	width: 100%;
+	height: 0px;
+}
+
+videogular vg-cuepoints vg-cuepoint {
+	position: absolute;
+
+	display: block;
+	width: 2px;
+	height: 50px;
+
+	background-color: red;
+}
+ /*marker*/
+.annotation-marker {
+  z-index: 100;
+  width: 1px;
+  left: -1px;
+  top: 23px;
+  height: 20px;
+  background-color: rgb(231, 76, 60);
+  position: absolute;
+  cursor: pointer;
+}
+.annotation-marker i {
+  position: relative;
+  bottom: 3px;
+  color: #0056b9;
+  left: 1px;
+  height: 4px;
+  z-index: 999999;
+  display: block !important;
+ 
+}
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+} 
+ span.annotation-marker.ng-scope {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+.videogular-container {
+    width: 50%;
+
+    margin: auto;
+    overflow: hidden;
+}
+ /*Mobile*/
+@media (max-width: 800px) {
+    div.tvBack {
+        background: url('../images/framez/welcome/tv.png');
+        padding: 0px 0px 0px 0px;
+        z-index: 2;
+    }
+
+    .annotation-section {
+        width: 100% !important;
+        left: 0 !important;
+    }
+
+    #annotations-module #filter_area {
+        width: 100% !important;
+        height: 270px !important;
+        overflow-y: auto !important;
+        padding-left: 0px !important;
+        display: block !important;
+        float: left;
+    }
+
+  .ui-resizable-e {
+  cursor: e-resize;
+  width: 7px;
+  right: -5px;
+  top: 0;
+  height: 100%;
+  visibility: hidden;
+}
+  .annotation-marker {
+  z-index: 100;
+  width: 4px;
+  left: -1px;
+  height: 9px;
+  background-color: black;
+  position: absolute;
+  cursor: pointer;
+  visibility: hidden;
+}
+ #annotations-module .annotations_list_wrap {
+  height: 270px !important;
+  overflow-y:  hidden !important; 
+  display: block !important;
+}
+}
+ /*Mobile*/
+
+ videogular vg-poster img, [videogular] vg-poster img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    position: absolute; }
+
+videogular vg-controls .controls-container {
+    background-color:none;
+}
 /*Sari*/
