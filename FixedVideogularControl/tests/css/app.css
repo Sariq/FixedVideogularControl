@@ -768,7 +768,7 @@ a:hover {
   }
   body.framez-index .video_part {
     width: 100%;
-    height: 70%;
+    height: 60%;
     display: inline-block !important;
     vertical-align: top !important;
   }
@@ -804,9 +804,9 @@ a:hover {
     /*padding-left: 12px !important;*/
   }
   #annotations-module #filter_area {
-    height: 30% !important;
+    height: 40% !important;
     overflow-y: hidden !important;
-    padding-left: 12px !important;
+    /*padding-left: 12px !important;*/
   }
 }
 @media (max-width: 1680px) {
@@ -816,7 +816,7 @@ a:hover {
   }
   body.framez-index .video_part {
     width: 100%;
-    height: 468px;
+    /*height: 468px;*/
   }
   body.framez-index #annotations_data {
     width: 658px;
@@ -835,7 +835,7 @@ a:hover {
   }
   body.framez-index .video_part {
     width: 100%;
-    height: 440px;
+    /*height: 440px;*/
   }
   body.framez-index #annotations_data {
     width: 608px;
@@ -857,7 +857,7 @@ a:hover {
   }
   body.framez-index .video_part {
     width: 100%;
-    height: 411px;
+    /*height: 411px;*/
   }
   body.framez-index #annotations_data {
     width: 558px;
@@ -876,7 +876,7 @@ a:hover {
   }
   body.framez-index .video_part {
     width: 100%;
-    height: 384px;
+    /*height: 384px;*/
   }
   body.framez-index #annotations_data {
     width: 508px;
@@ -895,7 +895,7 @@ a:hover {
   }
   body.framez-index .video_part {
     width: 100%;
-    height: 336px;
+    /*height: 336px;*/
   }
   body.framez-index #annotations_data {
     width: 458px;
@@ -914,7 +914,7 @@ a:hover {
   }
   body.framez-index .video_part {
     width: 100%;
-    height: 328px;
+    /*height: 328px;*/
   }
   body.framez-index #annotations_data {
     width: 408px;
@@ -962,7 +962,7 @@ a:hover {
   }
   body.framez-index .video_part {
     width: 100%;
-    height: 550px !important;
+    /*height: 550px !important;*/
   }
   #annotations-module {
     height: 100% !important;
@@ -980,7 +980,7 @@ a:hover {
   }
   #annotations-module #filter_area {
     width: 33% !important;
-    height: 270px !important;
+    /*height: 270px !important;*/
     overflow-y: auto !important;
     padding-left: 0px !important;
     display: block !important;
@@ -995,7 +995,7 @@ a:hover {
     width: 25% !important;
   }
   #annotations-module .video_part {
-    /*height: calc(100% - 270px) !important;*/
+    height: calc(100% - 270px) !important;
      height: 100%;
   }
   #annotations-module .video_part vg-poster-image img {
@@ -1013,7 +1013,7 @@ a:hover {
     width: 850px !important;
   }
   body.framez-index .video_part {
-    height: 478px !important;
+    /*height: 478px !important;*/
   }
   #annotations-module #filter_area .annotator_choose {
     width: 90% !important;
@@ -1247,8 +1247,108 @@ videogular vg-cuepoints vg-cuepoint {
     margin: auto;
     overflow: hidden;
 }
+
+   /*videogular vg-controls .controls-container, [videogular] vg-controls .controls-container {
+  width: 100%;
+  height: 50px;
+   background-color: #ff0000;
+  position: absolute;
+  display: table;
+  zoom: 1;
+}*/
+
  /*Mobile*/
 @media (max-width: 800px) {
+
+      #annotations-module #annotations_data {
+          margin-top:19px;
+    width: 100% !important;
+    display: block !important;
+    position: relative !important;
+    overflow: initial !important;
+    height: calc(-294%) !important;
+  }
+
+    #annotations-module .video_part {
+         height:250px;
+    }
+    #annotations-module #filter_area .infoAnnoWrapper {
+  overflow-y: auto;
+  display:none;
+}
+
+    videogular vg-controls, [videogular] vg-controls {
+  width: 100%;
+   height: 0px;
+  display: block;
+  position: initial;
+  z-index: 3;
+  top: calc(100% - 50px);
+}
+
+  videogular vg-scrub-bar [role=slider], [videogular] vg-scrub-bar [role=slider] {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 2px;
+    background-color: black; }
+
+    /*videogular vg-controls .controls-container {
+  width: 100%;
+height: 0px; 
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  display: table;
+  zoom: 1;
+}*/
+    videogular vg-controls {
+  width: 100%;
+  /* height: 50px; */
+  display: block;
+  position: initial;
+  z-index: 3;
+  top: calc(100% - 50px);
+}
+    .videoContainer {
+  margin-bottom: 0px;
+  height: 100%;
+  width: 100%;
+}
+.page-title1 {
+  font-weight: 900;
+  font-size: 25px;
+  line-height: 30px;
+  color: #fff;
+  text-shadow: 0px 0px 1px rgba(255, 255, 255, .2), 0px 2px 2px rgba(0, 0, 0, 1);
+  background: url('images/pattern-c.gif') rgba(0, 0, 0, .8);
+  width: 850px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0;
+  margin:0;
+  -webkit-box-shadow: 0px 1px 0px white;
+  box-shadow: 0px 1px 0px white;
+
+}
+                   body {
+  min-height: 100%;
+  padding-top: 0px;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+    #top, body.framez-index #top {
+  position: absolute;
+  visibility: hidden;
+}
+    body.framez-index #main, .welcome-editor #main {
+    padding-top:0px;
+    }
+    .annotation-section {
+  height: calc(100vh - 60px);
+  position: absolute;
+  top: 0px;
+  z-index: 1001;
+  width: 980px !important;
+}
     #wrapper #container {
          width: 100% !important;
     }
@@ -1270,7 +1370,7 @@ videogular vg-cuepoints vg-cuepoint {
 
     #annotations-module #filter_area {
         width: 100% !important;
-        height: 270px !important;
+         height:60%;
         overflow-y: auto !important;
         padding-left: 0px !important;
         display: block !important;

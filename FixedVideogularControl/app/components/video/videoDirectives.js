@@ -37,7 +37,7 @@
                     stretch: 'fit',
                     poster: {url: ''},
                     theme: {
-                        url: "http://www.videogular.com/styles/themes/default/latest/videogular.css"
+                        url: "/FixedVideogularControl/tests/css/videogular.css"
                     },
                     autoHide: false,
                     //                    autoHideTime: 200,

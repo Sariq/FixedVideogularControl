@@ -692,10 +692,10 @@ body.framez-index .viewTitle {
     display: none;
 }
 
-body.framez-index #main,
+/*body.framez-index #main,
 .welcome-editor #main {
     padding-top: 100px;
-}
+}*/
 
 body.framez-index .page-title1,
 .welcome-editor .page-title1 {

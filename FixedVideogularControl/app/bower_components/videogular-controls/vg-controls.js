@@ -29,7 +29,7 @@ angular.module("com.2fdevs.videogular.plugins.controls", [])
     .run(
     ["$templateCache", function ($templateCache) {
         $templateCache.put("vg-templates/vg-controls",
-            '<div class="controls-container" ng-mousemove="onMouseMove()" ng-class="animationClass" ng-transclude></div>');
+            '<div  class="controls-container" ng-mousemove="onMouseMove()" ng-class="animationClass" ng-transclude></div>');
     }]
 )
     .directive("vgControls",
