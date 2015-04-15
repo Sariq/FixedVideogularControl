@@ -1488,6 +1488,10 @@ add-button {
 }
 /*Mobile*/
 @media (max-width: 800px) {
+    .padding-lr-mobile {
+    padding-left:0;
+    padding-right:0;
+    }
     .welcome-editor #top, body.framez-index #top {
   display:none;
 }
