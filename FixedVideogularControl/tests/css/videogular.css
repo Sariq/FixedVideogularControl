@@ -132,9 +132,11 @@ videogular, [videogular] {
     width: 100%;
     /*height: 50px;*/
     display: block;
-    position: initial;
+    position: absolute;
     z-index: 3;
-    top: calc(100% - 50px); }
+    top: calc(100% - 50px);
+    margin-top:50px;
+  }
   videogular vg-controls .controls-container, [videogular] vg-controls .controls-container {
     width: 100%;
     height: 0px;
@@ -417,3 +419,53 @@ videogular, [videogular] {
     display: none; }
 
 /*# sourceMappingURL=videogular.css.map */
+
+
+/*Mobile*/
+@media (max-width: 800px) {
+        videogular vg-play-pause-button, [videogular] vg-play-pause-button {
+    display: table-cell;
+    width: 5%;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer; }
+          videogular vg-time-display, [videogular] vg-time-display {
+    color: #FFFFFF;
+    display: table-cell;
+    font-family: Arial;
+    font-size: 18px;
+    width: 10%;
+    vertical-align: middle;
+    text-align: center;
+    cursor: default; }
+            videogular vg-scrub-bar, [videogular] vg-scrub-bar {
+    width: 60%;
+    display: table-cell;
+    cursor: pointer;
+    vertical-align: middle; }
+
+              videogular vg-time-display, [videogular] vg-time-display {
+    color: #FFFFFF;
+    display: table-cell;
+    font-family: Arial;
+    font-size: 18px;
+    width: 10%;
+    vertical-align: middle;
+    text-align: center;
+    cursor: default; }
+                videogular vg-volume, [videogular] vg-volume {
+    display: table-cell;
+    width: 5%;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer; }
+                  videogular vg-fullscreen-button, [videogular] vg-fullscreen-button {
+    display: table-cell;
+    width: 50px;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer; }
+
+
+
+}

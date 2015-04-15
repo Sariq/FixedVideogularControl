@@ -21,6 +21,21 @@
         }
     );
 
+    //Sari
+    vcVideoModule.directive("addButton",
+        function() {
+            return {
+                restrict: "E",
+                require: "^videogular",
+                template: '<div ng-show="!addDisabled" ng-click="addAnnotation()" class="add-annot-btn" >+</div>'
+            }
+        }
+    );
+
+
+    //Sari
+
+
     vcVideoModule.directive('vcMediaVideoContainer', function ($sce, $timeout, annotationSvc,$rootScope) {
         return {restrict: "E",
             scope: {

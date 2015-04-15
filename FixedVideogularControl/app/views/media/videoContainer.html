@@ -1,9 +1,9 @@
 
 <div class="videoContainer">
     <div class="video-action-control">
-        <div class="video-action-btns">
+<!--        <div class="video-action-btns">
             <div ng-show="!addDisabled" ng-click="addAnnotation()" class="add-annot-btn">+</div>
-        </div>
+        </div>-->
     </div>
     <videogular  vg-update-time="onUpdateTime($currentTime,$duration)" vg-stretch="config.stretch" vg-responsive="config.responsive" vg-autoplay='config.autoPlay' vg-width="config.width"
         vg-height="config.height" vg-theme="config.theme.url" vg-player-ready="onPlayerReady($API)" vg-cue-points="config.cuePoints.points">
@@ -19,9 +19,9 @@
             <vg-time-display>{{ currentTime | date:'mm:ss' }}</vg-time-display>
             <vg-scrub-bar>
                 <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
-                               <span class="annotation-marker ng-scope" data-timestamp="26" style="margin-left: 32.6716%;">
+         <!--                      <span class="annotation-marker ng-scope" data-timestamp="26" style="margin-left: 32.6716%;">
                    <i class="fa fa-circle simpleShowAni ng-hide"></i>
-               </span>
+               </span>-->
 
             </vg-scrub-bar>
          
@@ -32,6 +32,7 @@
                 <vg-volume-bar></vg-volume-bar>
             </vg-volume>
             <vg-fullscreen-button></vg-fullscreen-button>
+            <add-button></add-button>
           </vg-controls>
     </videogular>
     {{config.cuePoints}}
