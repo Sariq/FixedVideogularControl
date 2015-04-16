@@ -168,14 +168,14 @@ videogular, [videogular] {
     width: auto; }
   videogular vg-scrub-bar, [videogular] vg-scrub-bar {
     width: auto;
-    /*display: table-cell;*/
+     display: block;
     cursor: pointer;
     vertical-align: middle; }
   videogular vg-scrub-bar [role=slider], [videogular] vg-scrub-bar [role=slider] {
     margin-top: 0px;
     margin-bottom: 0px;
     height: 2px;
-    background-color: gray; }
+    background-color: #525353; }
   videogular vg-scrub-bar :focus vg-scrub-bar-current-time, [videogular] vg-scrub-bar :focus vg-scrub-bar-current-time {
     border-right: 6px black groove; }
   videogular vg-scrub-bar-current-time, [videogular] vg-scrub-bar-current-time {
@@ -458,8 +458,8 @@ videogular, [videogular] {
     text-align: center;
     cursor: default; }
             videogular vg-scrub-bar, [videogular] vg-scrub-bar {
-    width: 60%;
-    /*display: table-cell;*/
+    /*width: 60%;*/
+    display: block;
     cursor: pointer;
     vertical-align: middle; }
 
