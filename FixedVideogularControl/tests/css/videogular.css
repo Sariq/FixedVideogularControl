@@ -73,7 +73,9 @@ videogular, [videogular] {
     -webkit-font-smoothing: antialiased;
     background: none;
     padding: 6px;
-    border: none; }
+    border: none; 
+    font-size:150%
+  }
   videogular .iconButton:focus, [videogular] .iconButton:focus {
     border: 1px solid white; }
   videogular vg-poster, [videogular] vg-poster {
@@ -140,19 +142,19 @@ videogular, [videogular] {
   videogular vg-controls .controls-container, [videogular] vg-controls .controls-container {
     width: 100%;
     height: 0px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: black;
     position: initial;
     display: table;
     zoom: 1; }
   videogular vg-play-pause-button, [videogular] vg-play-pause-button {
-    display: table-cell;
+    display: inline-block;
     width: 50px;
     vertical-align: middle;
     text-align: center;
     cursor: pointer; }
   videogular vg-time-display, [videogular] vg-time-display {
     color: #FFFFFF;
-    display: table-cell;
+    display: inline-block;
     font-family: Arial;
     font-size: 18px;
     width: 75px;
@@ -166,14 +168,14 @@ videogular, [videogular] {
     width: auto; }
   videogular vg-scrub-bar, [videogular] vg-scrub-bar {
     width: auto;
-    display: table-cell;
+    /*display: table-cell;*/
     cursor: pointer;
     vertical-align: middle; }
   videogular vg-scrub-bar [role=slider], [videogular] vg-scrub-bar [role=slider] {
     margin-top: 0px;
     margin-bottom: 0px;
     height: 2px;
-    background-color: black; }
+    background-color: gray; }
   videogular vg-scrub-bar :focus vg-scrub-bar-current-time, [videogular] vg-scrub-bar :focus vg-scrub-bar-current-time {
     border-right: 6px black groove; }
   videogular vg-scrub-bar-current-time, [videogular] vg-scrub-bar-current-time {
@@ -200,7 +202,7 @@ videogular, [videogular] {
     text-align: center;
     cursor: pointer; }
   videogular vg-volume, [videogular] vg-volume {
-    display: table-cell;
+    display: inline-block;
     width: 50px;
     vertical-align: middle;
     text-align: center;
@@ -220,7 +222,7 @@ videogular, [videogular] {
       filter: alpha(opacity=50);
       opacity: 0.5; } }
   videogular vg-fullscreen-button, [videogular] vg-fullscreen-button {
-    display: table-cell;
+    display: inline-block;
     width: 50px;
     vertical-align: middle;
     text-align: center;
@@ -339,11 +341,13 @@ videogular, [videogular] {
   100% {
     background-color: rgba(0, 0, 0, 0.5); } }
   videogular vg-play-pause-button .play:before, [videogular] vg-play-pause-button .play:before {
-    content: "\e000"; }
+    content: "\e000"; 
+    color:red;
+  }
   videogular vg-play-pause-button .pause:before, [videogular] vg-play-pause-button .pause:before {
-    content: "\e001"; }
+    content: "\e001";color:red; }
   videogular vg-mute-button, [videogular] vg-mute-button {
-    width: 50px;
+    /*width: 50px;*/
     display: block; }
   videogular vg-mute-button .level3:before, [videogular] vg-mute-button .level3:before {
     content: "\e002"; }
@@ -423,15 +427,30 @@ videogular, [videogular] {
 
 /*Mobile*/
 @media (max-width: 800px) {
+      videogular .iconButton, [videogular] .iconButton {
+    color: #FFFFFF;
+    font-family: 'videogular';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    background: none;
+    padding: 6px;
+    border: none; 
+    font-size:100%
+  }
         videogular vg-play-pause-button, [videogular] vg-play-pause-button {
-    display: table-cell;
+    display: inline-block;
     width: 5%;
     vertical-align: middle;
     text-align: center;
     cursor: pointer; }
           videogular vg-time-display, [videogular] vg-time-display {
     color: #FFFFFF;
-    display: table-cell;
+    display: inline-block;
     font-family: Arial;
     font-size: 18px;
     width: 10%;
@@ -440,13 +459,13 @@ videogular, [videogular] {
     cursor: default; }
             videogular vg-scrub-bar, [videogular] vg-scrub-bar {
     width: 60%;
-    display: table-cell;
+    /*display: table-cell;*/
     cursor: pointer;
     vertical-align: middle; }
 
               videogular vg-time-display, [videogular] vg-time-display {
     color: #FFFFFF;
-    display: table-cell;
+    display: inline-block;
     font-family: Arial;
     font-size: 18px;
     width: 10%;
@@ -454,14 +473,14 @@ videogular, [videogular] {
     text-align: center;
     cursor: default; }
                 videogular vg-volume, [videogular] vg-volume {
-    display: table-cell;
+    display: inline-block;
     width: 5%;
     vertical-align: middle;
     text-align: center;
     cursor: pointer; }
                   videogular vg-fullscreen-button, [videogular] vg-fullscreen-button {
-    display: table-cell;
-    width: 50px;
+    display: inline-block;
+      width: 5%;
     vertical-align: middle;
     text-align: center;
     cursor: pointer; }

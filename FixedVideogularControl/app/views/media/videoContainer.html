@@ -15,24 +15,29 @@
        <api-connector></api-connector>
          <vg-poster vg-url='config.poster.url' style="height:100%;"></vg-poster>
    <vg-controls vg-autohide="controller.config.plugins.controls.autoHide" vg-autohide-time="controller.config.plugins.controls.autoHideTime">
-            <vg-play-pause-button></vg-play-pause-button>
-            <vg-time-display>{{ currentTime | date:'mm:ss' }}</vg-time-display>
-            <vg-scrub-bar>
+           <vg-scrub-bar>
                 <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
          <!--                      <span class="annotation-marker ng-scope" data-timestamp="26" style="margin-left: 32.6716%;">
                    <i class="fa fa-circle simpleShowAni ng-hide"></i>
                </span>-->
 
             </vg-scrub-bar>
-         
-            <vg-time-display>{{ totalTime | date:'mm:ss' }}</vg-time-display>
+       <span >
+            <vg-play-pause-button></vg-play-pause-button>
+           
 
             <vg-volume>
                 <vg-mute-button></vg-mute-button>
                 <vg-volume-bar></vg-volume-bar>
             </vg-volume>
             <vg-fullscreen-button></vg-fullscreen-button>
-            <add-button></add-button>
+
+            <vg-time-display>{{ currentTime | date:'mm:ss' }}</vg-time-display>
+        
+         
+<!--            <vg-time-display>{{ totalTime | date:'mm:ss' }}</vg-time-display>-->
+            <add-button class="pull-right"></add-button>
+           </span>
           </vg-controls>
     </videogular>
     {{config.cuePoints}}
