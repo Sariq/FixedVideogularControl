@@ -149,6 +149,7 @@
             //Sari 
             //set AnnotationsList
             setList: function (annotations) {
+                
                 annotationsList = annotations;
             },
             //get AnnotationsListFromSvc

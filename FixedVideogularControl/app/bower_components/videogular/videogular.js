@@ -153,7 +153,7 @@ angular.module("com.2fdevs.videogular")
             this.playsInline = $scope.vgPlaysInline;
             this.cuePoints = $scope.vgCuePoints;
             this.currentState = VG_STATES.STOP;
-
+           // alert(angular.toJson($scope.vgCuePoints))
             isMetaDataLoaded = true;
 
             //Set media volume from localStorage if available

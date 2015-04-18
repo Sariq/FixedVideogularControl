@@ -197,15 +197,16 @@
             $('.resize').resizable({
                 handles: 's,e',
                 minWidth: 150,
-                maxWidth: 1200,
+                maxWidth: 1300,
                 resize: function (event, ui) {
                     var x = ui.element.outerWidth();
-                    // var y = ui.element.outerHeight();
+                    var y = ui.element.outerHeight();
+                    console.log(ui.element)
                     var par = $(this).parent().width();
                     var ele = ui.element;
                     var factor = par - x;
                     $.each(ele.siblings(), function (idx, item) {
-                        // ele.siblings().eq(idx).css('height', y + 'px');
+                       // ele.siblings().eq(idx).css('height', y-100 + 'px');
                         ele.siblings().eq(idx).css('width', (factor) + 'px');
                     });
 

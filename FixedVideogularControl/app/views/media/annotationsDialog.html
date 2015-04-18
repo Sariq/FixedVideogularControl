@@ -1,11 +1,11 @@
 
 <div id="annotations-module" ng-cloak="" title="Annotate" ng-controller="vc.annotationsController" annotation-list="annotationList">
 
-   <!-- <div ng-class="{'modal-backdrop':$root.userData.name && addDisabled,'fade':$root.userData.name && addDisabled,'in':$root.userData.name && addDisabled}"></div>-->
+    <div ng-class="{'modal-backdrop':$root.userData.name && addDisabled,'fade':$root.userData.name && addDisabled,'in':$root.userData.name && addDisabled}"></div>
 
     <!--ng-mousemove="onResizeWidth($event)"  ng-mouseup="onStopResize()"  ng-mouseleave="onStopResize()" ng-class="{'resizecursor':resizeFlag==true, 'initialcursor': resizeFlag==false}"-->
     <h4 class="viewTitle">{{ (allowAnnotate) ? 'Annotate' : 'View'}}</h4>
-    <div class="col-md-6 col-xs-12 sp resize tab-pane" id="jsPane" style="padding-left: 0; padding-right: 0; height: 100%;">
+    <div class="col-md-6 col-xs-12 sp resize tab-pane video-container" id="jsPane" >
         <div class="video_part clearfix" id='video-part'>
             <vc-media-video-container annotation-markers="annotations" media-time="mediaTime"
                 data-file="file"></vc-media-video-container>
@@ -63,7 +63,7 @@
                 </div>
     </div>
 
-    <div class="col-md-6 col-xs-12  tab-pane" id="cssPane" style="padding-left: 0; padding-right: 0; height: 100%">
+    <div class="col-md-6 col-xs-12  tab-pane annotations-container" id="cssPane">
             <div id="annotations_data">
                 
                 <div id="myDiv" class="annotations_list_wrap">

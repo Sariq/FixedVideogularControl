@@ -96,14 +96,15 @@
         $scope.state = {$editable: false, isMarked: false};
         $scope.mark = function (markOnly) {
            
-           
-            $element.parent().animate({
-                scrollTop: $element.parent().scrollTop() + ($element.position().top - $element.parent().position().top)
-            }, 700);
-            $scope.state.isMarked = true;
-            if (!markOnly) {
-                $scope.$root.$broadcast('videoSeekTime', $scope.annotation.timestamp);
-                $scope.$digest();
+            if (!$scope.state.isMarked) {
+                $element.parent().animate({
+                    scrollTop: $element.parent().scrollTop() + ($element.position().top - $element.parent().position().top)
+                }, 700);
+                $scope.state.isMarked = true;
+                if (!markOnly) {
+                    $scope.$root.$broadcast('videoSeekTime', $scope.annotation.timestamp);
+                    $scope.$digest();
+                }
             }
         };
         $scope.dismissOnPlayWatcher = null;
