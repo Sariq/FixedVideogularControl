@@ -10,7 +10,7 @@
             <vc-media-video-container annotation-markers="annotations" media-time="mediaTime"
                 data-file="file"></vc-media-video-container>
         </div>
-        <div id="filter_area" style="height:100%">
+        <div id="filter_area" resize>
                     <div ng-if="!$root.userData.name && !publicView" class="show_name">
                         <p>Enter your name to annotate, or <a vc-href="user/login">Login </a></p>
 
@@ -62,8 +62,8 @@
                     </div>
                 </div>
     </div>
-
-    <div class="col-md-6 col-xs-12  tab-pane annotations-container" id="cssPane">
+    <!--tab-pane-->
+    <div class="col-md-6 col-xs-12   annotations-container" id="cssPane">
             <div id="annotations_data">
                 
                 <div id="myDiv" class="annotations_list_wrap">

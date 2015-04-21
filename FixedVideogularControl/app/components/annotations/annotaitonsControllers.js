@@ -199,17 +199,24 @@
                 minWidth: 150,
                 maxWidth: 1300,
                 resize: function (event, ui) {
+                    
                     var x = ui.element.outerWidth();
                     var y = ui.element.outerHeight();
-                    console.log(ui.element)
+                    
                     var par = $(this).parent().width();
+                    var mypar = $(this).parent().height();
                     var ele = ui.element;
                     var factor = par - x;
+                    var myFac = mypar - y;
                     $.each(ele.siblings(), function (idx, item) {
-                       // ele.siblings().eq(idx).css('height', y-100 + 'px');
+                        //ele.siblings().eq(idx).css('height', myFac  + 'px');
                         ele.siblings().eq(idx).css('width', (factor) + 'px');
                     });
-
+                    //var videoheight = 100 * $('#video-part').height() / mypar;
+                       
+                    //videoheight = $('#video-part').height();
+                    //console.log(videoheight)
+                    //$('#filter_area').css('height', mypar-videoheight + 'px');
                     if (x >= (par - 100)) {
                         $(".resize").resizable("option", "maxWidth", ui.size.width);
                         return;

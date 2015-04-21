@@ -972,7 +972,7 @@ a {
         }
 
         #annotations-module #filter_area {
-            height: 40% !important;
+            height: 40% ;
             overflow-y: hidden !important;
             /*padding-left: 12px !important;*/
             margin-top: -1%;
@@ -1342,6 +1342,9 @@ a {
   }
 }*/
 /*Sari*/
+.modal-backdrop {
+    min-width: 100%;
+}
 .prz {
     padding-right: 0;
 }
@@ -1517,7 +1520,7 @@ add-button {
     .simpleShowAni {
         position: relative;
         /* bottom: 3px; */
-        color: #0056b9;
+        color: red;
         left: -4px;
         height: 4px;
         top: -10px;
