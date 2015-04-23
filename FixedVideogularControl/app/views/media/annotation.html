@@ -6,15 +6,20 @@
 
 
         <!--<div class="annotation_mark none"></div>-->
-        <span class="col-md-2 plz" >
+        <span class="col-md-2 col-xs-2  plz name-overflow" >
             <span class="annotation_mark active"></span>
             <span class="timestamp">{{annotation.timestamp | date:'mm:ss'}}</span>
             <span class="from" title="{{ annotation.fromUser }}">{{ annotation.fromUser.length > 20?  annotation.fromUser.substring(0,18)+'..': annotation.fromUser }}</span>
         </span>
 
 
-        <span class="col-md-8 padding-lr-mobile">
+        <span ng-if="!state.$editable" class="col-md-10 col-xs-10  padding-lr-mobile">
             <span ng-hide="state.$editable" class="comment">{{ annotation.comment }}</span>
+     
+        </span>
+
+               <span ng-if="state.$editable" class="col-md-9 col-xs-9  padding-lr-mobile">
+         
             <span ng-if="state.$editable" class="comment" >
                 <textarea auto-focus="true" rows="3" placeholder="Write your comment here"
                     ng-model="annotation.comment"></textarea>
@@ -22,7 +27,7 @@
         </span>
 
 
-        <span class="col-md-2 prz">
+        <div class="prz icons-pos"   ng-class="{'buttons-marker':!annotation.showMe && !state.$editable}">
         <span class="annotationButtons" ng-show="usernameIsSet()">
             <button ng-hide="annotation.showMe  || state.$editable" ng-disabled="replyDisabled" ng-click="addReply()" class="appBtn green reply annotation_comment" title="Click to add a reply comment">
             </button>
@@ -76,7 +81,7 @@
 
 
         </span>
-             </span>
+             </div>
     </div>
     <div ng-if="annotation.children.length" class="annotationReplyList">
         <vc-reply-annotation data-annotation="child" ng-repeat="child in annotation.children" ng-init="child.showMe=true"></vc-reply-annotation>

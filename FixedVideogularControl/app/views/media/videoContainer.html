@@ -22,7 +22,7 @@
                </span>-->
                 <vg-scrub-bar-cue-points vg-cue-points='config.cuePoints[0]'></vg-scrub-bar-cue-points>
             </vg-scrub-bar>
-       <span >
+       <div >
             <vg-play-pause-button></vg-play-pause-button>
            
 
@@ -32,12 +32,12 @@
             </vg-volume>
             <vg-fullscreen-button></vg-fullscreen-button>
 
-            <vg-time-display>{{ currentTime | date:'mm:ss' }}</vg-time-display>
+            <vg-time-display>{{ currentTime | date:'mm:ss' }} <span style="color:lightgray;">/</span><span style="color:lightgray;font-size:12px"> 43:20.2</span></vg-time-display>
         
          
 <!--            <vg-time-display>{{ totalTime | date:'mm:ss' }}</vg-time-display>-->
             <add-button class="pull-right"></add-button>
-           </span>
+           </div>
           </vg-controls>
     </videogular>
  

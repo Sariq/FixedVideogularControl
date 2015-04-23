@@ -1342,6 +1342,21 @@ a {
   }
 }*/
 /*Sari*/
+.name-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+ .icons-pos{
+  z-index: 9999;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  top: 20%;
+}
+.buttons-marker {
+  border: solid 1px #fc1d00;
+}
 .modal-backdrop {
     min-width: 100%;
 }
@@ -1516,7 +1531,11 @@ add-button {
 }
 /*Mobile*/
 @media (max-width: 800px) {
-
+.name-overflow {
+  overflow: hidden;
+   text-overflow:inherit; 
+   white-space:  normal; 
+}
     .simpleShowAni {
         position: relative;
         /* bottom: 3px; */

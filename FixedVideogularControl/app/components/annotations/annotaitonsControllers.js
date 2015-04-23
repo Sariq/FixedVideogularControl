@@ -214,8 +214,8 @@
                     });
                     //var videoheight = 100 * $('#video-part').height() / mypar;
                        
-                    //videoheight = $('#video-part').height();
-                    //console.log(videoheight)
+                    var videoheight = $('#video-part').height();
+                    console.log(videoheight)
                     //$('#filter_area').css('height', mypar-videoheight + 'px');
                     if (x >= (par - 100)) {
                         $(".resize").resizable("option", "maxWidth", ui.size.width);
@@ -235,9 +235,10 @@
                 },
                 resize: function (event, ui) {
                     var x = ui.element.outerWidth();
-                    // var y = ui.element.outerHeight();
+                    var y = ui.element.outerHeight();
                     var par = $(this).parent().width();
                     var ele = ui.element;
+
                     $.each(ele.siblings(), function (idx, item) {
                         //  ele.siblings().eq(idx).css('height', y + 'px');
                     });
