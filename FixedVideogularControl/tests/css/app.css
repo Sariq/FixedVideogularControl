@@ -930,7 +930,7 @@ a {
 
     body.framez-index .video_part {
         width: 100%;
-        height: 60%;
+        /*height: 60%;*/
         display: inline-block !important;
         vertical-align: top !important;
     }
@@ -972,10 +972,13 @@ a {
         }
 
         #annotations-module #filter_area {
-            height: 40% ;
+            /*height: 40% ;*/
             overflow-y: hidden !important;
             /*padding-left: 12px !important;*/
-            margin-top: -1%;
+              margin-top: 50px;
+                display: flex;
+                z-index: 80;
+                position: inherit;
         }
 }
 
@@ -1737,12 +1740,15 @@ height: 0px;
 
     #annotations-module #filter_area {
         width: 100% !important;
-        height: 40%;
+        /*height: 40%;*/
         overflow-y: auto !important;
         padding-left: 0px !important;
         display: block !important;
         float: left;
-        margin-top: 10%;
+                   margin-top: 50px;
+                display: flex;
+                z-index: 80;
+                position: inherit;
     }
 
     .ui-resizable-e {
