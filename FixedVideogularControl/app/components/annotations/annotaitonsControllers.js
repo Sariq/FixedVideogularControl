@@ -2,7 +2,7 @@
     "use strict";
     var annotationsModule = angular.module('vc.annotations');
 
-    annotationsModule.controller('vc.annotationsController', function ($timeout,$scope, $element, annotationSvc, $filter, $anchorScroll, $location) {
+    annotationsModule.controller('vc.annotationsController', function ($rootScope,$timeout, $scope, $element, annotationSvc, $filter, $anchorScroll, $location) {
         //  $element.data('$$ngAnimateState',{disabled:false,running:true});
         $scope.annotations = [];
         $scope.contributors = [];
@@ -221,6 +221,8 @@
                         $(".resize").resizable("option", "maxWidth", ui.size.width);
                         return;
                     }
+
+                    $rootScope.$broadcast('cuePointesUpdate');
 
                 }
             });

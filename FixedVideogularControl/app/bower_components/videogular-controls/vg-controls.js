@@ -351,7 +351,7 @@ angular.module("com.2fdevs.videogular.plugins.controls")
             },
             link: function (scope, elem, attr, API) {
                 var totalTimeWatch;
-
+                var annotationArray = [];
                 scope.onPlayerReady = function onPlayerReady() {
                     scope.vgCuePoints =
 
@@ -373,7 +373,7 @@ angular.module("com.2fdevs.videogular.plugins.controls")
       { fromUser: "test", "children": [{ fromUser: "sari", "children": [], "id": "274", "timestamp": "70000", "comment": "hi", "parent_id": "242", "is_hidden": 0, "votes_up": null, "votes_down": null, "user_id": -2, "from": "jake", "flag": false }], "id": "242", "timestamp": "70000", "comment": "how are you?", "parent_id": "0", "is_hidden": 0, "votes_up": null, "votes_down": null, "user_id": -2, "from": "wsefwef", "flag": false }
   ]
                
-                    var annotationArray = [];
+                    
                     for (var i = 0; i < scope.vgCuePoints.length; i++) {
                         var annotation = {}
 
@@ -396,7 +396,9 @@ angular.module("com.2fdevs.videogular.plugins.controls")
                     scope.updateCuePoints(annotationArray);
                     totalTimeWatch();
                 };
-
+                scope.$on('cuePointesUpdate', function () {
+                    scope.updateCuePoints(annotationArray);
+                });
                 scope.updateCuePoints = function onUpdateCuePoints(cuePoints) {
                     var totalWidth = parseInt(elem[0].clientWidth);
                     var left = parseInt(elem[0].offsetLeft);
