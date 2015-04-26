@@ -163,7 +163,7 @@ videogular, [videogular] {
     text-align: center;
     cursor: default;
       position: absolute;
-  left: 50%;
+    right: 44%;
   }
   videogular .vgTimeDisplay, [videogular] .vgTimeDisplay {
     display: table-cell;

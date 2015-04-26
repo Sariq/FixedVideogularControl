@@ -351,6 +351,7 @@ button::-moz-focus-inner {
             float: right;
             /*width: 94px;*/
             margin-top: -5px;
+              padding-left: 5px;
         }
 
             #annotations-module #annotations_list .annotation span.annotationButtons button {
