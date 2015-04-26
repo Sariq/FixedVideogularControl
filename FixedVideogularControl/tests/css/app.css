@@ -390,7 +390,7 @@ button::-moz-focus-inner {
             }
 
                 #annotations-module #annotations_list .annotation div.annotationReplyList .annotation.reply {
-                    padding: 10px 0 0 0;
+                    padding: 8px 1px 8px 0px;
                     margin-bottom: 3px;
                 }
 
