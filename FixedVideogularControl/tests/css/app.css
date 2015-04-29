@@ -689,6 +689,9 @@ a {
 
         #annotations-module #filter_area .infoAnnoWrapper {
             overflow-y: auto;
+                       left: 0;
+  bottom: 0;
+  width: 100%;
         }
 
         #annotations-module #filter_area .infoAnno {
@@ -976,10 +979,13 @@ a {
             /*height: 40% ;*/
             overflow-y: hidden !important;
             /*padding-left: 12px !important;*/
-              margin-top: 50px;
-                display: flex;
-                z-index: 80;
-                position: inherit;
+        margin-top: 50px;
+  display: flex;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
         }
 }
 
@@ -1636,6 +1642,7 @@ add-button {
     #annotations-module #filter_area .infoAnnoWrapper {
         overflow-y: auto;
         display: none;
+
     }
 
     videogular vg-controls, [videogular] vg-controls {

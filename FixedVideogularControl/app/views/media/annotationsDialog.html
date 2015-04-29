@@ -5,7 +5,7 @@
 
     <!--ng-mousemove="onResizeWidth($event)"  ng-mouseup="onStopResize()"  ng-mouseleave="onStopResize()" ng-class="{'resizecursor':resizeFlag==true, 'initialcursor': resizeFlag==false}"-->
     <h4 class="viewTitle">{{ (allowAnnotate) ? 'Annotate' : 'View'}}</h4>
-    <div class="col-md-6 col-xs-12 sp resize tab-pane video-container" id="jsPane" >
+    <div class="col-md-6 col-xs-12 sp resize tab-pane video-container" id="video-filter" >
         <div class="video_part clearfix" id='video-part'>
             <vc-media-video-container annotation-markers="annotations" media-time="mediaTime"
                 data-file="file"></vc-media-video-container>

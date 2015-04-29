@@ -14,7 +14,8 @@
         $scope.video_ratio = 1.5626;
         $scope.resizediv_flag = true;
 
-        console.log(window.innerWidth );
+        var videoheight = $('#video-part').height();
+        $('#filter_area').css('height', 380 - videoheight + 'px');
         if (window.innerWidth > 1079){            
             $scope.resizediv_flag = true;
         }else{
@@ -197,7 +198,7 @@
             $('.resize').resizable({
                 handles: 's,e',
                 minWidth: 150,
-                maxWidth: 1300,
+                maxWidth: 1200,
                 resize: function (event, ui) {
                     
                     var x = ui.element.outerWidth();
@@ -211,12 +212,13 @@
                     $.each(ele.siblings(), function (idx, item) {
                         //ele.siblings().eq(idx).css('height', myFac  + 'px');
                         ele.siblings().eq(idx).css('width', (factor) + 'px');
+                       // ele.siblings().eq(idx).css('heigth', (10) + 'px');
                     });
                     //var videoheight = 100 * $('#video-part').height() / mypar;
                        
+                
                     var videoheight = $('#video-part').height();
-                    console.log(videoheight)
-                    //$('#filter_area').css('height', mypar-videoheight + 'px');
+                    $('#filter_area').css('height', y - videoheight -50 + 'px');
                     if (x >= (par - 100)) {
                         $(".resize").resizable("option", "maxWidth", ui.size.width);
                         return;
